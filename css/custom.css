@@ -1,0 +1,153 @@
+/* ---------------------------------------------------
+    Global
+----------------------------------------------------- */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7073;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6b7073;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: #6b7073;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    /* transition: all 0.3s; */
+}
+
+strong {
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.btn-primary {
+    background-color: #fd7702;
+    border-color: #fd7702;
+}
+
+.btn-primary:hover {
+    background-color: #df6800;
+    border-color: #df6800;
+}
+
+.page-title {
+    margin: 30px 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------
+    BRAND BAR STYLE
+----------------------------------------------------- */
+
+#brand-bar {
+    height: 58px;
+    padding: 0;
+    background: #444;
+    color: #444;
+}
+
+.brand-link {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.brand-link.active {
+    background-color: #fff;
+}
+
+.search-form {
+    max-width: 165px;
+}
+
+.search-box .search-input {
+    background-color: #444;
+    color: #bbb;
+    border-color: #bbb;
+}
+
+.search-box .search-input::placeholder {
+    color: #bbb;
+}
+
+.search-box .search-btn {
+    background-color: #909090;
+    color: #e6e6e6;
+}
+
+ul.account-links li.nav-item {
+    border-right: 2px solid #bbb;
+    padding: 0 10px;
+}
+
+ul.account-links li.nav-item:last-child {
+    border: 0;
+}
+
+ul.account-links li a {
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: #bbb!important;
+    padding: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.account-links li a:hover {
+    color: #fff!important;
+}
+
+.nav-link.cart-link {
+    font-size: 2em;
+    line-height: 1em;
+    background: transparent;
+    padding: 0 5px 0 10px;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.cart-link:focus {
+    outline: none;
+}
+
+.cart-counter {
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+    position: absolute;
+    top: 9px;
+    right: 25px;
+    width: 16px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
