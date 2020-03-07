@@ -70,10 +70,17 @@ strong {
 .brand-link {
     padding-top: 4px;
     padding-bottom: 4px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .brand-link.active {
     background-color: #fff;
+}
+
+.brand-link:hover:not(.active) {
+    background-color: #666666;
 }
 
 .search-form {
@@ -151,3 +158,8 @@ ul.account-links li a:hover {
     text-align: center;
 }
 
+@media (max-width: 636px) {
+    .brand-bar-right {
+        display: none!important;
+    }
+}
