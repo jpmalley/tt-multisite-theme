@@ -38,16 +38,6 @@ strong {
     align-items: stretch;
 }
 
-.btn-primary {
-    background-color: #fd7702;
-    border-color: #fd7702;
-}
-
-.btn-primary:hover {
-    background-color: #df6800;
-    border-color: #df6800;
-}
-
 .page-title {
     margin: 30px 0;
 }
@@ -57,17 +47,17 @@ strong {
 }
 
 /* ---------------------------------------------------
-    BRAND BAR STYLE
+    UNIVERSAL BAR STYLE
 ----------------------------------------------------- */
 
-#brand-bar {
-    height: 58px;
+#universal-nav {
+    height: 44px;
     padding: 0;
     background: #444;
     color: #444;
 }
 
-.brand-link {
+.universal-link {
     padding-top: 4px;
     padding-bottom: 4px;
     -webkit-transition: all 0.3s;
@@ -75,22 +65,30 @@ strong {
     transition: all 0.3s;
 }
 
-.brand-link.active {
+.universal-link img {
+    display: block;
+    height: 36px;
+    width: auto;
+}
+
+.universal-link.active {
     background-color: #fff;
 }
 
-.brand-link:hover:not(.active) {
+.universal-link:hover:not(.active) {
     background-color: #666666;
 }
 
 .search-form {
     max-width: 165px;
+    margin: auto 0;
 }
 
 .search-box .search-input {
     background-color: #444;
     color: #bbb;
     border-color: #bbb;
+    font-size: .7rem;
 }
 
 .search-box .search-input::placeholder {
@@ -100,31 +98,32 @@ strong {
 .search-box .search-btn {
     background-color: #909090;
     color: #e6e6e6;
+    font-size: 0.8em;
 }
 
 ul.account-links li.nav-item {
     border-right: 2px solid #bbb;
-    padding: 0 10px;
+    padding: 0 6px;
 }
 
 ul.account-links li.nav-item:last-child {
     border: 0;
 }
 
-ul.account-links li a {
+ul.account-links li > a {
     font-family: "Dosis", sans-serif;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 1.2em;
-    color: #bbb!important;
+    font-size: 1.1em;
+    color: #bbb;
     padding: 0;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
-ul.account-links li a:hover {
-    color: #fff!important;
+ul.account-links li > a:hover {
+    color: #fff;
 }
 
 .nav-link.cart-link {
@@ -150,16 +149,154 @@ ul.account-links li a:hover {
     font-size: 14px;
     color: #444;
     position: absolute;
-    top: 9px;
-    right: 25px;
+    top: 3px;
+    right: 21px;
     width: 16px;
     margin: 0 auto;
     display: block;
-    text-align: center;
 }
 
 @media (max-width: 636px) {
-    .brand-bar-right {
+    .universal-bar-right {
         display: none!important;
     }
+}
+
+
+/* ---------------------------------------------------
+    CART DROPDOWN STYLE
+----------------------------------------------------- */
+
+.cart-dropdown {
+    left: auto;
+    right: 2px;
+    padding: 0;
+    max-width: 375px;
+    z-index: 1030;
+}
+
+.cart-item-list {
+    max-height: calc(100vh - 293px);
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: block;
+    position: relative;
+}
+
+.cart-item-contents {
+    padding: 15px;
+}
+
+.cart-dropdown-info {
+    padding-left: 0;
+}
+
+.cart-dropdown-title {
+    text-transform: uppercase;
+}
+
+.cart-dropdown-variant {
+    font-size: 0.8em;
+    margin-bottom: 4px;
+}
+
+.cart-dropdown-qty {
+    max-width: 100px;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.cart-dropdown .form-control {
+    padding: .75rem 1rem;
+}
+
+.form-control.input-number {
+    text-align: center;
+    padding: .25rem .5rem;
+}
+
+.remove-item {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.cart-buttons {
+    margin: 0 15px 15px 15px;
+}
+
+.more-items a {
+    font-size: 0.65em;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}
+
+.cart-disclaimer {
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.checkout-btn button {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------------
+    PROMO BAR STYLE
+----------------------------------------------------- */
+
+.promo-bar {
+    background: #77b93d;
+    padding: 8px;
+    z-index: 1000;
+}
+
+.promo-bar h5 {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+#page-content {
+    height: 2000px;
+    border-bottom: 3px solid red;
+}
+
+
+/* ---------------------------------------------------
+    BRAND BAR STYLE
+----------------------------------------------------- */
+
+.brand-bar {
+    background-color: #fff;
+}
+
+.brand-logo {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: auto;
+    margin: 1em;
+}
+
+.brand-nav {
+    width: 100%;
+}
+
+.brand-nav .nav .nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
