@@ -71,5 +71,20 @@ $(document).ready(function () {
         }
     });
 
-    
+});
+
+// Toggle navbar JS
+$(document).ready(function () {
+
+    $('.overlayNav').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('.overlayNav').toggleClass('active');
+    });
+
+    $('#navToggler').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('.overlayNav').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
 });

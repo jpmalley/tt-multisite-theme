@@ -9,7 +9,7 @@
   --blue: #2694cf;
   --indigo: #4e47e7;
   --purple: #6f42c1;
-  --pink: #e83e8c;
+  --pink: #ec3f8d;
   --red: #f23636;
   --orange: #f47719;
   --yellow: #ffea00;
@@ -497,7 +497,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #ec3f8d;
   word-wrap: break-word;
 }
 a > code {
