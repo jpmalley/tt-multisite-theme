@@ -167,16 +167,17 @@
                 </div>
             </div>
             <div class="mobile-nav d-flex justify-content-between position-absolute">
-                <div id="navToggler" class="d-md-none">
+                <button id="navToggler" class="d-md-none" type="button" aria-controls="responsiveNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
                 <div class="d-md-none">
                     <a class="nav-link cart-link" href="#" id="cartLink" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-counter">1</span>
                     </a>
-    
+
                     <!-- Cart dropdown -->
                     <div class="dropdown-menu cart-dropdown" aria-labelledby="cartLink">
                         <form action="#" method="post" id="cart-dropdown">
@@ -247,694 +248,567 @@
                         </form>
                     </div>
                     <!-- END Cart dropdown -->
-    
+
                 </div>
             </div>
         </div>
 
-        <nav class="brand-nav navbar navbar-light justify-content-center d-none d-md-block">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">New!</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+        <nav class="brand-nav navbar navbar-light justify-content-center">
+            <div id="responsiveNav" class="d-flex justify-content-center">
+                <ul class="nav menu-level-1">
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">New!</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">Men</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">Men</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">Women</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">Women</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">Juniors</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">Juniors</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">Kids</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">Kids</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">Accessories</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">Accessories</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link-wrapper">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">Final Clearance</a>
-                        <div class="brand-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-3 offset-lg-1">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Category</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">T-Shirts</a></li>
-                                            <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
-                                            <li><a href="#" class="menu-link">Plushies</a></li>
-                                            <li><a href="#" class="menu-link">Enamel Pins</a></li>
-                                            <li><a href="#" class="menu-link">Underwear</a></li>
-                                            <li><a href="#" class="menu-link">Socks</a></li>
-                                            <li><a href="#" class="menu-link">Stickers</a></li>
-                                            <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
-                                            <li><a href="#" class="menu-link">Hats</a></li>
-                                            <li><a href="#" class="menu-link">Leggings</a></li>
-                                            <li><a href="#" class="menu-link">Gift Cards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Animal</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Turtles</a></li>
-                                            <li><a href="#" class="menu-link">Cats</a></li>
-                                            <li><a href="#" class="menu-link">Dogs</a></li>
-                                            <li><a href="#" class="menu-link">Foxes</a></li>
-                                            <li><a href="#" class="menu-link">Bunnies</a></li>
-                                            <li><a href="#" class="menu-link">Unicorns</a></li>
-                                            <li><a href="#" class="menu-link">Pandas</a></li>
-                                            <li><a href="#" class="menu-link">Sloths</a></li>
-                                            <li><a href="#" class="menu-link">Dinosaurs</a></li>
-                                            <li><a href="#" class="menu-link">Dragons</a></li>
-                                            <li><a href="#" class="menu-link">All Animals</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Interest</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Fitness</a></li>
-                                            <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
-                                            <li><a href="#" class="menu-link">Video Games</a></li>
-                                            <li><a href="#" class="menu-link">Crafting</a></li>
-                                            <li><a href="#" class="menu-link">Space</a></li>
-                                            <li><a href="#" class="menu-link">Science</a></li>
-                                            <li><a href="#" class="menu-link">Food</a></li>
-                                            <li><a href="#" class="menu-link">Reading</a></li>
-                                            <li><a href="#" class="menu-link">Coffee</a></li>
-                                            <li><a href="#" class="menu-link">Fantasy</a></li>
-                                            <li><a href="#" class="menu-link">Puns</a></li>
-                                            <li><a href="#" class="menu-link">Pride</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-sm-3">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <h6 class="menu-header">Shop by Mood</h6>
-                                            </li>
-                                            <li><a href="#" class="menu-link">Magical</a></li>
-                                            <li><a href="#" class="menu-link">Quirky</a></li>
-                                            <li><a href="#" class="menu-link">Kind</a></li>
-                                            <li><a href="#" class="menu-link">Sarcastic</a></li>
-                                            <li><a href="#" class="menu-link">Tired</a></li>
-                                            <li><a href="#" class="menu-link">Cheerful</a></li>
-                                            <li><a href="#" class="menu-link">Angry</a></li>
-                                            <li><a href="#" class="menu-link">Nerdy</a></li>
-                                            <li><a href="#" class="menu-link">Creative</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-2 d-lg-flex d-none">
-                                        <div class="placeholder"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">Final Clearance</a>
+                            <div class="brand-dropdown">
+                                <div class="container menu-level-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <h6 class="menu-header">Shop by Category</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Animal</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Interest</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <h6 class="menu-header">Shop by Mood</h6>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="sidebar-wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar" class="collapse show">
-            <!-- Search form -->
-            <div class="input-group search-box">
-                <input class="form-control search-input" type="text" placeholder="Search..." aria-label="Search">
-                <div class="input-group-append">
-                    <button type="submit" class="input-group-text btn" id="sidebar-search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </div>
+                    </li>
+                </ul>
             </div>
-
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#shirtsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Shirts
-                        <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="shirtsSubmenu">
-                        <li>
-                            <a href="#">Shirts 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Shirts 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Shirts 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Accessories
-                        <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="accSubmenu">
-                        <li>
-                            <a href="#">Accessories 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Accessories 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Accessories 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#plushiesSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Plushies
-                        <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="plushiesSubmenu">
-                        <li>
-                            <a href="#">Plushies 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Plushies 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Plushies 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Gift Cards</a>
-                </li>
-                <li>
-                    <a href="#">Clearance</a>
-                </li>
-            </ul>
         </nav>
-        <!-- Nav overlay element -->
         <div class="overlayNav"></div>
     </div>
+
+
 
     <section id="page-content">
         <div class="container-fluid"></div>
