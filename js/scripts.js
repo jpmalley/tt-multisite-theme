@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 });
 
-// Toggle navbar JS
+// Mobile menu
 $(document).ready(function () {
 
     $('.overlayNav').on('click', function () {
@@ -85,5 +85,33 @@ $(document).ready(function () {
         $('#responsiveNav').toggleClass('active');
         $('.overlayNav').toggleClass('active');
         $('.collapse.in').toggleClass('in');
+    });
+
+    // TODO: Get rid of this and make the clicked element turn into the nav link header instead
+    $('.nav-link-header').on('click', function () {
+        var el = $(this);
+        if (el.closest('li.nav-item').siblings().hasClass('inactive')) {
+            $('.brand-dropdown').children('.menu-level-2').removeClass('active');
+            el.parent().siblings('.nav-item').find('a.nav-link').removeClass('active');
+            el.closest('li.nav-item').siblings('.nav-item:not(.d-md-none)').removeClass('inactive');
+        } else {
+            $('#responsiveNav').toggleClass('active');
+            $('.overlayNav').toggleClass('active');
+        }
+    });
+
+    $('.menu-level-1 a.nav-link:not(.nav-link-header)').on('click', function() {
+        var el = $(this);
+        el.addClass('active')
+        el.next('.brand-dropdown').children('.menu-level-2').addClass('active');
+        el.closest('li.nav-item').siblings('.nav-item:not(.d-md-none)').addClass('inactive');
+    });
+
+    $('.menu-level-2 h6.menu-header').on('click', function() {
+        var el = $(this);
+        el.addClass('active')
+        console.log(el.parent().siblings().children('h6.menu-header'))
+        el.parent().siblings().children('h6.menu-header').addClass('inactive');
+        el.siblings().addClass('active');
     });
 });

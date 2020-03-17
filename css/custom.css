@@ -155,12 +155,6 @@ ul.account-links li>a:hover {
     display: block;
 }
 
-/* @media (max-width: 636px) {
-    .universal-bar-right {
-        display: none!important;
-    }
-} */
-
 /* ---------------------------------------------------
     CART DROPDOWN STYLE
 ----------------------------------------------------- */
@@ -315,6 +309,21 @@ ul.account-links li>a:hover {
     background: #2694cf;
 }
 
+.brand-nav .nav .nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    outline: none;
+}
+
+
+.brand-nav ul>li:last-child .nav-link {
+    color: #ec3f8d!important;
+}
+
 /* Mobile Nav Styles */
 @media (max-width: 767.98px) {
     .brand-nav {
@@ -322,7 +331,7 @@ ul.account-links li>a:hover {
     }
     
     #responsiveNav {
-        width: 200px;
+        width: 250px;
         background: #fff;
         color: #000;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -336,11 +345,64 @@ ul.account-links li>a:hover {
         margin-left: -250px;
         z-index: 1002;
         overflow-y: auto;
+        overflow-x: hidden;
         padding-bottom: 58px;
     }
     
     #responsiveNav.active {
         margin-left: 0;
+    }
+
+    .brand-nav li.nav-item.inactive {
+        display: none;
+    }
+
+    .brand-nav .nav a.nav-link i {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+    }
+
+    .brand-nav .nav a.nav-link.nav-link-header {
+        color: #fff!important;
+        background: #77b93d;
+    }
+
+    .brand-nav .nav a.nav-link.active {
+        font-size: 14px;
+        color: #f47719;
+        pointer-events: none;
+    }
+
+    .brand-nav .nav a.nav-link.active span {
+        border-bottom: 3px solid;
+    }
+
+    .brand-nav .nav a.nav-link.active i {
+        display: none;
+    }
+
+    .brand-nav .nav h6.menu-header {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        outline: none;
+        margin: .5rem 1rem;
+        cursor: pointer;
+    }
+
+    .brand-nav .nav h6.menu-header.inactive {
+        display: none;
+    }
+
+    .brand-nav .nav ul.menu-level-3 li {
+        font-size: 14px;
+        padding: .5rem 1rem;
+
     }
 
     .brand-nav .menu-level-1 {
@@ -350,9 +412,19 @@ ul.account-links li>a:hover {
     .brand-nav .menu-level-2 {
         display: none;
     }
+
+    .brand-nav .menu-level-2.active {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
     
     .brand-nav .menu-level-3 {
         display: none;
+    }
+
+    .brand-nav .menu-level-3.active {
+        display: block;
     }
     
     .overlayNav {
@@ -384,6 +456,8 @@ ul.account-links li>a:hover {
     }
 
     #responsiveNav {
+        display: flex;
+        justify-content: center;
         width: initial;
         background: #fff;
         color: #000;
@@ -405,16 +479,6 @@ ul.account-links li>a:hover {
         position: static;
     }
 
-    .brand-nav .nav .nav-link {
-        font-size: 14px;
-        font-weight: 600;
-        color: #000;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        position: relative;
-        outline: none;
-    }
-
     .brand-nav .nav .nav-link::after {
         position: absolute;
         opacity: 0;
@@ -427,10 +491,6 @@ ul.account-links li>a:hover {
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s;
-    }
-
-    .brand-nav ul>li:last-child .nav-link {
-        color: #ec3f8d!important;
     }
 
     .brand-nav ul>li:last-child .nav-link::after {
