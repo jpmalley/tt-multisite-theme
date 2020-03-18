@@ -357,32 +357,26 @@ ul.account-links li>a:hover {
         display: none;
     }
 
-    .brand-nav .nav a.nav-link i {
+    .brand-nav a.nav-link.inactive {
+        display: none;
+    }
+
+    .brand-nav .nav a.nav-link i, .brand-nav .nav a.menu-header i {
         position: absolute;
         top: 11px;
         right: 15px;
     }
 
-    .brand-nav .nav a.nav-link.nav-link-header {
+    .brand-nav .nav .nav-link-header {
         color: #fff!important;
         background: #77b93d;
     }
 
-    .brand-nav .nav a.nav-link.active {
-        font-size: 14px;
-        color: #f47719;
-        pointer-events: none;
+    .brand-nav .nav a.nav-link.active i, .brand-nav .nav a.menu-header.active i {
+        transform: rotate(-180deg);
     }
 
-    .brand-nav .nav a.nav-link.active span {
-        border-bottom: 3px solid;
-    }
-
-    .brand-nav .nav a.nav-link.active i {
-        display: none;
-    }
-
-    .brand-nav .nav h6.menu-header {
+    .brand-nav .nav a.menu-header {
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         font-weight: 600;
@@ -391,11 +385,11 @@ ul.account-links li>a:hover {
         letter-spacing: 1px;
         position: relative;
         outline: none;
-        margin: .5rem 1rem;
-        cursor: pointer;
+        padding: .5rem 1rem;
+        display: block;
     }
 
-    .brand-nav .nav h6.menu-header.inactive {
+    .brand-nav .nav a.menu-header.inactive {
         display: none;
     }
 
@@ -531,11 +525,14 @@ ul.account-links li>a:hover {
     .brand-dropdown .row {
         width: 100%;
     }
-    .brand-dropdown h6.menu-header {
+    .brand-dropdown a.menu-header {
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
         color: #000;
         margin-bottom: 0;
+        pointer-events: none;
     }
 
     .brand-dropdown ul.list-unstyled li {
