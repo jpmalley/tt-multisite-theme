@@ -82,10 +82,13 @@ $(document).ready(function () {
         $('.overlayNav').toggleClass('active');
     });
 
-    // Close nav when clicking outside
+    // Close and reset nav when clicking outside
     $('.overlayNav').on('click', function () {
         $('#responsiveNav').toggleClass('active');
         $('.overlayNav').toggleClass('active');
+        $('.menu-level-2, .menu-level-3').removeClass('active');
+        $('#responsiveNav .nav-item, #responsiveNav .nav-link, #responsiveNav .level-3').removeClass('inactive');
+        $('#responsiveNav .nav-link:not(.level-1), #responsiveNav .menu-header').removeClass('active nav-link-header');
     });
 
     // Close menu button
