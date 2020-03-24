@@ -7,10 +7,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Dosis", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #6b7073;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 1px;
 }
 
 p {
@@ -554,16 +555,146 @@ ul.account-links li>a:hover {
 }
 
 /* ---------------------------------------------------
-    TEMPORARY STYLES FOR DESIGN
+    HOMEPAGE STYLES
 ----------------------------------------------------- */
 
-#page-content {
-    height: 2000px;
-    background-color: #e6e6e6;
+#homepage .container-fluid a, #homepage .container-fluid img {
+    width: 100%;
 }
 
-.placeholder {
-    width: 100%;
-    background-color: #e6e6e6;
-    height: 200px;
+#homepage h4 {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
+
+#homepage .secondary-banner {
+    margin: 20px 0;
+}
+
+#homepage .shop-category .see-all a h6 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 15px 0;
+}
+
+#homepage .shop-category {
+    margin-bottom: 30px;
+}
+
+#homepage .shop-by-group {
+    border: 3px solid #bbb;
+    border-radius: .25rem;
+    margin-bottom: 20px;
+}
+
+#homepage .shop-by-title {
+    margin-top: 20px;
+}
+
+#homepage .shop-by h6 {
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;
+    text-decoration: underline;
+}
+
+#homepage .shop-by-footer {
+    background: #bbb;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+}
+
+#homepage .shop-by-footer h6 {
+    margin: .8rem 0 .7rem 0;
+    color: #fff;
+}
+
+#homepage .customer-service {
+    margin: 30px auto;
+}
+
+#homepage .customer-service .col {
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#homepage .customer-service .col:last-child {
+    border-right: none;
+}
+
+/* ---------------------------------------------------
+    COLLECTION PAGE STYLES
+----------------------------------------------------- */
+
+.product {
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.product img {
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.product a:hover img {
+    transform: perspective(500px) translate3d(0, 0, 20px);
+    -webkit-transform: perspective(500px) translate3d(0, 0, 20px);
+}
+
+.product .product-title a h6 {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    backface-visibility: hidden;
+}
+
+.product .product-title a:hover h6 {
+    color: #bbb;
+}
+
+.product .price.sale {
+    font-weight: bold;
+    color: #fd7702;
+}
+
+.product .compare-at-price {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.product .sale-tag {
+    color: #fff;
+    font-size: .7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: #fd7702;
+    padding: .2em .4em;
+    border-radius: .2em;
+    margin: 0 .5em;
+}
+
+.product .quick-add {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #2694cf;
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    backface-visibility: hidden;
+}
+
+.product .quick-add:hover {
+    color: #bbb;
+}
+
+/* ---------------------------------------------------
+    TEMPORARY STYLES FOR DESIGN
+----------------------------------------------------- */

@@ -86,4 +86,7 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+// Grid columns
+$grid-gutter-width: 20px;
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
