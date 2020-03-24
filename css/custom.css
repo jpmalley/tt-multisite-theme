@@ -46,6 +46,10 @@ strong {
     overflow: hidden;
 }
 
+.container-fluid a, .container-fluid img {
+    width: 100%;
+}
+
 /* ---------------------------------------------------
     UNIVERSAL BAR STYLE
 ----------------------------------------------------- */
@@ -558,10 +562,6 @@ ul.account-links li>a:hover {
     HOMEPAGE STYLES
 ----------------------------------------------------- */
 
-#homepage .container-fluid a, #homepage .container-fluid img {
-    width: 100%;
-}
-
 #homepage h4 {
     text-align: center;
     letter-spacing: 2px;
@@ -627,6 +627,94 @@ ul.account-links li>a:hover {
 /* ---------------------------------------------------
     COLLECTION PAGE STYLES
 ----------------------------------------------------- */
+
+.collection-title {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.collection-title h3 {
+    font-size: 2.2em;
+}
+
+.filter-sort {
+    margin-bottom: 2em;
+}
+
+.filter-sort .dropdown-menu {
+    min-width: 100%;
+    padding: 0;
+    border: 1px solid #2694cf;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.filter-sort .size-filter {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Dosis", sans-serif;
+    color: #2694cf;
+    text-align-last: center;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.filter-sort .product-options {
+    margin: 10px;
+}
+
+.filter-sort .product-options .size-group .size-label {
+    margin-right: 4px;
+}
+
+.filter-sort .product-options .size-group .size-label:last-child {
+    margin-right: 0;
+}
+
+.filter-sort .product-options button {
+    font-family: "Dosis", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.filter-sort .product-options button:first-child {
+    margin-right: 2px;
+}
+
+.filter-sort .product-options button:last-child {
+    margin-left: 2px;
+}
+
+.selected-filters .btn-group {
+    margin: 2px;
+    display: none;
+}
+
+.selected-filters .btn-group.show {
+    display: inline-flex;
+}
+
+.selected-filters {
+    display: none;
+    margin-bottom: 2em;
+}
+
+.selected-filters.show {
+    display: block;
+}
+
+.filter-sort select {
+    font-family: "Dosis", sans-serif;
+    color: #2694cf;
+    text-align-last: center;
+}
 
 .product {
     margin-bottom: 20px;
@@ -694,6 +782,83 @@ ul.account-links li>a:hover {
 .product .quick-add:hover {
     color: #bbb;
 }
+
+.product .collection-badge {
+    position: absolute;
+    top: -13px;
+    right: -3px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background: #6b7073;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.product .collection-badge.badge-new {
+    font-size: 16px;
+    background: #2694cf;
+    color: #fff;
+    transform: rotate(30deg)
+}
+
+.product .collection-badge.badge-sale {
+    font-size: 16px;
+    background: #fd7702;
+    color: #fff;
+    transform: rotate(30deg)
+}
+
+.product .collection-badge.badge-fc {
+    font-size: 23px;
+    background: #ec3f8d;
+    color: #fff;
+
+}
+
+/* ---------------------------------------------------
+    PRODUCT PAGE STYLES
+----------------------------------------------------- */
+
+.product-options {
+    margin-top: 20px;
+}
+
+.product-options .product-type {
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+}
+
+.product-options .group-label {
+    font-size: 0.75em;
+    margin-bottom: 3px;
+}
+
+.product-options input {
+    display: none;
+}
+
+.product-options label {
+    min-width: 42px;
+}
+
+.product-options input:checked+label {
+    background: #2694cf;
+    border-color: #2694cf;
+    color: #fff;
+}
+
+.product-options label.disabled {
+    opacity: .4;
+    background: linear-gradient(to top left, rgba(108, 117, 125, 0) 0%, rgba(108, 117, 125, 0) calc(50% - 1.5px), #ccc 50%, rgba(108, 117, 125, 0) calc(50% + 1.5px), rgba(108, 117, 125, 0) 100%), linear-gradient(to top right, rgba(108, 117, 125, 0) 0%, rgba(108, 117, 125, 0) calc(50% - 1.5px), #ccc 50%, rgba(108, 117, 125, 0) calc(50% + 1.5px), rgba(108, 117, 125, 0) 100%);
+}
+
 
 /* ---------------------------------------------------
     TEMPORARY STYLES FOR DESIGN

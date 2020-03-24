@@ -137,3 +137,79 @@ $(document).ready(function () {
         el.closest('.brand-dropdown').siblings().removeClass('inactive').addClass('active nav-link-header');
     });
 });
+
+
+// Collection page size filter
+$(document).ready(function () {
+
+    var filters = [];
+
+    // Apply filters
+    $('.dropdown-menu .product-options label').on('click', function (e) {
+
+        var $target = $(e.currentTarget),
+            val = $target.attr('for'),
+            input = $('#' + val),
+            idx;
+
+        if ((idx = filters.indexOf(val)) > -1) {
+            filters.splice(idx, 1);
+            setTimeout(function () {
+                input.prop('checked', false);
+                $('.' + val).removeClass('show');
+            }, 0);
+        } else {
+            filters.push(val);
+            setTimeout(function () {
+                input.prop('checked', true);
+                $('.' + val).addClass('show');
+            }, 0);
+        }
+
+        $(e.target).blur();
+
+        if (filters.length > 0) {
+            $('.selected-filters').addClass('show');
+        } else {
+            $('.selected-filters').removeClass('show');
+        }
+        return false;
+    });
+
+    // Done button
+    $('.dropdown-menu .product-options button.done').on('click', function (e) {
+        e.preventDefault();
+        $('#sizeFilter').dropdown('toggle');
+    });
+
+    // Clear filters button
+    $('.dropdown-menu .product-options button.clear').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        for (var i = 0; i < filters.length; i++) {
+            var val = filters[i];
+            $('#' + val).prop('checked', false);
+            $('.' + val).removeClass('show');
+        }
+        $('.selected-filters').removeClass('show');
+        filters = [];
+    });
+
+    // Remove filter tag
+    $('.remove-filter').on('click', function (e) {
+        var val = $(this).parents('.btn-group').attr('for'),
+            idx;
+
+        if ((idx = filters.indexOf(val)) > -1) {
+            filters.splice(idx, 1);
+            setTimeout(function () {
+                $('#' + val).prop('checked', false);
+                $('.' + val).removeClass('show');
+            }, 0);
+        }
+        if (filters.length < 1) {
+            $('.selected-filters').removeClass('show');
+        }
+    });
+
+});
