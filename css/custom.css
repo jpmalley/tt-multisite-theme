@@ -758,7 +758,7 @@ ul.account-links li>a:hover {
 
 .product .price.sale {
     font-weight: bold;
-    color: #fd7702;
+    color: #f47719;
 }
 
 .product .compare-at-price {
@@ -772,7 +772,7 @@ ul.account-links li>a:hover {
     font-weight: bold;
     text-transform: uppercase;
     vertical-align: middle;
-    background-color: #fd7702;
+    background-color: #f47719;
     padding: .2em .4em;
     border-radius: .2em;
     margin: 0 .5em;
@@ -818,7 +818,7 @@ ul.account-links li>a:hover {
 
 .product .collection-badge.badge-sale {
     font-size: 16px;
-    background: #fd7702;
+    background: #f47719;
     color: #fff;
     transform: rotate(30deg)
 }
@@ -866,6 +866,77 @@ ul.account-links li>a:hover {
 .product-options label.disabled {
     opacity: .4;
     background: linear-gradient(to top left, rgba(108, 117, 125, 0) 0%, rgba(108, 117, 125, 0) calc(50% - 1.5px), #ccc 50%, rgba(108, 117, 125, 0) calc(50% + 1.5px), rgba(108, 117, 125, 0) 100%), linear-gradient(to top right, rgba(108, 117, 125, 0) 0%, rgba(108, 117, 125, 0) calc(50% - 1.5px), #ccc 50%, rgba(108, 117, 125, 0) calc(50% + 1.5px), rgba(108, 117, 125, 0) 100%);
+}
+
+
+/* ---------------------------------------------------
+    FOOTER STYLES
+----------------------------------------------------- */
+
+.footer {
+    background: rgb(235, 235, 235) url(../img/footer-turtle.svg) right bottom no-repeat;
+    background-size: auto 280px;
+    padding: 2em;
+    position: relative;
+    min-height: 300px;
+    font-weight: normal;
+    color: #6b7073;
+}
+
+.footer>.container {
+    z-index: 2;
+}
+
+.footer-text {
+    font-size: 0.85em;
+}
+
+.footer .klaviyo-form button {
+    font-family: "Dosis", sans-serif!important;
+    text-transform: uppercase;
+}
+
+.email-box {
+    margin-top: 20px;
+}
+
+.email-input {
+    font-size: 1em;
+}
+
+#email-submit {
+    background: #f47719;
+    border: 1px solid #f47719;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+
+.social-icons {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.social-icons a:hover {
+    color: #2694cf;
+}
+
+.footer-nav {
+    font-size: 0.8em;
+}
+
+.footer-nav a {
+    margin-bottom: 10px;
+}
+
+.footer-nav a:hover {
+    color: #2694cf;
+}
+
+.copyright {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 15px;
 }
 
 
