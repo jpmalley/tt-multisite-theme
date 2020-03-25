@@ -1,6 +1,11 @@
 // Cart dropdown JS
 $(document).ready(function () {
 
+    $('#cartLink, #cartLinkMobile').click(function () {
+        console.log('clicked!')
+        $('#cartDropdown').toggleClass('show');
+    });
+
     $('.cart-dropdown').click(function (e) {
         e.preventDefault();
         e.stopPropagation();

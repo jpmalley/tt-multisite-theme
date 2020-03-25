@@ -160,92 +160,6 @@ ul.account-links li>a:hover {
     display: block;
 }
 
-/* ---------------------------------------------------
-    CART DROPDOWN STYLE
------------------------------------------------------ */
-
-.cart-dropdown {
-    left: auto;
-    right: 2px;
-    padding: 0;
-    max-width: 375px;
-    z-index: 1030;
-}
-
-.cart-item-list {
-    max-height: calc(100vh - 293px);
-    overflow-y: auto;
-}
-
-.cart-item {
-    display: block;
-    position: relative;
-}
-
-.cart-item-contents {
-    padding: 15px;
-}
-
-.cart-dropdown-info {
-    padding-left: 0;
-}
-
-.cart-dropdown-title {
-    text-transform: uppercase;
-}
-
-.cart-dropdown-variant {
-    font-size: 0.8em;
-    margin-bottom: 4px;
-}
-
-.cart-dropdown-qty {
-    max-width: 100px;
-    margin-bottom: 3px;
-    font-size: 14px;
-}
-
-.cart-dropdown .form-control {
-    padding: .75rem 1rem;
-}
-
-.form-control.input-number {
-    text-align: center;
-    padding: .25rem .5rem;
-}
-
-.remove-item {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
-.cart-buttons {
-    margin: 0 15px 15px 15px;
-}
-
-.more-items a {
-    font-size: 0.65em;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.total {
-    font-weight: bold;
-    vertical-align: bottom;
-    margin-bottom: 10px;
-}
-
-.cart-disclaimer {
-    font-size: 0.7em;
-    font-weight: normal;
-}
-
-.checkout-btn a.btn {
-    font-family: 'Dosis', sans-serif;
-    text-transform: uppercase;
-}
 
 /* ---------------------------------------------------
     PROMO BAR STYLE
@@ -325,7 +239,7 @@ ul.account-links li>a:hover {
 }
 
 
-.brand-nav ul>li:last-child .nav-link {
+.brand-nav ul.menu-level-1>li:last-child .nav-link {
     color: #ec3f8d!important;
 }
 
@@ -424,6 +338,18 @@ ul.account-links li>a:hover {
 
     .brand-nav .menu-level-3.active {
         display: block;
+    }
+
+    .mobile-account-links {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #444;
+    }
+
+    .mobile-account-links .nav-item a.nav-link {
+        color: #fff;
     }
     
     .overlayNav {
@@ -559,6 +485,120 @@ ul.account-links li>a:hover {
         color: #2694cf;
     }
 }
+
+
+/* ---------------------------------------------------
+    CART DROPDOWN STYLE
+----------------------------------------------------- */
+
+.cart-dropdown {
+    top: 54px;
+    right: 10px;
+    padding: 0;
+    max-width: 375px;
+    z-index: 1030;
+    position: absolute;
+    display: none;
+    padding: 0;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 767.98px) {
+    .cart-dropdown {
+        top: 145px;
+    }
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.cart-item-list {
+    max-height: calc(100vh - 293px);
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: block;
+    position: relative;
+}
+
+.cart-item-contents {
+    padding: 15px;
+    position: relative;
+}
+
+.cart-dropdown-info {
+    padding-left: 0;
+}
+
+.cart-dropdown-title {
+    text-transform: uppercase;
+}
+
+.cart-dropdown-variant {
+    font-size: 0.8em;
+    margin-bottom: 4px;
+}
+
+.cart-dropdown-qty {
+    max-width: 100px;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.cart-dropdown .form-control {
+    padding: .75rem 1rem;
+}
+
+.form-control.input-number {
+    text-align: center;
+    padding: .25rem .5rem;
+}
+
+.cart-dropdown a.remove-item {
+    font-size: 12px;
+    text-decoration: underline;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.cart-dropdown a.remove-item:hover {
+    color: #f23636;
+}
+
+.cart-buttons {
+    margin: 0 15px 15px 15px;
+}
+
+.more-items a {
+    font-size: 0.65em;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}
+
+.cart-disclaimer {
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.checkout-btn a.btn {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+}
+
 
 /* ---------------------------------------------------
     HOMEPAGE STYLES
