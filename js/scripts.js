@@ -104,7 +104,7 @@ $(document).ready(function () {
     });
 
     // From level 1 to level 2
-    $('#responsiveNav').on('click', 'a.nav-link:not(.nav-link-header)', function(e) {
+    $('#responsiveNav').on('click', 'a.nav-link:not(.nav-link-header, .acct-link)', function(e) {
         e.preventDefault();
         var el = $(this);
         el.addClass('active nav-link-header')
