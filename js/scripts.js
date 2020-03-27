@@ -1,14 +1,8 @@
 // Cart dropdown JS
 $(document).ready(function () {
-
-    $('#cartLink, #cartLinkMobile').click(function () {
-        console.log('clicked!')
-        $('#cartDropdown').toggleClass('show');
-    });
-
-    $('.cart-dropdown').click(function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+    // Toggle cart
+    $('#cartLink, #cartLinkMobile, .cart-overlay, .dismiss-cart').click(function () {
+        $('#cartDropdown, .cart-overlay').toggleClass('active');
     });
 
     // Increment using +/- buttons
@@ -84,13 +78,13 @@ $(document).ready(function () {
     // Open nav
     $('#navToggler').on('click', function () {
         $('#responsiveNav').toggleClass('active');
-        $('.overlayNav').toggleClass('active');
+        $('.nav-overlay').toggleClass('active');
     });
 
     // Close and reset nav when clicking outside
-    $('.overlayNav').on('click', function () {
+    $('.nav-overlay').on('click', function () {
         $('#responsiveNav').toggleClass('active');
-        $('.overlayNav').toggleClass('active');
+        $('.nav-overlay').toggleClass('active');
         $('.menu-level-2, .menu-level-3').removeClass('active');
         $('#responsiveNav .nav-item, #responsiveNav .nav-link, #responsiveNav .level-3').removeClass('inactive');
         $('#responsiveNav .nav-link:not(.level-1), #responsiveNav .menu-header').removeClass('active nav-link-header');
@@ -100,7 +94,7 @@ $(document).ready(function () {
     $('#responsiveNav').on('click', 'a.nav-link-header.level-1', function(e) {
         e.preventDefault();
         $('#responsiveNav').removeClass('active');
-        $('.overlayNav').removeClass('active');
+        $('.nav-overlay').removeClass('active');
     });
 
     // From level 1 to level 2

@@ -352,7 +352,7 @@ ul.account-links li>a:hover {
         color: #fff;
     }
     
-    .overlayNav {
+    .nav-overlay {
         top: 0;
         display: none;
         position: fixed;
@@ -364,7 +364,7 @@ ul.account-links li>a:hover {
         transition: all 0.5s ease-in-out;
     }
     
-    .overlayNav.active {
+    .nav-overlay.active {
         display: block;
         opacity: 1;
     }
@@ -492,8 +492,8 @@ ul.account-links li>a:hover {
 ----------------------------------------------------- */
 
 .cart-dropdown {
-    top: 54px;
-    right: 10px;
+    top: 44px;
+    right: 0;
     padding: 0;
     max-width: 375px;
     z-index: 1030;
@@ -505,15 +505,17 @@ ul.account-links li>a:hover {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
     box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+    margin: .5rem;
 }
 
 @media (max-width: 767.98px) {
     .cart-dropdown {
-        top: 145px;
+        top: 135px;
+        width: calc(100%-1rem);
     }
 }
 
-.cart-dropdown.show {
+.cart-dropdown.active {
     display: block;
 }
 
@@ -597,6 +599,39 @@ ul.account-links li>a:hover {
 .checkout-btn a.btn {
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
+}
+
+.empty-cart {
+    margin: 35px 20px 20px 20px;
+}
+
+.dismiss-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    line-height: 16px;
+    color: #444;
+}
+
+.dismiss-cart:hover {
+    color: #666;
+}
+
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 1002;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.cart-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 
