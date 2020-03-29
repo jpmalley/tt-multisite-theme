@@ -257,22 +257,26 @@ ul.account-links li>a:hover {
         transition: all 0.3s;
         position: fixed;
         top: 0px;
-        left: 0px;
-        min-height: 100vh;
-        max-height: 100%;
-        margin-top: 0;
-        margin-left: -250px;
+        left: -275px;
+        /* min-height: 100vh; */
+        /* max-height: 100%; */
+        /* margin-top: 0; */
         z-index: 1002;
         overflow-y: auto;
         overflow-x: hidden;
+        /* padding-bottom: 58px; */
+        box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+        margin: .5rem;
+        border-radius: .25rem;
+        /* border: 1px solid #444; */
     }
     
     #responsiveNav.active {
-        margin-left: 0;
+        left: 0;
     }
 
     #responsiveNav .search-form {
-        max-width: unset;
+        max-width: 100%;
         margin: 1rem 1rem .5rem 1rem;
     }
 
@@ -316,6 +320,7 @@ ul.account-links li>a:hover {
     .brand-nav .nav .nav-link-header {
         color: #fff!important;
         background: #444;
+        border: 1px solid #444;
     }
 
     .brand-nav .nav a.nav-link.active i, .brand-nav .nav a.menu-header.active i {
@@ -369,10 +374,9 @@ ul.account-links li>a:hover {
 
     .mobile-account-links {
         display: block;
-        position: absolute;
-        bottom: 0;
         width: 100%;
         background: #444;
+        margin-top: .5rem;
     }
 
     .mobile-account-links .nav-item a.nav-link {
