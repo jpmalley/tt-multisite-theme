@@ -265,11 +265,38 @@ ul.account-links li>a:hover {
         z-index: 1002;
         overflow-y: auto;
         overflow-x: hidden;
-        padding-bottom: 58px;
     }
     
     #responsiveNav.active {
         margin-left: 0;
+    }
+
+    #responsiveNav .search-form {
+        max-width: unset;
+        margin: 1rem 1rem .5rem 1rem;
+    }
+
+    #responsiveNav .search-box .search-input {
+        background-color: #fff;
+        color: #444;
+        border-color: #444;
+        font-size: .7rem;
+    }
+    
+    #responsiveNav .search-box .search-input::placeholder {
+        color: unset;
+    }
+    
+    #responsiveNav .search-box .search-btn {
+        background-color: #444;
+        color: #fff;
+        border-color: #444;
+        font-size: 0.8em;
+    }
+
+    #responsiveNav .search-box .search-btn:hover {
+        border-color: #666;
+        background-color: #666;
     }
 
     .brand-nav li.nav-item.inactive {
