@@ -3,6 +3,7 @@ $(document).ready(function () {
     // Toggle cart
     $('#cartLink, #cartLinkMobile, .cart-overlay, .dismiss-cart').click(function () {
         $('#cartDropdown, .cart-overlay').toggleClass('active');
+        $('body').toggleClass('overflow-hidden')
     });
 
     // Increment using +/- buttons
@@ -79,12 +80,14 @@ $(document).ready(function () {
     $('#navToggler').on('click', function () {
         $('#responsiveNav').toggleClass('active');
         $('.nav-overlay').toggleClass('active');
+        $('body').toggleClass('overflow-hidden')
     });
 
     // Close and reset nav when clicking outside
     $('.nav-overlay').on('click', function () {
         $('#responsiveNav').toggleClass('active');
         $('.nav-overlay').toggleClass('active');
+        $('body').toggleClass('overflow-hidden')
         $('.menu-level-2, .menu-level-3').removeClass('active');
         $('#responsiveNav .nav-item, #responsiveNav .nav-link, #responsiveNav .level-3').removeClass('inactive');
         $('#responsiveNav .nav-link:not(.level-1), #responsiveNav .menu-header').removeClass('active nav-link-header');
