@@ -185,6 +185,7 @@ ul.account-links li>a:hover {
 
 .brand-bar {
     background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .brand-logo {
@@ -975,12 +976,15 @@ ul.account-links li>a:hover {
     height: 60px;
 }
 
+#productImages .carousel-indicators {
+    position: static;
+    margin: .5rem;
+}
+
 #productImages .carousel-indicators li {
-    width: 15px!important;
-    height: 15px!important;
-    border-radius: 50%!important;
     border: none;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
 }
 
 #productImages .carousel-item .video-outer {
@@ -1008,15 +1012,15 @@ ul.account-links li>a:hover {
 }
 
 #product .product-title {
-    font-size: 2em;
+    font-size: 1.8em;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 #product .price {
-    font-size: 2em;
-    /* font-family: 'Helvetica', 'Arial', sans-serif; */
+    font-size: 1.8em;
     font-weight: bold;
-    color: #fd7702;
+    color: #f47719;
 }
 
 #product .compare-at-price {
@@ -1027,7 +1031,7 @@ ul.account-links li>a:hover {
 
 #product .sale-message {
     font-size: 0.8em;
-    color: #fa5a56;
+    color: #f47719;
 }
 
 .product-options {
@@ -1081,7 +1085,8 @@ ul.account-links li>a:hover {
 
 .add-to-cart-btn {
     text-transform: uppercase;
-    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
     font-size: 1.7em;
 }
 
