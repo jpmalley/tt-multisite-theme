@@ -215,3 +215,55 @@ $(document).ready(function () {
     });
 
 });
+
+// Product image style switch JS
+$(document).ready(function () {
+    $('.style-label').on('click', function () {
+        var idx = parseInt($(this).attr('data-slide-to'));
+        $('#productImages').carousel(idx);
+    });
+});
+
+// Prevent click on disabled buttons
+$(document).ready(function () {
+    $('.btn.btn-outline-secondary.disabled').on('click', function (e) {
+        e.preventDefault();
+    });
+});
+
+// Recommendation module JS
+$(document).ready(function () {
+    $('.recommendations').removeClass('d-none');
+    $('.recommendations').slick({
+        infinite: true,
+        speed: 300,
+        centerMode: true,
+        slidesToShow: 5,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 613,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+});

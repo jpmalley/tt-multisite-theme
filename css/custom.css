@@ -299,8 +299,17 @@ ul.account-links li>a:hover {
         background-color: #666;
     }
 
+    .brand-nav li.nav-item {
+        position: relative;
+        left: 0;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
     .brand-nav li.nav-item.inactive {
-        display: none;
+        position: absolute;
+        left: -250px;
     }
 
     .brand-nav a.nav-link.inactive {
@@ -317,6 +326,10 @@ ul.account-links li>a:hover {
         color: #fff!important;
         background: #444;
         border: 1px solid #444;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        z-index: 10;
     }
 
     .brand-nav .nav a.nav-link.active i, .brand-nav .nav a.menu-header.active i {
@@ -946,6 +959,77 @@ ul.account-links li>a:hover {
     PRODUCT PAGE STYLES
 ----------------------------------------------------- */
 
+#product {
+    margin: 2em 0;
+    padding: 0 10px;
+}
+
+#productImages .fa-chevron-left, #productImages .fa-chevron-right {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+}
+
+#productImages .carousel-control-next, #productImages .carousel-control-prev {
+    top: calc(50% - 30px);
+    height: 60px;
+}
+
+#productImages .carousel-indicators li {
+    width: 15px!important;
+    height: 15px!important;
+    border-radius: 50%!important;
+    border: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+#productImages .carousel-item .video-outer {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+
+#productImages .carousel-item .video-outer .video-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#productImages .carousel-item .video-outer .video-inner .video-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product .product-title {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#product .price {
+    font-size: 2em;
+    /* font-family: 'Helvetica', 'Arial', sans-serif; */
+    font-weight: bold;
+    color: #fd7702;
+}
+
+#product .compare-at-price {
+    font-weight: normal;
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+#product .sale-message {
+    font-size: 0.8em;
+    color: #fa5a56;
+}
+
 .product-options {
     margin-top: 20px;
 }
@@ -980,6 +1064,126 @@ ul.account-links li>a:hover {
     background: linear-gradient(to top left, rgba(108, 117, 125, 0) 0%, rgba(108, 117, 125, 0) calc(50% - 1.5px), #ccc 50%, rgba(108, 117, 125, 0) calc(50% + 1.5px), rgba(108, 117, 125, 0) 100%), linear-gradient(to top right, rgba(108, 117, 125, 0) 0%, rgba(108, 117, 125, 0) calc(50% - 1.5px), #ccc 50%, rgba(108, 117, 125, 0) calc(50% + 1.5px), rgba(108, 117, 125, 0) 100%);
 }
 
+.sizing-guide {
+    margin: 30px 0 45px 0;
+}
+
+.sizing-guide p {
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+
+.sizing-guide a {
+    color: #2694cf;
+}
+
+.add-to-cart-btn {
+    text-transform: uppercase;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.7em;
+}
+
+.product-description {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-description.col-md-4 {
+    padding: 0 25px;
+}
+
+.product-description:last-child {
+    border-right: none;
+}
+
+.product-description h5 {
+    text-align: center;
+    color: #7dbf39;
+    margin-bottom: 10px;
+}
+
+.product-description p {
+    margin-bottom: 10px;
+}
+
+.product-description ul {
+    margin-left: 15px;
+}
+
+.feat-heading {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.recommendations .product {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.recommendations .product .price {
+    font-size: 16px;
+}
+
+.recommendations .slick-prev, .recommendations .slick-next {
+    top: 40%;
+}
+
+.recommendations .slick-prev::before, .recommendations .slick-next::before {
+    font-size: 28px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.recommendations .product[aria-hidden="true"] {
+    opacity: .3;
+}
+
+.recommendations .product[aria-hidden="true"]>div {
+    opacity: 0;
+}
+
+.featured .feat-heading {
+    margin-bottom: 20px;
+}
+
+.featured a:hover {
+    opacity: .6;
+}
+
+#sizingGuide {
+    text-align: center;
+}
+
+#sizingGuide h2 {
+    margin: 5px 0 10px 0;
+}
+
+#sizingGuide p {
+    font-size: 14px;
+}
+
+#sizingGuide .size-chart {
+    margin: 2% auto 5% auto;
+}
+
+#sizingGuide .modal-dialog {
+    max-width: 870px;
+}
+
+#sizingGuide .collection-link {
+    max-width: 90%;
+    margin: 0 auto 10% auto;
+}
+
+#sizingGuide .embed-responsive {
+    max-width: 600px;
+    margin: 10% auto 5% auto;
+}
+
+.preorder-btn {
+    background: #2694cf;
+    border-color: #2694cf;
+}
 
 /* ---------------------------------------------------
     FOOTER STYLES
@@ -1052,6 +1256,174 @@ ul.account-links li>a:hover {
 }
 
 
+/* ---------------------------------------------------
+    SLICK SLIDER STYLE
+----------------------------------------------------- */
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* Arrows */
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 55%;
+    display: block;
+    width: 12.5px;
+    height: 50px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 2;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+    opacity: 1;
+}
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #fff;
+    display: inline-block;
+    font-style: normal;
+    font-size: 20px;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.slick-prev {
+    left: 15px;
+}
+
+.slick-prev:before {
+    content: "\f053";
+}
+
+.slick-next {
+    right: 15px;
+}
+
+.slick-next:before {
+    content: "\f054";
+}
 /* ---------------------------------------------------
     TEMPORARY STYLES FOR DESIGN
 ----------------------------------------------------- */

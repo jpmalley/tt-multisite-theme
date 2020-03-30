@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TeeTurtle - Cute, nerdy, pop-culture t-shirts!</title>
 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" href="css/tt-bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
 
@@ -50,7 +51,7 @@
             </ul>
         </div>
         <div class="universal-bar-right d-none d-md-flex">
-            <form action="" class="search-form d-none d-lg-block">
+            <form action="" class="search-form d-none d-md-block">
                 <div class="input-group search-box">
                     <input class="form-control form-control-sm search-input" type="text" placeholder="Search..."
                         aria-label="Search">
@@ -185,6 +186,19 @@
                 <ul class="nav menu-level-1">
                     <li class="nav-item d-md-none">
                         <a href="#" class="nav-link nav-link-header level-1"><i class="fas fa-times"></i> Menu</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <form action="" class="search-form">
+                            <div class="input-group search-box">
+                                <input class="form-control search-input" type="text" placeholder="Search..."
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text btn search-btn" id="sidebar-search">
+                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </li>
                     <li class="nav-item">
                         <div class="nav-link-wrapper">
@@ -821,7 +835,9 @@
                                         <div class="video-center">
                                             <div class="embed-responsive embed-responsive-16by9">
                                                 <iframe class="embed-responsive-item"
-                                                src="https://www.youtube.com/embed/vt3D41UiGlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    src="https://www.youtube.com/embed/vt3D41UiGlI" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -855,8 +871,7 @@
                             </div>
                             <div class="form-group clearfix">
                                 <div class="group-label">Style</div>
-                                <input class="style-radio" type="radio" name="style" id="style-1"
-                                    checked="checked">
+                                <input class="style-radio" type="radio" name="style" id="style-1" checked="checked">
                                 <label class="style-label btn btn-outline-secondary" data-slide-to="2"
                                     for="style-1">Men's</label>
                                 <input class="style-radio" type="radio" name="style" id="style-2">
@@ -868,12 +883,10 @@
                             </div>
                             <div class="form-group clearfix">
                                 <div class="group-label">Size</div>
-                                <input class="size-radio" type="radio" name="size" id="size-1"
-                                    checked="checked">
+                                <input class="size-radio" type="radio" name="size" id="size-1" checked="checked">
                                 <label class="size-label btn btn-outline-secondary" for="size-1">S</label>
                                 <input class="size-radio" type="radio" name="size" id="size-2">
-                                <label class="size-label btn btn-outline-secondary disabled"
-                                    for="size-2">M</label>
+                                <label class="size-label btn btn-outline-secondary disabled" for="size-2">M</label>
                                 <input class="size-radio" type="radio" name="size" id="size-3">
                                 <label class="size-label btn btn-outline-secondary" for="size-3">L</label>
                                 <input class="size-radio" type="radio" name="size" id="size-4">
@@ -890,7 +903,8 @@
                                 </p>
                             </div>
                             <div class="form-group clearfix">
-                                <button type="submit" class="btn btn-lg btn-block btn-primary add-to-cart-btn preorder-btn">Preorder</button>
+                                <button type="submit"
+                                    class="btn btn-lg btn-block btn-primary add-to-cart-btn preorder-btn">Preorder</button>
                             </div>
                             <div class="preorder-msg alert alert-secondary text-center">
                                 This product may take an additional 1-2 weeks to ship
@@ -908,7 +922,6 @@
                     </div>
                 </div>
             </div>
-            <!--end of row-->
             <hr>
             <div class="row">
                 <div class="col-md-4 product-description">
@@ -930,18 +943,16 @@
                 </div>
                 <div class="col-md-4 product-description">
                     <h5>Care Instructions</h5>
-                    <ul>
-                        <li>Wash cold</li>
-                        <li>Tumble dry low</li>
-                        <li>Do not iron</li>
-                        <li>Wear with pride</li>
-                    </ul>
+                    <p>
+                        > Wash cold <br>
+                        > Tumble dry low <br>
+                        > Do not iron <br>
+                        > Wear with pride <br>
+                    </p>
                 </div>
             </div>
-            <!--end of row-->
             <hr>
         </div>
-        <!--end of container-->
         <div class="container featured">
             <div class="row">
                 <div class="col-12">
@@ -958,8 +969,7 @@
                 </div>
                 <div class="col-md-4">
                     <a href="#">
-                        <img class="img-fluid" src="img/final-clearance-collection-button2_800x.jpg"
-                            alt="Plushies">
+                        <img class="img-fluid" src="img/final-clearance-collection-button2_800x.jpg" alt="Plushies">
                     </a>
                 </div>
                 <div class="col-md-4">
@@ -986,7 +996,7 @@
                                 aria-label="Newsletter Signup">
                             <div class="input-group-append">
                                 <button type="submit" class="input-group-text btn" id="email-submit">
-                                    <h6>Submit</h3>
+                                    Submit
                                 </button>
                             </div>
                         </div>
@@ -1055,6 +1065,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="js/scripts.js"></script>
 </body>
