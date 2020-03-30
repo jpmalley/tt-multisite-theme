@@ -1,10 +1,5 @@
-// Cart dropdown JS
+// Cart drawer JS
 $(document).ready(function () {
-    // Toggle cart
-    $('#cartLink, #cartLinkMobile, .cart-overlay, .dismiss-cart').click(function () {
-        $('#cartDropdown, .cart-overlay').toggleClass('active');
-        $('body').toggleClass('overflow-hidden');
-    });
 
     // Increment using +/- buttons
     $('.btn-number').click(function (e) {
@@ -71,6 +66,40 @@ $(document).ready(function () {
         }
     });
 
+    // Dismiss cart
+    $('#dismissCart, .cart-overlay').on('click', function () {
+        $('#cart, #cart-email-prompt, #cart-sign-up').removeClass('active');
+        $('body').removeClass('overflow-hidden');
+        $('.cart-overlay').removeClass('active');
+    });
+    // Cart back button
+    $('.cart-back-btn').on('click', function () {
+        var closeId = $(this).closest('.cart-drawer').attr('id');
+        $('#' + closeId).removeClass('active');
+    });
+    // Open cart
+    $('#cartLink, #cartLinkMobile').on('click', function () {
+        $('#cart').addClass('active');
+        $('body').addClass('overflow-hidden');
+        $('.cart-overlay').addClass('active');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+    $('#checkOut').on('click', function () {
+        $('#cart-email-prompt').addClass('active');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+    $('#emailContinue').on('click', function () {
+        var emailValue = $('#cart-email-init').val();
+        if (emailValue) {
+            $('#cart-sign-in').addClass('active');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        } else {
+            $('#cart-sign-up').addClass('active');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        }
+    });
 });
 
 // Mobile nav
