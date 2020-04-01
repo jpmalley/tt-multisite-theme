@@ -239,22 +239,16 @@ ul.account-links li>a:hover {
     outline: none;
 }
 
-
-.brand-nav ul.menu-level-1>li:last-child .nav-link {
-    color: #ec3f8d!important;
-}
-
 /* Mobile Nav Styles */
 @media (max-width: 767.98px) {
     .brand-nav {
         padding: 0;
     }
     
-    #responsiveNav {
+    #mobileNav {
         width: 250px;
         background: #fff;
         color: #000;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         transition: all 0.3s;
         position: fixed;
         top: 0px;
@@ -263,61 +257,48 @@ ul.account-links li>a:hover {
         z-index: 1002;
         overflow-y: auto;
         overflow-x: hidden;
-        box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
         margin: .5rem;
         border-radius: .25rem;
     }
     
-    #responsiveNav.active {
+    #mobileNav.active {
         left: 0;
+        box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
     }
 
-    #responsiveNav .search-form {
+    #mobileNav .search-form {
         max-width: 100%;
         margin: 1rem 1rem .5rem 1rem;
     }
 
-    #responsiveNav .search-box .search-input {
+    #mobileNav .search-box .search-input {
         background-color: #fff;
         color: #444;
         border-color: #444;
         font-size: .7rem;
     }
     
-    #responsiveNav .search-box .search-input::placeholder {
-        color: unset;
-    }
-    
-    #responsiveNav .search-box .search-btn {
+    #mobileNav .search-box .search-btn {
         background-color: #444;
         color: #fff;
         border-color: #444;
         font-size: 0.8em;
     }
 
-    #responsiveNav .search-box .search-btn:hover {
+    #mobileNav .search-box .search-btn:hover {
         border-color: #666;
         background-color: #666;
     }
 
-    .brand-nav li.nav-item {
-        position: relative;
-        left: 0;
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-
     .brand-nav li.nav-item.inactive {
-        position: absolute;
-        left: -250px;
+        display: none;
     }
 
     .brand-nav a.nav-link.inactive {
         display: none;
     }
 
-    .brand-nav .nav a.nav-link i, .brand-nav .nav a.menu-header i {
+    .brand-nav .nav a.nav-link i {
         position: absolute;
         top: 11px;
         right: 15px;
@@ -327,37 +308,16 @@ ul.account-links li>a:hover {
         color: #fff!important;
         background: #444;
         border: 1px solid #444;
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
         z-index: 10;
     }
 
-    .brand-nav .nav a.nav-link.active i, .brand-nav .nav a.menu-header.active i {
+    .brand-nav .nav a.nav-link.active i {
         transform: rotate(-180deg);
-    }
-
-    .brand-nav .nav a.menu-header {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        color: #000;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        position: relative;
-        outline: none;
-        padding: .5rem 1rem;
-        display: block;
-    }
-
-    .brand-nav .nav a.menu-header.inactive {
-        display: none;
     }
 
     .brand-nav .nav ul.menu-level-3 li {
         font-size: 14px;
         padding: .5rem 1rem;
-
     }
 
     .brand-nav .menu-level-1 {
@@ -370,8 +330,6 @@ ul.account-links li>a:hover {
 
     .brand-nav .menu-level-2.active {
         display: block;
-        padding: 0;
-        margin: 0;
     }
     
     .brand-nav .menu-level-3 {
@@ -380,6 +338,10 @@ ul.account-links li>a:hover {
 
     .brand-nav .menu-level-3.active {
         display: block;
+    }
+
+    .brand-nav ul.menu-level-1>li:last-child>.nav-link {
+        color: #ec3f8d!important;
     }
 
     .mobile-account-links {
@@ -421,7 +383,7 @@ ul.account-links li>a:hover {
         padding: 4px;
     }
 
-    #responsiveNav {
+    #desktopNav {
         display: flex;
         justify-content: center;
         width: initial;
@@ -524,6 +486,10 @@ ul.account-links li>a:hover {
     
     .brand-dropdown a.menu-link:hover {
         color: #2694cf;
+    }
+
+    #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
+        color: #ec3f8d!important;
     }
 }
 

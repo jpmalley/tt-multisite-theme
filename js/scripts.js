@@ -107,65 +107,64 @@ $(document).ready(function () {
 
     // Open nav
     $('#navToggler').on('click', function () {
-        $('#responsiveNav').toggleClass('active');
+        $('#mobileNav').toggleClass('active');
         $('.nav-overlay').toggleClass('active');
         $('body').toggleClass('overflow-hidden');
     });
 
     // Close and reset nav when clicking outside
     $('.nav-overlay').on('click', function () {
-        $('#responsiveNav').toggleClass('active');
+        $('#mobileNav').toggleClass('active');
         $('.nav-overlay').toggleClass('active');
         $('body').toggleClass('overflow-hidden');
-        $('.menu-level-2, .menu-level-3').removeClass('active');
-        $('#responsiveNav .nav-item, #responsiveNav .nav-link, #responsiveNav .level-3').removeClass('inactive');
-        $('#responsiveNav .nav-link:not(.level-1), #responsiveNav .menu-header').removeClass('active nav-link-header');
+        $('ul.menu-level-2, ul.menu-level-3').removeClass('active');
+        $('.nav-link-header:not(.link-level-0').removeClass('nav-link-header active');
+        $('li.nav-item, a.link-level-1').removeClass('inactive');
     });
 
     // Close menu button
-    $('#responsiveNav').on('click', 'a.nav-link-header.level-1', function(e) {
+    $('#mobileNav').on('click', 'a.nav-link-header.link-level-0', function(e) {
         e.preventDefault();
-        $('#responsiveNav').removeClass('active');
+        $('#mobileNav').removeClass('active');
         $('.nav-overlay').removeClass('active');
     });
 
     // From level 1 to level 2
-    $('#responsiveNav').on('click', 'a.nav-link:not(.nav-link-header, .acct-link)', function(e) {
+    $('#mobileNav').on('click', 'a.link-level-1:not(.nav-link-header, .acct-link)', function(e) {
         e.preventDefault();
         var el = $(this);
-        el.addClass('active nav-link-header')
-        el.next('.brand-dropdown').children('.menu-level-2').addClass('active');
-        el.closest('li.nav-item').siblings('.nav-item').addClass('inactive');
+        el.addClass('active nav-link-header');
+        el.next('ul.menu-level-2').addClass('active');
+        el.closest('li.nav-item').siblings('li.nav-item').addClass('inactive');
     });
 
     // From level 2 to level 1
-    $('#responsiveNav').on('click', 'a.nav-link-header.level-2', function (e) {
+    $('#mobileNav').on('click', 'a.nav-link-header.link-level-1', function (e) {
         e.preventDefault();
         var el = $(this);
-        el.removeClass('active nav-link-header')
-        $('.brand-dropdown').children('.menu-level-2').removeClass('active');
-        el.parent().siblings('.nav-item').find('a.nav-link').removeClass('active');
-        el.closest('li.nav-item').siblings('.nav-item').removeClass('inactive');
+        el.removeClass('active nav-link-header');
+        $('ul.menu-level-2').removeClass('active');
+        el.closest('li.nav-item').siblings('li.nav-item').removeClass('inactive');
     });
 
     // From level 2 to level 3
-    $('#responsiveNav').on('click', 'a.menu-header:not(.active)', function(e) {
+    $('#mobileNav').on('click', 'a.link-level-2:not(.active)', function(e) {
         e.preventDefault();
         var el = $(this);
-        el.addClass('active nav-link-header')
-        el.parent().siblings().children('a.menu-header').addClass('inactive');
-        el.closest('.brand-dropdown').siblings('a.nav-link').removeClass('active').addClass('inactive');
-        el.siblings().addClass('active');
+        el.addClass('active nav-link-header');
+        el.next('ul.menu-level-3').addClass('active');
+        el.closest('li.nav-item').siblings('li.nav-item').addClass('inactive');
+        el.closest('.menu-level-2').siblings('a.link-level-1').addClass('inactive');
     });
 
     // From level 3 to level 2
-    $('#responsiveNav').on('click', 'a.nav-link-header.level-3', function (e) {
+    $('#mobileNav').on('click', 'a.nav-link-header.link-level-2', function (e) {
         e.preventDefault();
         var el = $(this);
         el.removeClass('active nav-link-header')
-        el.parent().siblings().children('a.menu-header').removeClass('inactive');
-        el.siblings().removeClass('active');   
-        el.closest('.brand-dropdown').siblings().removeClass('inactive').addClass('active nav-link-header');
+        $('ul.menu-level-3').removeClass('active');
+        el.closest('li.nav-item').siblings('li.nav-item').removeClass('inactive');
+        el.closest('.menu-level-2').siblings('a.link-level-1').removeClass('inactive');
     });
 });
 
