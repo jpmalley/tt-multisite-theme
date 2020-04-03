@@ -377,6 +377,8 @@ ul.account-links li>a:hover {
 @media (min-width: 768px) {
     .brand-logo {
         height: 50px;
+        margin-top: 1.25rem;
+        margin-bottom: .5rem;
     }
     .brand-nav {
         width: 100%;
