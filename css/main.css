@@ -191,9 +191,7 @@ ul.account-links li>a:hover {
 .brand-logo {
     display: block;
     position: relative;
-    height: 24px;
     width: auto;
-    margin: 1em;
 }
 
 .mobile-nav {
@@ -375,11 +373,6 @@ ul.account-links li>a:hover {
 
 /* Desktop Nav Styles */
 @media (min-width: 768px) {
-    .brand-logo {
-        height: 50px;
-        margin-top: 1.25rem;
-        margin-bottom: .5rem;
-    }
     .brand-nav {
         width: 100%;
         padding: 4px;
@@ -742,6 +735,10 @@ ul.account-links li>a:hover {
 
 #homepage .shop-category {
     margin-bottom: 30px;
+}
+
+#homepage .shop-category .col-6 {
+    margin-bottom: 20px;
 }
 
 #homepage .shop-by-group {
@@ -1463,6 +1460,51 @@ ul.account-links li>a:hover {
 .slick-next:before {
     content: "\f054";
 }
+
+
 /* ---------------------------------------------------
-    TEMPORARY STYLES FOR DESIGN
+    TeeTurtle SPECIFIC STYLES
+----------------------------------------------------- */
+
+#teeturtle .brand-logo {
+    height: 24px;
+    margin: 1em;
+}
+
+@media (min-width: 768px) {
+    #teeturtle .brand-logo {
+        height: 50px;
+        margin-top: 1.25rem;
+        margin-bottom: .5rem;
+    }
+}
+
+
+/* ---------------------------------------------------
+    Fandoms SPECIFIC STYLES
+----------------------------------------------------- */
+
+#fandoms .brand-logo {
+    height: 40px;
+    margin: .5rem;
+}
+
+@media (min-width: 768px) {
+    #fandoms .brand-logo {
+        height: 70px;
+        margin-top: .75rem;
+        margin-bottom: .25rem;
+    }
+}
+
+
+/* ---------------------------------------------------
+    Chibi Puffs SPECIFIC STYLES
+----------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------
+    Unstable Unicorns SPECIFIC STYLES
 ----------------------------------------------------- */
