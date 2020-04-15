@@ -69,7 +69,7 @@ strong {
     transition: all 0.3s;
 }
 
-.universal-link img {
+.universal-link img, .universal-link svg {
     display: block;
     height: 36px;
     width: auto;
@@ -77,6 +77,10 @@ strong {
 
 .universal-link.active {
     background-color: #fff;
+}
+
+.universal-link:not(.active) svg path {
+    fill: #bbb!important;
 }
 
 .universal-link:hover:not(.active) {
@@ -484,7 +488,7 @@ ul.account-links li>a:hover {
     }
 
     #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
-        color: #ec3f8d!important;
+        color: #a19b9e;
     }
 }
 
@@ -727,7 +731,7 @@ ul.account-links li>a:hover {
     margin: 20px 0;
 }
 
-#homepage .shop-category .see-all a h6 {
+#homepage .see-all a h6 {
     text-align: center;
     text-decoration: underline;
     margin: 15px 0;
@@ -1499,11 +1503,156 @@ ul.account-links li>a:hover {
 
 
 /* ---------------------------------------------------
-    Chibi Puffs SPECIFIC STYLES
+    Chibipuffs SPECIFIC STYLES
 ----------------------------------------------------- */
 
+/* This is a global style, but specific to the chibipuff 
+   logo when it is inactive on other storefronts */
+.universal-link:not(.active) #chibi-svg .cls-1,
+.universal-link:not(.active) #chibi-svg .cls-2,
+.universal-link:not(.active) #chibi-svg .cls-3,
+.universal-link:not(.active) #chibi-svg .cls-5 {
+    fill: none!important;
+}
 
+#chibipuffs h1, 
+#chibipuffs h2, 
+#chibipuffs h3, 
+#chibipuffs h4, 
+#chibipuffs h5, 
+#chibipuffs h6 {
+    font-family: atten-round-new, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #44667B;
+    letter-spacing: 1px;
+}
 
+/* Universal Nav */
+#chibipuffs #universal-nav {
+    background: #4cceee;
+    color: #fff;
+}
+
+#chibipuffs .universal-link:hover:not(.active) {
+    background-color: #8edcf0;
+}
+
+#chibipuffs .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+
+#chibipuffs .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+#chibipuffs .universal-link:not(.active) svg path {
+    fill: #fff!important;
+}
+
+#chibipuffs .search-box .search-input {
+    background-color: #4cceee;
+    color: #fff;
+    border-color: #fff;
+}
+
+#chibipuffs .search-box .search-input::placeholder {
+    color: #fff;
+}
+
+#chibipuffs .search-box .search-btn {
+    background-color: #8edcf0;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+#chibipuffs ul.account-links li.nav-item {
+    border-right: 2px solid #fff;
+}
+
+#chibipuffs ul.account-links li.nav-item:last-child {
+    border: 0;
+}
+
+@media (min-width: 768px) {
+    #chibipuffs .cart-counter {
+        color: #4cceee;
+    }
+}
+
+/* Promo Bar */
+#chibipuffs .promo-bar {
+    background: #493499;
+}
+
+#chibipuffs .promo-bar h5 {
+    color: #fff;
+}
+
+/* Brand Bar */
+#chibipuffs .brand-logo {
+    height: 40px;
+    margin: .5rem;
+}
+
+@media (min-width: 768px) {
+    #chibipuffs .brand-logo {
+        height: 120px;
+        margin-top: .75rem;
+        margin-bottom: .25rem;
+    }
+}
+
+#chibipuffs #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
+    color: #4cceee;
+}
+
+/* Desktop Nav Styles */
+@media (min-width: 768px) {
+    #chibipuffs .brand-nav .nav .nav-link::after {
+        background: #493499;
+    }
+
+    #chibipuffs .brand-nav ul>li:last-child .nav-link::after {
+        background: #4cceee!important;
+    }
+}
+
+/* Homepage */
+#chibipuffs #homepage .shop-characters .col-6 {
+    padding: 0;
+}
+
+/* Footer */
+.footer {
+    background: #C8F5FF url(../img/footer-unicorn.svg) right bottom no-repeat;
+    background-size: auto 280px;
+    position: relative;
+    min-height: 300px;
+    font-weight: 700;
+    color: #44667B;
+}
+
+.footer p {
+    color: #44667B;
+    font-weight: 700;
+}
+
+#email-submit {
+    background: #44667B;
+    border: 1px solid #44667B;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+
+.social-icons a:hover {
+    color: #2694cf;
+}
+
+.footer-nav a:hover {
+    color: #2694cf;
+}
 
 /* ---------------------------------------------------
     Unstable Unicorns SPECIFIC STYLES
