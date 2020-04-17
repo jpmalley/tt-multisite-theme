@@ -69,7 +69,7 @@ strong {
     transition: all 0.3s;
 }
 
-.universal-link img, .universal-link svg {
+.universal-link img {
     display: block;
     height: 36px;
     width: auto;
@@ -79,12 +79,16 @@ strong {
     background-color: #fff;
 }
 
-.universal-link:not(.active) svg path {
-    fill: #bbb!important;
+.universal-link:not(.active) img {
+    opacity: .5;
 }
 
 .universal-link:hover:not(.active) {
     background-color: #666666;
+}
+
+.universal-link:hover:not(.active) img {
+    opacity: 1;
 }
 
 .search-form {
@@ -1506,15 +1510,6 @@ ul.account-links li>a:hover {
     Chibipuffs SPECIFIC STYLES
 ----------------------------------------------------- */
 
-/* This is a global style, but specific to the chibipuff 
-   logo when it is inactive on other storefronts */
-.universal-link:not(.active) #chibi-svg .cls-1,
-.universal-link:not(.active) #chibi-svg .cls-2,
-.universal-link:not(.active) #chibi-svg .cls-3,
-.universal-link:not(.active) #chibi-svg .cls-5 {
-    fill: none!important;
-}
-
 #chibipuffs h1, 
 #chibipuffs h2, 
 #chibipuffs h3, 
@@ -1534,8 +1529,12 @@ ul.account-links li>a:hover {
     color: #fff;
 }
 
+#chibipuffs .universal-link:not(.active) img {
+    opacity: .8;
+}
+
 #chibipuffs .universal-link:hover:not(.active) {
-    background-color: #8edcf0;
+    background-color: #0cbeeb;
 }
 
 #chibipuffs .navbar-dark .navbar-nav .nav-link {
@@ -1544,10 +1543,6 @@ ul.account-links li>a:hover {
 
 #chibipuffs .navbar-dark .navbar-nav .nav-link:hover {
     color: rgba(255, 255, 255, .5);
-}
-
-#chibipuffs .universal-link:not(.active) svg path {
-    fill: #fff!important;
 }
 
 #chibipuffs .search-box .search-input {
