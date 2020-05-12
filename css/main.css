@@ -492,7 +492,7 @@ ul.account-links li>a:hover {
     }
 
     #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
-        color: #a19b9e;
+        color: #ec3f8d;
     }
 }
 
@@ -1652,3 +1652,63 @@ ul.account-links li>a:hover {
 /* ---------------------------------------------------
     Unstable Unicorns SPECIFIC STYLES
 ----------------------------------------------------- */
+
+#unstable .brand-logo {
+    height: 40px;
+    margin: .5em;
+}
+
+/* Promo Bar */
+#unstable .promo-bar {
+    background: #2694cf;
+}
+
+#unstable .mobile-nav {
+    height: 35px;
+    top: 44px;
+}
+
+#unstable .search-box .search-input {
+    background-color: #fff;
+    color: #000;
+    border-color: #2694cf;
+    font-size: .7rem;
+}
+
+#unstable .search-box .search-input::placeholder {
+    color: #2694cf;
+}
+
+#unstable .search-box .search-btn {
+    background-color: #c9ecfd;
+    color: #2694cf;
+    font-size: 0.8em;
+    border-color: #2694cf;
+}
+
+#unstable ul.account-links li>a {
+    padding: 0 .5rem;
+    color: #2694cf;
+}
+#unstable .nav-link.cart-link {
+    padding: 0;
+}
+
+.mobile-nav .cart-counter {
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    right: 23px;
+}
+
+@media (min-width: 768px) {
+    #unstable .brand-logo {
+        height: 70px;
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    #unstable .mobile-nav {
+        top: 71px;
+    }
+}
