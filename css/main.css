@@ -418,7 +418,7 @@ ul.account-links li>a:hover {
         content: '';
         background: #f47719;
         left: 0px;
-        bottom: -5px;
+        bottom: 0px;
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s;
@@ -450,7 +450,6 @@ ul.account-links li>a:hover {
         left: 0;
         top: 45px;
         width: 100%;
-        border-top: 1px solid #e6e6e6;
         border-bottom: 1px solid #e6e6e6;
         padding: 20px 0;
         opacity: 0;
@@ -775,6 +774,23 @@ ul.account-links li>a:hover {
 #homepage .shop-by-footer h6 {
     margin: .8rem 0 .7rem 0;
     color: #fff;
+}
+
+@media (max-width: 767.98px) {
+    #homepage .shop-by-title {
+        font-size: 1.1rem;
+        letter-spacing: .5px;
+    }
+
+    #homepage .shop-by-group h6 {
+        font-size: 0.9rem;
+        letter-spacing: .5px;
+    }
+
+    #homepage .shop-by-group .col-6 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 .customer-service {
@@ -1482,8 +1498,8 @@ ul.account-links li>a:hover {
 @media (min-width: 768px) {
     #teeturtle .brand-logo {
         height: 50px;
-        margin-top: 1.25rem;
-        margin-bottom: .5rem;
+        margin-top: 1.75rem;
+        margin-bottom: 1.25rem;
     }
 }
 
@@ -1500,8 +1516,8 @@ ul.account-links li>a:hover {
 @media (min-width: 768px) {
     #fandoms .brand-logo {
         height: 70px;
-        margin-top: .75rem;
-        margin-bottom: .25rem;
+        margin-top: 1.25rem;
+        margin-bottom: .75rem;
     }
 }
 
@@ -1709,6 +1725,6 @@ ul.account-links li>a:hover {
     }
 
     #unstable .mobile-nav {
-        top: 71px;
+        top: 44px;
     }
 }

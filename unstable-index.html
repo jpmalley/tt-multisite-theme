@@ -1133,9 +1133,30 @@
     <section id="homepage">
         <div class="container-fluid main-banner">
             <div class="row">
-                <a href="#">
-                    <img src="img/placeholder-1200x400.jpg" alt="">
-                </a>
+                <div id="mainCarousel" class="carousel slide w-100" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mainCarousel" data-slide-to="1"></li>
+                        <li data-target="#mainCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="#">
+                                <img src="img/placeholder-1200x400.jpg" class="d-block w-100" alt="">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="img/placeholder-1200x400.jpg" class="d-block w-100" alt="">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="img/placeholder-1200x400.jpg" class="d-block w-100" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container featured-products">
