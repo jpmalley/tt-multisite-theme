@@ -46,9 +46,9 @@ strong {
     overflow: hidden;
 }
 
-.container-fluid a, .container-fluid img {
+/* .container-fluid a, .container-fluid img {
     width: 100%;
-}
+} */
 
 /* ---------------------------------------------------
     UNIVERSAL BAR STYLE
@@ -734,6 +734,10 @@ ul.account-links li>a:hover {
     margin: 20px 0;
 }
 
+#homepage .secondary-banner a, #homepage .secondary-banner img {
+    width: 100%;
+}
+
 #homepage .see-all a h6 {
     text-align: center;
     text-decoration: underline;
@@ -1315,9 +1319,319 @@ ul.account-links li>a:hover {
     margin-top: 15px;
 }
 
+/* ---------------------------------------------------
+    CHECKOUT STYLES
+----------------------------------------------------- */
+
+#checkout h2 {
+    line-height: 1rem;
+}
+
+#checkout h6 {
+    text-transform: unset;
+    letter-spacing: normal;
+}
+
+#checkout button.btn-link {
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+
+#checkout .accordion {
+    margin: 2rem 0;
+}
+
+#checkout .marketing-disclaimer {
+    font-size: 0.75rem;
+}
+
+#checkout input:not([type="text"]) {
+    cursor: pointer;
+}
+
+#checkout select {
+    height: 50px;
+    color: #6c757d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+}
+
+#checkout i.dropdown-arrow {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 20px;
+    color: #6c757d;
+    pointer-events: none;
+}
+
+#checkout button.continue {
+    height: 50px;
+    font-weight: bold;
+}
+
+.shipping-options input {
+    display: none;
+}
+
+.shipping-options label {
+    min-width: 150px;
+    padding: 16px;
+}
+
+.shipping-options input:checked+label {
+    background: #2694cf;
+    border-color: #2694cf;
+    color: #fff;
+}
+
+.shipping-options .shipping-title {
+    font-weight: bold;
+}
+
+.shipping-options .shipping-est {
+    font-size: 12px;
+}
+
+.shipping-options .shipping-price {
+    font-weight: bold;
+}
+
+#checkout .selected-wrapper {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    color: #6c757d;
+}
+
+.option-icon {
+    font-size: 24px;
+    line-height: 24px;
+    margin-right: 0.5rem;
+}
+
+.option-text {
+    text-align: left;
+}
+
+.option-address {
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.selector-arrow i {
+    font-size: 20px;
+}
+
+.modal-select-options input {
+    display: none;
+}
+
+.modal-select-options label {
+    width: 100%;
+    padding: 16px;
+}
+
+.modal-select-options input:checked+label {
+    background: #2694cf;
+    border-color: #2694cf;
+    color: #fff;
+}
+
+#couponCodeWrapper input {
+    height: 50px;
+}
+
+#couponCodeWrapper button {
+    font-weight: bold;
+    padding: 6px 16px;
+}
+
+.accepted-cc i {
+    font-size: 38px;
+    margin-right: 4px;
+    color: #6c757d;
+}
+
+#payTabs li {
+    position: relative;
+}
+
+#payTabs li a {
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#payTabs li a:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#payTabs>li>a::after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 4px;
+    content: '';
+    background: #f47719;
+    transition: all 0.3s;
+    left: 0px;
+    bottom: -5px;
+}
+
+#payTabs>li>a.active::after {
+    opacity: 1;
+    width: 100%;
+}
+
+p.third-party-disclaimer {
+    font-size: .9rem;
+}
+
+button.place-order {
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.order-summary-wrapper {
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: .25rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+    .order-summary-header {
+        margin-top: 2rem;
+    }
+}
+
+.order-line-items {
+    border-top: 1px solid rgb(223, 223, 223);
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.order-item {
+    border-bottom: 1px solid rgb(223, 223, 223);
+    position: relative;
+    padding: 15px 0;
+    margin: 0 15px;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item-contents {
+    padding: 0;
+}
+
+.order-summary-info {
+    padding-left: 0;
+}
+
+.order-summary-title {
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.order-summary-variant {
+    font-size: 0.8em;
+}
+
+.order-summary-qtyamt .qty {
+    font-size: 0.8em;
+}
+
+.remove-item-checkout {
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.order-subtotal {
+    padding: 15px;
+}
+
+.order-subtotal .subtotal {
+    margin-bottom: 10px;
+}
+
+#checkout .total {
+    margin-bottom: 0;
+}
+
+.order-total {
+    padding: 15px;
+}
+
 
 /* ---------------------------------------------------
-    SLICK SLIDER STYLE
+    FLOATING FORM LABEL STYLES
+----------------------------------------------------- */
+
+:root {
+    --input-padding-x: .75rem;
+    --input-padding-y: .75rem;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-label-group>input, .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>input {
+    height: 50px;
+}
+
+.form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #6c757d;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+    cursor: text;
+}
+
+.form-label-group input::-webkit-input-placeholder,
+.form-label-group input:-ms-input-placeholder,
+.form-label-group input::-ms-input-placeholder,
+.form-label-group input::-moz-placeholder,
+.form-label-group input::placeholder {
+    color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    opacity: 1;
+    color: #777;
+}
+
+/* ---------------------------------------------------
+    SLICK SLIDER STYLES
 ----------------------------------------------------- */
 
 /* Slider */
@@ -1635,7 +1949,7 @@ ul.account-links li>a:hover {
 }
 
 /* Footer */
-.footer {
+#chibipuffs .footer {
     background: #C8F5FF url(../img/footer-unicorn.svg) right bottom no-repeat;
     background-size: auto 280px;
     position: relative;
@@ -1644,12 +1958,12 @@ ul.account-links li>a:hover {
     color: #44667B;
 }
 
-.footer p {
+#chibipuffs .footer p {
     color: #44667B;
     font-weight: 700;
 }
 
-#email-submit {
+#chibipuffs #email-submit {
     background: #44667B;
     border: 1px solid #44667B;
     text-transform: uppercase;
@@ -1657,11 +1971,11 @@ ul.account-links li>a:hover {
     font-weight: 600;
 }
 
-.social-icons a:hover {
+#chibipuffs .social-icons a:hover {
     color: #2694cf;
 }
 
-.footer-nav a:hover {
+#chibipuffs .footer-nav a:hover {
     color: #2694cf;
 }
 

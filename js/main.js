@@ -123,14 +123,14 @@ $(document).ready(function () {
     });
 
     // Close menu button
-    $('#mobileNav').on('click', 'a.nav-link-header.link-level-0', function(e) {
+    $('#mobileNav').on('click', 'a.nav-link-header.link-level-0', function (e) {
         e.preventDefault();
         $('#mobileNav').removeClass('active');
         $('.nav-overlay').removeClass('active');
     });
 
     // From level 1 to level 2
-    $('#mobileNav').on('click', 'a.link-level-1:not(.nav-link-header, .acct-link)', function(e) {
+    $('#mobileNav').on('click', 'a.link-level-1:not(.nav-link-header, .acct-link)', function (e) {
         e.preventDefault();
         var el = $(this);
         el.addClass('active nav-link-header');
@@ -148,7 +148,7 @@ $(document).ready(function () {
     });
 
     // From level 2 to level 3
-    $('#mobileNav').on('click', 'a.link-level-2:not(.active)', function(e) {
+    $('#mobileNav').on('click', 'a.link-level-2:not(.active)', function (e) {
         e.preventDefault();
         var el = $(this);
         el.addClass('active nav-link-header');
@@ -260,38 +260,197 @@ $(document).ready(function () {
 });
 
 // Recommendation module JS
-$(document).ready(function () {
-    $('.recommendations').removeClass('d-none');
-    $('.recommendations').slick({
-        infinite: true,
-        speed: 300,
-        centerMode: true,
-        slidesToShow: 5,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 613,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+// $(document).ready(function () {
+//     $('.recommendations').removeClass('d-none');
+//     $('.recommendations').slick({
+//         infinite: true,
+//         speed: 300,
+//         centerMode: true,
+//         slidesToShow: 5,
+//         responsive: [
+//             {
+//                 breakpoint: 1200,
+//                 settings: {
+//                     arrows: true,
+//                     centerMode: true,
+//                     slidesToShow: 3
+//                 }
+//             },
+//             {
+//                 breakpoint: 613,
+//                 settings: {
+//                     arrows: true,
+//                     centerMode: true,
+//                     slidesToShow: 1
+//                 }
+//             },
+//             {
+//                 breakpoint: 480,
+//                 settings: {
+//                     arrows: true,
+//                     centerMode: true,
+//                     slidesToShow: 1
+//                 }
+//             }
+//         ]
+//     });
+// });
+
+// Checkout scripts
+
+// Scroll to top on continue
+$( "button.continue" ).click(function( event ) {
+    event.preventDefault();
+    $("html, body").scrollTop($($(this).attr('data-target')).offset().top);
 });
+
+// Shipping address modal selector
+$('body').on('click', '.shipping-address-radio', function () {
+    var content = $(this).next('.shipping-address-label').children().html();
+    $('#shippingAddressSelector .selected-content').html(content);
+    if ($(this).val() === 'new') {
+        $('#newShippingAddress').collapse('show');
+    } else {
+        $('#newShippingAddress').collapse('hide');
+    }
+    $(this).closest('.modal').modal('hide');
+});
+
+// Billing address modal selector
+$('body').on('click', '.billing-address-radio', function () {
+    var content = $(this).next('.billing-address-label').children().html();
+    $('#billingAddressSelector .selected-content').html(content);
+    if ($(this).val() === 'new') {
+        $('#newBillingAddress').collapse('show');
+    } else {
+        $('#newBillingAddress').collapse('hide');
+    }
+    $(this).closest('.modal').modal('hide');
+});
+
+// Card modal selector
+$('body').on('click', '.card-radio', function () {
+    var content = $(this).next('.card-label').children().html();
+    $('#cardSelector .selected-content').html(content);
+    if ($(this).val() === 'new') {
+        $('#newCard').collapse('show');
+    } else {
+        $('#newCard').collapse('hide');
+    }
+    $(this).closest('.modal').modal('hide');
+});
+
+// Card validation and formatting
+var acceptedCreditCards = {
+    visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
+    mastercard: /^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/,
+    amex: /^3[47][0-9]{13}$/,
+    discover: /^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/,
+};
+
+$('#cardNumber, #cvv').on('input', function () {
+    if (validateCard($('#cardNumber').val()) && validateCVV($('#cardNumber').val(), $('#cvv').val())) {
+        $('button[type="submit"]').prop('disabled', false);
+    } else {
+        $('button[type="submit"]').prop('disabled', true);
+    }
+
+    var node = $('#cardNumber')[0]; // vanilla javascript element
+    var cursor = node.selectionStart; // store cursor position
+    var lastValue = $('#cardNumber').val(); // get value before formatting
+
+    var formattedValue = formatCardNumber(lastValue);
+    $('#cardNumber').val(formattedValue); // set value to formatted
+
+    // keep the cursor at the end on addition of spaces
+    if (cursor === lastValue.length) {
+        cursor = formattedValue.length;
+        // decrement cursor when backspacing
+        // i.e. "4444 |" => backspace => "4444|"
+        if ($('#cardNumber').attr('data-lastvalue') && $('#cardNumber').attr('data-lastvalue').charAt(cursor - 1) == " ") {
+            cursor--;
+        }
+    }
+
+    if (lastValue != formattedValue) {
+        // increment cursor when inserting character before a space
+        // i.e. "1234| 6" => "5" typed => "1234 5|6"
+        if (lastValue.charAt(cursor) == " " && formattedValue.charAt(cursor - 1) == " ") {
+            cursor++;
+        }
+    }
+
+    // set cursor position
+    node.selectionStart = cursor;
+    node.selectionEnd = cursor;
+    // store last value
+    $('#cardNumber').attr('data-lastvalue', formattedValue);
+});
+
+function formatCardNumber(value) {
+    // remove all non digit characters
+    var value = value.replace(/\D/g, '');
+    var formattedValue;
+    var maxLength;
+    // american express, 15 digits
+    if ((/^3[47]\d{0,13}$/).test(value)) {
+        formattedValue = value.replace(/(\d{4})/, '$1 ').replace(/(\d{4}) (\d{6})/, '$1 $2 ');
+        maxLength = 17;
+        cvvMaxLength = 4;
+    } else if ((/^\d{0,16}$/).test(value)) { // regular cc number, 16 digits
+        formattedValue = value.replace(/(\d{4})/, '$1 ').replace(/(\d{4}) (\d{4})/, '$1 $2 ').replace(/(\d{4}) (\d{4}) (\d{4})/, '$1 $2 $3 ');
+        maxLength = 19;
+        cvvMaxLength = 3;
+    }
+
+    $('#cardNumber').attr('maxlength', maxLength);
+    $('#cvv').attr('maxlength', cvvMaxLength);
+    return formattedValue;
+}
+
+
+function validateCard(value) {
+    // remove all non digit characters
+    var value = value.replace(/\D/g, '');
+    var sum = 0;
+    var shouldDouble = false;
+    // loop through values starting at the rightmost side
+    for (var i = value.length - 1; i >= 0; i--) {
+        var digit = parseInt(value.charAt(i));
+
+        if (shouldDouble) {
+            if ((digit *= 2) > 9) digit -= 9;
+        }
+
+        sum += digit;
+        shouldDouble = !shouldDouble;
+    }
+
+    var valid = (sum % 10) == 0;
+    var accepted = false;
+
+    // loop through the keys (visa, mastercard, amex, etc.)
+    Object.keys(acceptedCreditCards).forEach(function (key) {
+        var regex = acceptedCreditCards[key];
+        if (regex.test(value)) {
+            accepted = true;
+        }
+    });
+
+    return valid && accepted;
+}
+
+
+function validateCVV(creditCard, cvv) {
+    // remove all non digit characters
+    var creditCard = creditCard.replace(/\D/g, '');
+    var cvv = cvv.replace(/\D/g, '');
+    // american express and cvv is 4 digits
+    if ((acceptedCreditCards.amex).test(creditCard)) {
+        if ((/^\d{4}$/).test(cvv))
+            return true;
+    } else if ((/^\d{3}$/).test(cvv)) { // other card & cvv is 3 digits
+        return true;
+    }
+    return false;
+}
