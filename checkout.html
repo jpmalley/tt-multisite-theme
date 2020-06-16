@@ -48,6 +48,70 @@
     </nav>
 
     <section id="checkout-content">
+        <div class="modal fade" id="accountCheck" tabindex="-1" role="dialog" aria-labelledby="accountCheckTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container account-check">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-title" id="accountCheckTitle">Do you have an account?</div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <a href="#" id="accountCheckout" class="btn btn-primary btn-lg btn-block"><strong>Yes, sign
+                                            in</strong></a>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <a href="#" id="guestCheckout" data-dismiss="modal"
+                                        class="btn btn-secondary btn-lg btn-block"><strong>Nope, continue as
+                                            guest</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container account-sign-in d-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-title" id="accountCheckTitle">Welcome back!</div>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="form-label-group">
+                                            <input type="email" id="accountEmail" class="form-control"
+                                                placeholder="Email address" required>
+                                            <label for="accountEmail">Email address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="form-label-group">
+                                            <input type="password" id="accountPassword" class="form-control"
+                                                placeholder="Password" required>
+                                            <label for="accountPassword">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <a href="/checkout-signedin.html" id="signIn" class="btn btn-primary btn-lg btn-block"><strong>Sign In</strong></a>
+                                    </div>
+                                </div>
+                                <div class="form-row d-flex justify-content-center mt-2 forgot-password">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -282,7 +346,8 @@
                                             <div class="col-12">
                                                 <a id="billingAddressSelector" href="#billingAddressModal"
                                                     class="selectorForModal" data-toggle="modal">
-                                                    <div class="selected-wrapper d-flex justify-content-between align-items-center  mb-3">
+                                                    <div
+                                                        class="selected-wrapper d-flex justify-content-between align-items-center  mb-3">
                                                         <div class="selected-content d-flex align-items-center">
                                                             <div class="option-icon">
                                                                 <i class="fas fa-truck"></i>
@@ -421,13 +486,16 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-12">
-                                                <a href="#couponCodeWrapper" data-toggle="collapse">Do you have a coupon code or gift card?</a>
+                                                <a href="#couponCodeWrapper" data-toggle="collapse">Do you have a coupon
+                                                    code or gift card?</a>
                                                 <div id="couponCodeWrapper" class="collapse mt-2">
                                                     <div class="input-group">
-                                                        <input class="form-control" type="text" placeholder="Apply a promo code or gift card"
+                                                        <input class="form-control" type="text"
+                                                            placeholder="Apply a promo code or gift card"
                                                             aria-label="Apply a promo code">
                                                         <div class="input-group-append">
-                                                            <button type="submit" class="input-group-text btn" id="promo-apply">
+                                                            <button type="submit" class="input-group-text btn"
+                                                                id="promo-apply">
                                                                 Apply
                                                             </button>
                                                         </div>
@@ -440,25 +508,30 @@
                                                 <div class="payTabs-wrapper">
                                                     <ul class="nav my-3" id="payTabs" role="tablist">
                                                         <li class="nav-item">
-                                                            <a class="nav-link active" id="creditCard-tab" data-toggle="tab"
-                                                                href="#creditCard" role="tab" aria-controls="creditCard"
-                                                                aria-selected="true">Credit Card</a>
+                                                            <a class="nav-link active" id="creditCard-tab"
+                                                                data-toggle="tab" href="#creditCard" role="tab"
+                                                                aria-controls="creditCard" aria-selected="true">Credit
+                                                                Card</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" id="payPal-tab" data-toggle="tab" href="#payPal"
-                                                                role="tab" aria-controls="payPal" aria-selected="false">PayPal</a>
+                                                            <a class="nav-link" id="payPal-tab" data-toggle="tab"
+                                                                href="#payPal" role="tab" aria-controls="payPal"
+                                                                aria-selected="false">PayPal</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" id="applePay-tab" data-toggle="tab" href="#applePay"
-                                                                role="tab" aria-controls="applePay" aria-selected="false">Apply Pay</a>
+                                                            <a class="nav-link" id="applePay-tab" data-toggle="tab"
+                                                                href="#applePay" role="tab" aria-controls="applePay"
+                                                                aria-selected="false">Apply Pay</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" id="googlePay-tab" data-toggle="tab" href="#googlePay"
-                                                                role="tab" aria-controls="googlePay" aria-selected="false">Google Pay</a>
+                                                            <a class="nav-link" id="googlePay-tab" data-toggle="tab"
+                                                                href="#googlePay" role="tab" aria-controls="googlePay"
+                                                                aria-selected="false">Google Pay</a>
                                                         </li>
                                                     </ul>
                                                     <div class="tab-content" id="payTabsContent">
-                                                        <div class="tab-pane fade show active" id="creditCard" role="tabpanel" aria-labelledby="creditCard-tab">
+                                                        <div class="tab-pane fade show active" id="creditCard"
+                                                            role="tabpanel" aria-labelledby="creditCard-tab">
                                                             <div class="row">
                                                                 <div class="col-12 d-flex accepted-cc mt-1 mb-3">
                                                                     <i class="fab fa-cc-visa"></i>
@@ -475,7 +548,8 @@
                                                             <div class="form-row">
                                                                 <div class="col-12">
                                                                     <div class="form-label-group">
-                                                                        <input type="text" id="nameOnCard" class="form-control"
+                                                                        <input type="text" id="nameOnCard"
+                                                                            class="form-control"
                                                                             placeholder="Name on card" required>
                                                                         <label for="nameOnCard">Name on card</label>
                                                                     </div>
@@ -484,7 +558,8 @@
                                                             <div class="form-row">
                                                                 <div class="col-12">
                                                                     <div class="form-label-group">
-                                                                        <input type="text" id="cardNumber" class="form-control"
+                                                                        <input type="text" id="cardNumber"
+                                                                            class="form-control"
                                                                             placeholder="Card number" required>
                                                                         <label for="cardNumber">Card number</label>
                                                                     </div>
@@ -493,15 +568,18 @@
                                                             <div class="form-row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-label-group">
-                                                                        <input type="text" id="expMonth" class="form-control"
-                                                                            placeholder="Month (MM)" required maxlength="2">
+                                                                        <input type="text" id="expMonth"
+                                                                            class="form-control"
+                                                                            placeholder="Month (MM)" required
+                                                                            maxlength="2">
                                                                         <label for="expMonth">Month (MM)</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="form-label-group">
                                                                         <input type="" id="expYear" class="form-control"
-                                                                            placeholder="Year (YY)" required maxlength="2">
+                                                                            placeholder="Year (YY)" required
+                                                                            maxlength="2">
                                                                         <label for="expYear">Year (YY)</label>
                                                                     </div>
                                                                 </div>
@@ -515,49 +593,66 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <button class="btn btn-primary btn-block place-order" type="submit">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
                                                                         Place Order
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane fade" id="payPal" role="tabpanel" aria-labelledby="payPal-tab">
+                                                        <div class="tab-pane fade" id="payPal" role="tabpanel"
+                                                            aria-labelledby="payPal-tab">
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <p class="third-party-disclaimer">You’ll be directed to PayPal to enter your payment details and then directed back to TeeTurtle.</p>
+                                                                    <p class="third-party-disclaimer">You’ll be directed
+                                                                        to PayPal to enter your payment details and then
+                                                                        directed back to TeeTurtle.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <button class="btn btn-primary btn-block place-order" type="submit">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
                                                                         Pay with PayPal
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane fade" id="applePay" role="tabpanel" aria-labelledby="applePay-tab">
+                                                        <div class="tab-pane fade" id="applePay" role="tabpanel"
+                                                            aria-labelledby="applePay-tab">
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <p class="third-party-disclaimer">You’ll be directed to Apple Pay to enter your payment details and then directed back to TeeTurtle.</p>
+                                                                    <p class="third-party-disclaimer">You’ll be directed
+                                                                        to Apple Pay to enter your payment details and
+                                                                        then directed back to TeeTurtle.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <button class="btn btn-primary btn-block place-order" type="submit">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
                                                                         Pay with Apple Pay
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane fade" id="googlePay" role="tabpanel" aria-labelledby="googlePay-tab">
+                                                        <div class="tab-pane fade" id="googlePay" role="tabpanel"
+                                                            aria-labelledby="googlePay-tab">
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <p class="third-party-disclaimer">You’ll be directed to Google Pay to enter your payment details and then directed back to TeeTurtle.</p>
+                                                                    <p class="third-party-disclaimer">You’ll be directed
+                                                                        to Google Pay to enter your payment details and
+                                                                        then directed back to TeeTurtle.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <button class="btn btn-primary btn-block place-order" type="submit">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
                                                                         Pay with Google Pay
                                                                     </button>
                                                                 </div>
@@ -717,6 +812,10 @@
         crossorigin="anonymous"></script>
 
     <script src="js/main.js"></script>
+    <script>
+        // Shows modal on page load
+        $('#accountCheck').modal('show');
+    </script>
 </body>
 
 </html>

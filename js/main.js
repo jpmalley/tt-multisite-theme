@@ -41,8 +41,6 @@ $(document).ready(function () {
             alert('Minimum value was reached');
             $(this).val($(this).data('oldValue'));
         }
-
-
     });
 
     $('.input-number').keydown(function (e) {
@@ -84,23 +82,27 @@ $(document).ready(function () {
         $('.cart-overlay').addClass('active');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+});
 
-    $('#checkOut').on('click', function () {
-        $('#cart-email-prompt').addClass('active');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    });
-
-    $('#emailContinue').on('click', function () {
-        var emailValue = $('#cart-email-init').val();
-        if (emailValue) {
-            $('#cart-sign-in').addClass('active');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        } else {
-            $('#cart-sign-up').addClass('active');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        }
+// Enable tooltips
+$(document).ready(function () {
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
     });
 });
+
+
+
+// DEMO SCRIPT REMOVE FOR IMPLIMENTATION
+$(document).ready(function () {
+    $('#est-btn').on('click', function (e) {
+        e.preventDefault;
+        $('.estimator, .estimate-results').toggleClass('d-none');
+    })
+});
+// END DEMO SCRIPT
+
+
 
 // Mobile nav
 $(document).ready(function () {
@@ -298,8 +300,16 @@ $(document).ready(function () {
 
 // Checkout scripts
 
+// Account check modal
+$(document).ready(function () {
+    $('#accountCheckout').on('click', function (e) {
+        e.preventDefault;
+        $('.account-check, .account-sign-in').toggleClass('d-none');
+    })
+});
+
 // Scroll to top on continue
-$( "button.continue" ).click(function( event ) {
+$("button.continue").click(function (event) {
     event.preventDefault();
     $("html, body").scrollTop($($(this).attr('data-target')).offset().top);
 });

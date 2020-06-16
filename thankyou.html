@@ -1070,342 +1070,54 @@
         <div class="cart-overlay"></div>
     </div>
 
-    <section id="homepage">
-        <div class="container-fluid main-banner">
-            <div class="row">
-                <div id="mainCarousel" class="carousel slide w-100" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#mainCarousel" data-slide-to="1"></li>
-                        <li data-target="#mainCarousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="#">
-                                <img src="img/placeholder-1200x400.jpg" class="d-block w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#">
-                                <img src="img/placeholder-1200x400.jpg" class="d-block w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#">
-                                <img src="img/placeholder-1200x400.jpg" class="d-block w-100" alt="">
-                            </a>
+    <section class="notification-page d-flex justify-content-center align-items-center">
+
+        <!-- Account Creation Modal -->
+        <div class="modal fade" id="createAccount" tabindex="-1" role="dialog" aria-labelledby="createAccountTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container account-check">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-title" id="createAccountTitle">Thank you for your order!</div>
+                                    <p class="text-center">You will receive an order confirmation email soon.</p>
+                                    <hr>
+                                    <div class="modal-subtitle">Would you like to create an account?</div>
+                                    <p class="text-center">You’ll save time at checkout next time and have access to all of your order history in one place. Just enter a password below and you’ll be all set!</p>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="form-label-group">
+                                            <input type="password" id="accountPassword" class="form-control"
+                                                placeholder="Password" required>
+                                            <label for="accountPassword">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <a href="#" id="signIn" class="btn btn-primary btn-lg btn-block"><strong>Create Account</strong></a>
+                                    </div>
+                                </div>
+                                <div class="form-row d-flex justify-content-center mt-2 forgot-password">
+                                    <a href="#" data-dismiss="modal">No thanks, not today</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container featured-products">
-            <div class="row">
-                <div class="col-12">
-                    <h4>Featured Products</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="product">
-                        <a href="#">
-                            <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                        </a>
-                        <div class="product-title">
-                            <a href="#">
-                                <h6>Product Title</h6>
-                            </a>
-                        </div>
-                        <div>
-                            <span class="price">$25</span>
-                        </div>
-                        <div>
-                            <a href="#" class="quick-add" data-toggle="modal" data-target="#quickAddModal">
-                                <i class="fas fa-plus-square"></i> Quick Add
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="product">
-                        <a href="#">
-                            <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                        </a>
-                        <div class="product-title">
-                            <a href="#">
-                                <h6>Product Title</h6>
-                            </a>
-                        </div>
-                        <div>
-                            <span class="price">$25</span>
-                        </div>
-                        <div>
-                            <a href="#" class="quick-add" data-toggle="modal" data-target="#quickAddModal">
-                                <i class="fas fa-plus-square"></i> Quick Add
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="product">
-                        <a href="#">
-                            <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                        </a>
-                        <div class="product-title">
-                            <a href="#">
-                                <h6>Product Title</h6>
-                            </a>
-                        </div>
-                        <div>
-                            <span class="price">$25</span>
-                        </div>
-                        <div>
-                            <a href="#" class="quick-add" data-toggle="modal" data-target="#quickAddModal">
-                                <i class="fas fa-plus-square"></i> Quick Add
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid secondary-banner">
-            <div class="row">
-                <a href="#">
-                    <img src="img/placeholder-1200x200.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="container shop-category">
-            <div class="row">
-                <div class="col-12">
-                    <h4>Shop by Category</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col-6">
-                    <a href="#">
-                        <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-3 col-6">
-                    <a href="#">
-                        <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-3 col-6">
-                    <a href="#">
-                        <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-3 col-6">
-                    <a href="#">
-                        <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row see-all">
-                <div class="col-12 d-flex justify-content-center">
-                    <a href="#">
-                        <h6>See All Categories</h6>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container shop-by">
-            <div class="row">
-                <div class="col-6">
-                    <div class="container shop-by-group" style="border-color: #f23636;">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="shop-by-title">Shop By Style</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Men's</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Women's</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Juniors</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Kids</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row shop-by-footer" style="background-color: #f23636;">
-                            <a href="#">
-                                <h6>See All Styles</h6>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="container shop-by-group" style="border-color: #EA9942;">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="shop-by-title">Shop By Animal</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Foxes</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Unicorns</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Dinosaurs</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Pandas</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row shop-by-footer" style="background-color: #EA9942;">
-                            <a href="#">
-                                <h6>See All Animals</h6>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="container shop-by-group" style="border-color: #94CA6F;">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="shop-by-title">Shop By Interest</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Tabletop Gaming</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Food</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Science</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Reading</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row shop-by-footer" style="background-color: #94CA6F;">
-                            <a href="#">
-                                <h6>See All Interests</h6>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="container shop-by-group" style="border-color: #3FC1E7
-                    ;">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="shop-by-title">Shop By Mood</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Quirky</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Sarcastic</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Cheerful</h6>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#">
-                                    <img class="img-fluid" src="img/placeholder-400x400.jpg" alt="">
-                                    <h6>Tired</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row shop-by-footer" style="background-color: #3FC1E7;">
-                            <a href="#">
-                                <h6>See All Moods</h6>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container customer-service pb-3">
-            <div class="row">
-                <div class="col-12">
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-md-4 col-12">
-                    <h6>Find the Perfect Fit</h6>
-                    <img class="img-fluid"
-                        src="https://cdn.shopify.com/s/files/1/0267/4223/files/00002_600x.png?v=1505338030" alt="">
-                    <p>Everybody is different, which is why we offer styles for every body.</p>
-                    <a href="#" class="btn btn-primary my-3">Check out our sizing guide</a>
-                </div>
-                <div class="col col-md-4 col-12">
-                    <h6>Free Exchanges</h6>
-                    <img class="img-fluid"
-                        src="https://cdn.shopify.com/s/files/1/0267/4223/files/home_2_600x.jpg?v=1479329426" alt="">
-                    <p>One of the many reasons you can shop with peace of mind. *U.S. orders only*</p>
-                    <a href="#" class="btn btn-primary my-3">Learn more here!</a>
-                </div>
-                <div class="col col-md-4 col-12">
-                    <h6>Contact Our Turtles</h6>
-                    <img class="img-fluid"
-                        src="https://cdn.shopify.com/s/files/1/0267/4223/files/00001_60493abf-1f52-4673-9a10-e020ab35feed_600x.jpg?v=1505338013"
-                        alt="">
-                    <p>They are here to help you. That's quite literally what we pay them for.</p>
-                    <a href="#" class="btn btn-primary my-3">Send us a message</a>
-                </div>
-            </div>
+
+        <div class="message">
+            <img src="https://www.teeturtle.com/assets/7146b29c4ff30ac642634642ff1758ef/img/thank-you-turtle.png" class="img-fluid" alt="uh-oh-turtle">
+            <h1>Your order is being processed</h1>
+            <p>You will receive an order confirmation email soon. Once your order has shipped, you will receive a shipping confirmation email.</p>
+            <a href="/" class="btn btn-primary">Take me to the homepage!</a>
         </div>
     </section>
 
@@ -1493,8 +1205,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
     <script src="js/main.js"></script>
+    <script>
+        // Shows modal on page load
+        $('#createAccount').modal('show');
+    </script>
 </body>
 
 </html>

@@ -46,6 +46,11 @@ strong {
     overflow: hidden;
 }
 
+.tooltip {
+    z-index: 9999;
+    line-height: 1.3;
+}
+
 /* .container-fluid a, .container-fluid img {
     width: 100%;
 } */
@@ -260,7 +265,7 @@ ul.account-links li>a:hover {
         top: 0px;
         left: -275px;
         max-height: calc(100% - 1rem);
-        z-index: 1002;
+        z-index: 1030;
         overflow-y: auto;
         overflow-x: hidden;
         margin: .5rem;
@@ -368,7 +373,7 @@ ul.account-links li>a:hover {
         width: 100vw;
         height: 100vh;
         background: rgba(0, 0, 0, 0.7);
-        z-index: 1001;
+        z-index: 1025;
         opacity: 0;
         transition: all 0.5s ease-in-out;
     }
@@ -506,7 +511,7 @@ ul.account-links li>a:hover {
     top: 0;
     right: -375px;
     height: 100vh;
-    z-index: 9999;
+    z-index: 1035;
     background: #fff;
     color: #444;
     transition: all ease-out 0.3s;
@@ -616,20 +621,24 @@ ul.account-links li>a:hover {
     z-index: 10;
 }
 
-.subtotal, .promo-box, .total {
+.promo-box, .subtotal, .estimator, .est-shipping, .est-tax, .total {
     margin-bottom: 20px;
 }
 
-.subtotal {
+.estimator {
+    color: #aaa;
+}
+
+.subtotal, .estimate-results {
     font-size: 0.9em;
     color: #aaa;
 }
 
-.promo-box input {
+.promo-box input, .est-box input {
     font-size: 0.8em;
 }
 
-.promo-box button {
+.promo-box button, .est-box button {
     font-size: 0.8em;
     font-weight: 600;
     text-transform: uppercase;
@@ -658,7 +667,7 @@ ul.account-links li>a:hover {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1002;
+    z-index: 1020;
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
@@ -707,15 +716,6 @@ ul.account-links li>a:hover {
 
 .required-field {
     margin: 15px 0;
-}
-
-#guestCheckout {
-    color: #2694cf;
-    text-align: center;
-}
-
-#guestCheckout:hover {
-    text-decoration: underline;
 }
 
 
@@ -1249,6 +1249,37 @@ ul.account-links li>a:hover {
     border-color: #2694cf;
 }
 
+
+/* ---------------------------------------------------
+    404 PAGE STYLES
+----------------------------------------------------- */
+
+.notification-page>.message {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.notification-page>.message>h1 {
+    margin: 20px 0;
+    padding: 0 20px;
+    letter-spacing: normal;
+}
+
+.notification-page>.message>p {
+    max-width: 580px;
+    margin: 0 auto 25px auto;
+    padding: 0 20px;
+}
+
+.notification-page>.message>a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
 /* ---------------------------------------------------
     FOOTER STYLES
 ----------------------------------------------------- */
@@ -1322,6 +1353,30 @@ ul.account-links li>a:hover {
 /* ---------------------------------------------------
     CHECKOUT STYLES
 ----------------------------------------------------- */
+
+#accountCheck .modal-title, #createAccount .modal-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+#createAccount .modal-subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+#accountCheck .forgot-password, #createAccount .forgot-password {
+    font-size: 0.9em;
+}
+
+#accountCheck .forgot-password:hover, #createAccount .forgot-password:hover {
+    text-decoration: underline;
+}
 
 #checkout h2 {
     line-height: 1rem;
@@ -2027,8 +2082,8 @@ button.place-order {
 .mobile-nav .cart-counter {
     color: #fff;
     position: absolute;
-    top: -2px;
-    right: 23px;
+    top: -4px;
+    right: 22px;
 }
 
 @media (min-width: 768px) {
