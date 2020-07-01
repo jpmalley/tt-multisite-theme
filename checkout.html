@@ -118,14 +118,13 @@
 
                     <form>
                         <div class="accordion" id="checkout-steps">
-
-                            <!-- 1. Customer Info -->
+                            <!-- 1. Shipping Info -->
                             <div class="card">
                                 <div class="card-header" id="step-1">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            1. Customer Info
+                                            1. Shipping Info
                                         </button>
                                     </h2>
                                 </div>
@@ -185,156 +184,148 @@
                                                 <h6>Enter a new shipping address</h6>
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="col-md-6">
-                                                <div class="form-label-group">
-                                                    <input type="text" id="shipFirst" class="form-control"
-                                                        placeholder="First name" required>
-                                                    <label for="shipFirst">First name</label>
+                                        <div class="shippingWrapper">
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipFirst" class="form-control"
+                                                            placeholder="First name" required>
+                                                        <label for="shipFirst">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipLast" class="form-control"
+                                                            placeholder="Last name" required>
+                                                        <label for="shipLast">Last name</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-label-group">
-                                                    <input type="text" id="shipLast" class="form-control"
-                                                        placeholder="Last name" required>
-                                                    <label for="shipLast">Last name</label>
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipAddress1" class="form-control"
+                                                            placeholder="Street address" required>
+                                                        <label for="shipAddress1">Street address</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <div class="form-label-group">
-                                                    <input type="text" id="shipAddress1" class="form-control"
-                                                        placeholder="Street address" required>
-                                                    <label for="shipAddress1">Street address</label>
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipAddress2" class="form-control"
+                                                            placeholder="Address line 2" required>
+                                                        <label for="shipAddress2">Address line 2</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <div class="form-label-group">
-                                                    <input type="text" id="shipAddress2" class="form-control"
-                                                        placeholder="Address line 2" required>
-                                                    <label for="shipAddress2">Address line 2</label>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><select id="shipCountry" class="form-control">
+                                                            <option selected>Country</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select id="shipState" class="form-control">
+                                                            <option selected>State</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="col-md-6">
-                                                <div class="form-group"><select id="shipCountry" class="form-control">
-                                                        <option selected>Country</option>
-                                                        <option>...</option>
-                                                    </select>
-                                                    <i class="fas fa-angle-down dropdown-arrow"></i>
+                                            <div class="form-row">
+                                                <div class="col-md-8 col-7">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipCity" class="form-control"
+                                                            placeholder="City" required>
+                                                        <label for="shipCity">City</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select id="shipState" class="form-control">
-                                                        <option selected>State</option>
-                                                        <option>...</option>
-                                                    </select>
-                                                    <i class="fas fa-angle-down dropdown-arrow"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="col-md-8 col-7">
-                                                <div class="form-label-group">
-                                                    <input type="text" id="shipCity" class="form-control"
-                                                        placeholder="City" required>
-                                                    <label for="shipCity">City</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-5">
-                                                <div class="form-label-group">
-                                                    <input type="text" id="shipPostalCode" class="form-control"
-                                                        placeholder="Postal code" required>
-                                                    <label for="shipPostalCode">Postal code</label>
+                                                <div class="col-md-4 col-5">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipPostalCode" class="form-control"
+                                                            placeholder="Postal code" required>
+                                                        <label for="shipPostalCode">Postal code</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-12">
-                                                <button id="toShipping" class="btn btn-primary continue" type="button"
-                                                    data-toggle="collapse" data-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    Continue to shipping method
+                                            <div class="col-12 d-flex align-items-center">
+                                                <button id="submitAddress" class="btn btn-primary continue next-btn"
+                                                    type="button" data-toggle="collapse" data-target="#shippingOptions"
+                                                    aria-expanded="false" aria-controls="shippingOptions">
+                                                    Submit address
                                                 </button>
+                                                <div>
+                                                    <button id="changeAddress" class="btn btn-link ml-3 d-none"
+                                                        type="button" data-toggle="collapse"
+                                                        data-target="#shippingOptions" aria-expanded="false"
+                                                        aria-controls="shippingOptions">Change Address</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="shippingOptions" class="collapse">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h6 class="mt-5">Select your preferred shipping method</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix shipping-options">
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-1"
+                                                    checked="checked">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="2" for="shipping-1">
+                                                    <div class="shipping-title">Economy</div>
+                                                    <div class="shipping-est">(7-10 Business Days)</div>
+                                                    <div class="shipping-price">$3.95</div>
+                                                </label>
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-2">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="3" for="shipping-2">
+                                                    <div class="shipping-title">Priority</div>
+                                                    <div class="shipping-est">(3-6 Business Days)</div>
+                                                    <div class="shipping-price">$5.36</div>
+                                                </label>
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-3">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="4" for="shipping-3">
+                                                    <div class="shipping-title">FedEx</div>
+                                                    <div class="shipping-est">(2-3 Business Days)</div>
+                                                    <div class="shipping-price">$18.15</div>
+                                                </label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <button id="toShipping" class="btn btn-primary continue"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        Continue to payment info
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- 2. Shipping Method -->
+                            <!-- 2. Payment Info -->
                             <div class="card">
                                 <div class="card-header" id="step-2">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseTwo" aria-expanded="false"
                                             aria-controls="collapseTwo">
-                                            2. Shipping Method
+                                            2. Payment Info
                                         </button>
                                     </h2>
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="step-2"
-                                    data-parent="#checkout-steps">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h6>Select your preferred shipping method</h6>
-                                            </div>
-                                        </div>
-                                        <div class="form-group clearfix shipping-options">
-                                            <input class="shipping-radio" type="radio" name="style" id="shipping-1"
-                                                checked="checked">
-                                            <label class="shipping-label btn btn-outline-secondary" data-slide-to="2"
-                                                for="shipping-1">
-                                                <div class="shipping-title">Economy</div>
-                                                <div class="shipping-est">(7-10 Business Days)</div>
-                                                <div class="shipping-price">$3.95</div>
-                                            </label>
-                                            <input class="shipping-radio" type="radio" name="style" id="shipping-2">
-                                            <label class="shipping-label btn btn-outline-secondary" data-slide-to="3"
-                                                for="shipping-2">
-                                                <div class="shipping-title">Priority</div>
-                                                <div class="shipping-est">(3-6 Business Days)</div>
-                                                <div class="shipping-price">$5.36</div>
-                                            </label>
-                                            <input class="shipping-radio" type="radio" name="style" id="shipping-3">
-                                            <label class="shipping-label btn btn-outline-secondary" data-slide-to="4"
-                                                for="shipping-3">
-                                                <div class="shipping-title">FedEx</div>
-                                                <div class="shipping-est">(2-3 Business Days)</div>
-                                                <div class="shipping-price">$18.15</div>
-                                            </label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <button class="btn btn-primary continue" type="button"
-                                                    data-toggle="collapse" data-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    Continue to payment
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 3. Payment -->
-                            <div class="card">
-                                <div class="card-header" id="step-3">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            3. Payment
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="step-3"
                                     data-parent="#checkout-steps">
                                     <div class="card-body">
                                         <div class="row">
@@ -485,9 +476,9 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-12">
-                                                <a href="#couponCodeWrapper" data-toggle="collapse">Do you have a coupon
-                                                    code or gift card?</a>
+                                            <div class="col-12 my-2">
+                                                <a href="#couponCodeWrapper" data-toggle="collapse"><strong>Do you have
+                                                        a coupon code or gift card?</strong></a>
                                                 <div id="couponCodeWrapper" class="collapse mt-2">
                                                     <div class="input-group">
                                                         <input class="form-control" type="text"
@@ -566,24 +557,15 @@
                                                                 </div>
                                                             </div>
                                                             <div class="form-row">
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-6">
                                                                     <div class="form-label-group">
-                                                                        <input type="text" id="expMonth"
-                                                                            class="form-control"
-                                                                            placeholder="Month (MM)" required
-                                                                            maxlength="2">
-                                                                        <label for="expMonth">Month (MM)</label>
+                                                                        <input type="text" id="expDate"
+                                                                            class="form-control" placeholder="MM / YY"
+                                                                            required maxlength="7">
+                                                                        <label for="expDate">MM / YY</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="form-label-group">
-                                                                        <input type="" id="expYear" class="form-control"
-                                                                            placeholder="Year (YY)" required
-                                                                            maxlength="2">
-                                                                        <label for="expYear">Year (YY)</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-6">
                                                                     <div class="form-label-group">
                                                                         <input type="text" id="cvv" class="form-control"
                                                                             placeholder="CVV" required>
@@ -593,10 +575,12 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <button
-                                                                        class="btn btn-primary btn-block place-order"
-                                                                        type="submit">
-                                                                        Place Order
+                                                                    <button class="btn btn-primary continue"
+                                                                        type="button" data-toggle="collapse"
+                                                                        data-target="#collapseThree"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseThree">
+                                                                        Continue to review your order
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -607,7 +591,8 @@
                                                                 <div class="col-12">
                                                                     <p class="third-party-disclaimer">You’ll be directed
                                                                         to PayPal to enter your payment details and then
-                                                                        directed back to TeeTurtle.</p>
+                                                                        back to TeeTurtle to review and complete your
+                                                                        order.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -626,7 +611,8 @@
                                                                 <div class="col-12">
                                                                     <p class="third-party-disclaimer">You’ll be directed
                                                                         to Apple Pay to enter your payment details and
-                                                                        then directed back to TeeTurtle.</p>
+                                                                        then back to TeeTurtle to review and complete
+                                                                        your order.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -645,7 +631,8 @@
                                                                 <div class="col-12">
                                                                     <p class="third-party-disclaimer">You’ll be directed
                                                                         to Google Pay to enter your payment details and
-                                                                        then directed back to TeeTurtle.</p>
+                                                                        then back to TeeTurtle to review and complete
+                                                                        your order.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -660,6 +647,153 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. Review -->
+                            <div class="card">
+                                <div class="card-header" id="step-3">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            3. Review
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="step-3"
+                                    data-parent="#checkout-steps">
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <h6>Shipping address</h6>
+                                                3858 Walnut Ave. <br>
+                                                Suite 111 <br>
+                                                Denver, CO 80214
+                                            </div>
+                                            <div class="col-md-6 mt-md-0 mt-3">
+                                                <h6>Shipping Method</h6>
+                                                Economy (7-10 Business Days)<br>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5">
+                                            <div class="col-md-6 mt-md-0 mt-3">
+                                                <h6>Billing address</h6>
+                                                Same as shipping <br>
+                                            </div>
+                                            <div class="col-md-6 mt-md-0 mt-3">
+                                                <h6>Payment</h6>
+                                                Visa ending in 1234 <br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div id="reviewOrder" class="w-100">
+                                                <ul class="order-line-items list-unstyled mb-2">
+                                                    <li class="order-item">
+                                                        <div class="order-item-contents">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <a href="#">
+                                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                                            alt="Ohhh Burn" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="order-summary-info col-8">
+                                                                    <a class="order-summary-title" href="#">Ohhh
+                                                                        Burn</a>
+                                                                    <div class="order-summary-variant">T-Shirt / Men's /
+                                                                        M</div>
+                                                                    <div class="order-summary-qtyamt">
+                                                                        <div class="qty">Qty 1</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <div class="ammount text-right">$25</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- end order item -->
+                                                    <li class="order-item">
+                                                        <div class="order-item-contents">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <a href="#">
+                                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                                            alt="Ohhh Burn" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="order-summary-info col-8">
+                                                                    <a class="order-summary-title" href="#">Ohhh
+                                                                        Burn</a>
+                                                                    <div class="order-summary-variant">T-Shirt / Men's /
+                                                                        M</div>
+                                                                    <div class="order-summary-qtyamt">
+                                                                        <div class="qty">Qty 1</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <div class="ammount text-right">$25</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- end order item -->
+                                                    <li class="order-item">
+                                                        <div class="order-item-contents">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <a href="#">
+                                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                                            alt="Ohhh Burn" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="order-summary-info col-8">
+                                                                    <a class="order-summary-title" href="#">Ohhh
+                                                                        Burn</a>
+                                                                    <div class="order-summary-variant">T-Shirt / Men's /
+                                                                        M</div>
+                                                                    <div class="order-summary-qtyamt">
+                                                                        <div class="qty">Qty 1</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <div class="ammount text-right">$25</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- end order item -->
+
+                                                </ul>
+                                                <div class="order-subtotal mb-2">
+                                                    <div class="subtotal d-flex justify-content-between">
+                                                        <div class="label">Subtotal</div>
+                                                        <div class="ammount">$37.50</div>
+                                                    </div>
+                                                    <div class="subtotal d-flex justify-content-between">
+                                                        <div class="label">Shipping (Economy)</div>
+                                                        <div class="ammount">$3.95</div>
+                                                    </div>
+                                                    <div class="subtotal d-flex justify-content-between">
+                                                        <div class="label">Tax (8.31%)</div>
+                                                        <div class="ammount">$2.78</div>
+                                                    </div>
+                                                    <div class="total d-flex justify-content-between">
+                                                        <div class="label">Total</div>
+                                                        <div class="ammount">$37.50</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button class="btn btn-primary btn-block place-order" type="submit">
+                                                    Place Order
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

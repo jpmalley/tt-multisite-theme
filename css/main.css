@@ -1391,6 +1391,7 @@ ul.account-links li>a:hover {
     font-weight: bold;
     padding: 0;
     border: none;
+    color: #6c757d;
 }
 
 #checkout .accordion {
@@ -1415,6 +1416,10 @@ ul.account-links li>a:hover {
     cursor: pointer;
 }
 
+#checkout input.disabled {
+    cursor: not-allowed;
+}
+
 #checkout i.dropdown-arrow {
     position: absolute;
     right: 16px;
@@ -1427,6 +1432,10 @@ ul.account-links li>a:hover {
 #checkout button.continue {
     height: 50px;
     font-weight: bold;
+}
+
+#submitAddress.disabled {
+    cursor: not-allowed;
 }
 
 .shipping-options input {
@@ -1545,6 +1554,23 @@ ul.account-links li>a:hover {
 
 p.third-party-disclaimer {
     font-size: .9rem;
+}
+
+#reviewOrder .subtotal {
+    font-size: 1rem;
+}
+
+#reviewOrder .order-line-items {
+    border: none;
+}
+
+#reviewOrder .order-item {
+    border-bottom: 1px solid rgb(223, 223, 223);
+    margin: 0 10px;
+}
+
+#reviewOrder .order-subtotal {
+    padding: 15px 10px;
 }
 
 button.place-order {

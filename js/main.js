@@ -309,9 +309,30 @@ $(document).ready(function () {
 });
 
 // Scroll to top on continue
-$("button.continue").click(function (event) {
+$( "button.continue:not(.next-btn)" ).click(function( event ) {
     event.preventDefault();
     $("html, body").scrollTop($($(this).attr('data-target')).offset().top);
+});
+
+// Submit address button
+$('body').on('click', '#submitAddress', function (e) {
+    $('#changeAddress').removeClass('d-none');
+    var shippingInputs = $('.shippingWrapper input, .shippingWrapper select');
+    for (var i = 0; i < shippingInputs.length; i++) {
+        $(shippingInputs[i]).addClass('disabled').prop('disabled', true);
+    }
+    setTimeout(function () {
+        $('#submitAddress').addClass('disabled').prop('disabled', true);
+    }, 100);
+});
+
+$('body').on('click', '#changeAddress', function (e) {
+    $('#changeAddress').addClass('d-none');
+    var shippingInputs = $('.shippingWrapper input, .shippingWrapper select');
+    for (var i = 0; i < shippingInputs.length; i++) {
+        $(shippingInputs[i]).removeClass('disabled').prop('disabled', false);
+    }
+    $('#submitAddress').removeClass('disabled').prop('disabled', false);
 });
 
 // Shipping address modal selector
@@ -395,6 +416,23 @@ $('#cardNumber, #cvv').on('input', function () {
     node.selectionEnd = cursor;
     // store last value
     $('#cardNumber').attr('data-lastvalue', formattedValue);
+});
+
+// format expiriaton date input
+$('#expDate').on('keydown', function (e) {
+    var monthAndSlashRegex = /^\d\d \/ $/;
+    var isMonthAndSlashEntered = monthAndSlashRegex.exec(e.target.value);
+    if (isMonthAndSlashEntered && e.key === 'Backspace') {
+        e.target.value = e.target.value.slice(0, -3);
+    }
+});
+
+$('#expDate').on('keyup', function (e) {
+    var monthRegex = /^\d\d$/;
+    var isMonthEntered = monthRegex.exec(e.target.value);
+    if (e.key >= 0 && e.key <= 9 && isMonthEntered) {
+        e.target.value = e.target.value + " / ";
+    }
 });
 
 function formatCardNumber(value) {
