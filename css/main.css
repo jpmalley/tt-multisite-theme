@@ -1921,12 +1921,12 @@ button.place-order {
     Chibipuffs SPECIFIC STYLES
 ----------------------------------------------------- */
 
-#chibipuffs h1, 
-#chibipuffs h2, 
-#chibipuffs h3, 
-#chibipuffs h4, 
-#chibipuffs h5, 
-#chibipuffs h6 {
+#toys h1, 
+#toys h2, 
+#toys h3, 
+#toys h4, 
+#toys h5, 
+#toys h6 {
     font-family: atten-round-new, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -1935,102 +1935,102 @@ button.place-order {
 }
 
 /* Universal Nav */
-#chibipuffs #universal-nav {
+#toys #universal-nav {
     background: #4cceee;
     color: #fff;
 }
 
-#chibipuffs .universal-link:not(.active) img {
+#toys .universal-link:not(.active) img {
     opacity: .8;
 }
 
-#chibipuffs .universal-link:hover:not(.active) {
+#toys .universal-link:hover:not(.active) {
     background-color: #0cbeeb;
 }
 
-#chibipuffs .navbar-dark .navbar-nav .nav-link {
+#toys .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 1);
 }
 
-#chibipuffs .navbar-dark .navbar-nav .nav-link:hover {
+#toys .navbar-dark .navbar-nav .nav-link:hover {
     color: rgba(255, 255, 255, .5);
 }
 
-#chibipuffs .search-box .search-input {
+#toys .search-box .search-input {
     background-color: #4cceee;
     color: #fff;
     border-color: #fff;
 }
 
-#chibipuffs .search-box .search-input::placeholder {
+#toys .search-box .search-input::placeholder {
     color: #fff;
 }
 
-#chibipuffs .search-box .search-btn {
+#toys .search-box .search-btn {
     background-color: #8edcf0;
     color: #fff;
     border: 1px solid #fff;
 }
 
-#chibipuffs ul.account-links li.nav-item {
+#toys ul.account-links li.nav-item {
     border-right: 2px solid #fff;
 }
 
-#chibipuffs ul.account-links li.nav-item:last-child {
+#toys ul.account-links li.nav-item:last-child {
     border: 0;
 }
 
 @media (min-width: 768px) {
-    #chibipuffs .cart-counter {
+    #toys .cart-counter {
         color: #4cceee;
     }
 }
 
 /* Promo Bar */
-#chibipuffs .promo-bar {
+#toys .promo-bar {
     background: #493499;
 }
 
-#chibipuffs .promo-bar h5 {
+#toys .promo-bar h5 {
     color: #fff;
 }
 
 /* Brand Bar */
-#chibipuffs .brand-logo {
-    height: 40px;
-    margin: .5rem;
+#toys .brand-logo {
+    height: 50px;
+    margin: .25rem;
 }
 
 @media (min-width: 768px) {
-    #chibipuffs .brand-logo {
-        height: 120px;
+    #toys .brand-logo {
+        height: 130px;
         margin-top: .75rem;
-        margin-bottom: .25rem;
+        margin-bottom: 0;
     }
 }
 
-#chibipuffs #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
+#toys #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
     color: #4cceee;
 }
 
 /* Desktop Nav Styles */
 @media (min-width: 768px) {
-    #chibipuffs .brand-nav .nav .nav-link::after {
+    #toys .brand-nav .nav .nav-link::after {
         background: #493499;
     }
 
-    #chibipuffs .brand-nav ul>li:last-child .nav-link::after {
+    #toys .brand-nav ul>li:last-child .nav-link::after {
         background: #4cceee!important;
     }
 }
 
 /* Homepage */
-#chibipuffs #homepage .shop-characters .col-6 {
+#toys #homepage .shop-characters .col-6 {
     padding: 0;
 }
 
 /* Footer */
-#chibipuffs .footer {
+#toys .footer {
     background: #C8F5FF url(../img/footer-unicorn.svg) right bottom no-repeat;
     background-size: auto 280px;
     position: relative;
@@ -2039,12 +2039,12 @@ button.place-order {
     color: #44667B;
 }
 
-#chibipuffs .footer p {
+#toys .footer p {
     color: #44667B;
     font-weight: 700;
 }
 
-#chibipuffs #email-submit {
+#toys #email-submit {
     background: #44667B;
     border: 1px solid #44667B;
     text-transform: uppercase;
@@ -2052,11 +2052,11 @@ button.place-order {
     font-weight: 600;
 }
 
-#chibipuffs .social-icons a:hover {
+#toys .social-icons a:hover {
     color: #2694cf;
 }
 
-#chibipuffs .footer-nav a:hover {
+#toys .footer-nav a:hover {
     color: #2694cf;
 }
 
