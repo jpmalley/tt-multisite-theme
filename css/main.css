@@ -1251,6 +1251,32 @@ ul.account-links li>a:hover {
 
 
 /* ---------------------------------------------------
+    CCPA PAGE STYLES
+----------------------------------------------------- */
+
+section.ccpa-page {
+    min-height: calc(100vh - 496px);
+}
+
+.ccpa-page h6 {
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.ccpa-page a {
+    color: #2694cf;
+}
+
+.ccpa-page a:hover {
+    text-decoration: underline;
+}
+
+.ccpa-message {
+    max-width: 600px;
+    margin: 1rem;
+}
+
+/* ---------------------------------------------------
     404 PAGE STYLES
 ----------------------------------------------------- */
 

@@ -261,6 +261,37 @@ $(document).ready(function () {
     });
 });
 
+// CCPA Request Form
+$('body').on('change', '.request-for', function () {
+    switch ($(this).val()) {
+        case 'myself':
+            $('#forMyself').collapse('show');
+            $('#forSomeoneElse').collapse('hide');
+            break
+        case "someoneElse":
+            $('#forSomeoneElse').collapse('show');
+            $('#forMyself').collapse('hide');
+            break
+        default:
+            $('#forMyself, #forSomeoneElse').collapse('hide');
+    }
+});
+
+$('body').on('change', '.intention', function () {
+    switch ($(this).val()) {
+        case 'requestInfo':
+            $('#requestDisclaimer').collapse('show');
+            $('#deleteDisclaimer').collapse('hide');
+            break
+        case "deleteInfo":
+            $('#deleteDisclaimer').collapse('show');
+            $('#requestDisclaimer').collapse('hide');
+            break
+        default:
+            $('#requestDisclaimer, #deleteDisclaimer').collapse('hide');
+    }
+});
+
 // Recommendation module JS
 // $(document).ready(function () {
 //     $('.recommendations').removeClass('d-none');
