@@ -277,6 +277,21 @@ $('body').on('change', '.request-for', function () {
     }
 });
 
+$('body').on('change', '.auth-agent', function () {
+    switch ($(this).val()) {
+        case 'individual':
+            $('#authIndividual').collapse('show');
+            $('#authBusiness').collapse('hide');
+            break
+        case "business":
+            $('#authBusiness').collapse('show');
+            $('#authIndividual').collapse('hide');
+            break
+        default:
+            $('#authIndividual, #authBusiness').collapse('hide');
+    }
+});
+
 $('body').on('change', '.intention', function () {
     switch ($(this).val()) {
         case 'requestInfo':
@@ -290,6 +305,14 @@ $('body').on('change', '.intention', function () {
         default:
             $('#requestDisclaimer, #deleteDisclaimer').collapse('hide');
     }
+});
+
+$('.custom-file input').change(function (e) {
+    var files = [];
+    for (var i = 0; i < $(this)[0].files.length; i++) {
+        files.push($(this)[0].files[i].name);
+    }
+    $(this).next('.custom-file-label').html(files.join(', '));
 });
 
 // Recommendation module JS
