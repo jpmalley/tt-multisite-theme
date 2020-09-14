@@ -556,3 +556,56 @@ function validateCVV(creditCard, cvv) {
     }
     return false;
 }
+
+
+// Game Landing Pages
+
+// function calcHeight(srcWidth, srcHeight, maxWidth, maxHeight) {
+//     var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+//     return { width: srcWidth*ratio, height: srcHeight*ratio };
+// }
+
+// var imgSize = calcHeight(5000, 2813, $(window).width(), $(window).height())
+
+// const html = document.documentElement;
+// const canvas = document.getElementById("hts-main");
+// const context = canvas.getContext("2d");
+
+// const frameCount = 125;
+// const currentFrame = index => (
+//   `img/animation/hts-sequence-${index.toString()}.jpg`
+// )
+
+// const preloadImages = () => {
+//   for (let i = 1; i < frameCount; i++) {
+//     const img = new Image();
+//     img.src = currentFrame(i);
+//   }
+// };
+
+// const img = new Image()
+// img.src = currentFrame(1);
+// canvas.width = $(window).width();
+// canvas.height = imgSize.height;
+// img.onload=function(){
+//   context.drawImage(img, 0, 0, canvas.width, canvas.height);
+// }
+
+// const updateImage = index => {
+//   img.src = currentFrame(index);
+//   context.drawImage(img, 0, 0, canvas.width, canvas.height);
+// }
+
+// window.addEventListener('scroll', () => {  
+//   const scrollTop = html.scrollTop;
+//   const maxScrollTop = html.scrollHeight - window.innerHeight;
+//   const scrollFraction = scrollTop / maxScrollTop;
+//   const frameIndex = Math.min(
+//     frameCount - 1,
+//     Math.ceil(scrollFraction * frameCount)
+//   );
+  
+//   requestAnimationFrame(() => updateImage(frameIndex + 1))
+// });
+
+// preloadImages()

@@ -193,6 +193,28 @@ ul.account-links li>a:hover {
 }
 
 /* ---------------------------------------------------
+    GDPR MESSAGE STYLE
+----------------------------------------------------- */
+
+.gdpr-message {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.gdpr-message p {
+    color: #fff;
+    font-size: .875rem;
+}
+
+.gdpr
+
+
+/* ---------------------------------------------------
     BRAND BAR STYLE
 ----------------------------------------------------- */
 
@@ -1677,6 +1699,68 @@ button.place-order {
     padding: 15px;
 }
 
+
+/* ---------------------------------------------------
+    Game Landing Page STYLES
+----------------------------------------------------- */
+
+#landing-page {
+    background: #1c1d25;
+    color: #fff;
+}
+
+#landing-page h1, #landing-page h2, #landing-page h3 {
+    font-family: 'Patua One', sans-serif;
+    color: rgba(255, 255, 255, .9);
+}
+
+#landing-page .btn {
+    font-family: 'Patua One', sans-serif;
+    color: rgba(255, 255, 255, .9);
+}
+
+#landing-page p {
+    color: rgba(255, 255, 255, .9);
+}
+
+.layered-png {
+    position: relative;
+    width: 100%;
+    height: calc(100vw * .4);
+    overflow: hidden;
+}
+
+.layered-png img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+canvas {
+    width: 100%;
+    height: calc(100vw * .5625);
+    position: relative;
+}
+
+.carousel-content {
+    width: 100%;
+    height: 600px;
+}
+
+.cta-bar {
+    background: #2760AD;
+}
+
+.card-types {
+    background: #DD6B52
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 300px;
+    background: rgba(255, 255, 255, .3);
+    margin-bottom: 2rem;
+}
 
 /* ---------------------------------------------------
     FLOATING FORM LABEL STYLES
