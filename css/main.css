@@ -173,7 +173,6 @@ ul.account-links li>a:hover {
     display: block;
 }
 
-
 /* ---------------------------------------------------
     PROMO BAR STYLE
 ----------------------------------------------------- */
@@ -223,7 +222,6 @@ ul.account-links li>a:hover {
     opacity: .7;
     z-index: 10;
 }
-
 
 /* ---------------------------------------------------
     BRAND BAR STYLE
@@ -284,11 +282,11 @@ ul.account-links li>a:hover {
 }
 
 /* Mobile Nav Styles */
+
 @media (max-width: 767.98px) {
     .brand-nav {
         padding: 0;
     }
-    
     #mobileNav {
         width: 250px;
         background: #fff;
@@ -304,101 +302,81 @@ ul.account-links li>a:hover {
         margin: .5rem;
         border-radius: .25rem;
     }
-    
     #mobileNav.active {
         left: 0;
-        box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.75);
     }
-
     #mobileNav .search-form {
         max-width: 100%;
         margin: 1rem 1rem .5rem 1rem;
     }
-
     #mobileNav .search-box .search-input {
         background-color: #fff;
         color: #444;
         border-color: #444;
         font-size: .7rem;
     }
-    
     #mobileNav .search-box .search-btn {
         background-color: #444;
         color: #fff;
         border-color: #444;
         font-size: 0.8em;
     }
-
     #mobileNav .search-box .search-btn:hover {
         border-color: #666;
         background-color: #666;
     }
-
     .brand-nav li.nav-item.inactive {
         display: none;
     }
-
     .brand-nav a.nav-link.inactive {
         display: none;
     }
-
     .brand-nav .nav a.nav-link i {
         position: absolute;
         top: 11px;
         right: 15px;
     }
-
     .brand-nav .nav .nav-link-header {
         color: #fff!important;
         background: #444;
         border: 1px solid #444;
         z-index: 10;
     }
-
     .brand-nav .nav a.nav-link.active i {
         transform: rotate(-180deg);
     }
-
     .brand-nav .nav ul.menu-level-3 li {
         font-size: 14px;
         padding: .5rem 1rem;
     }
-
     .brand-nav .menu-level-1 {
         display: block;
     }
-
     .brand-nav .menu-level-2 {
         display: none;
     }
-
     .brand-nav .menu-level-2.active {
         display: block;
     }
-    
     .brand-nav .menu-level-3 {
         display: none;
     }
-
     .brand-nav .menu-level-3.active {
         display: block;
     }
-
     .brand-nav ul.menu-level-1>li:last-child>.nav-link {
         color: #ec3f8d!important;
     }
-
     .mobile-account-links {
         display: block;
         width: 100%;
         background: #444;
         margin-top: .5rem;
     }
-
     .mobile-account-links .nav-item a.nav-link {
         color: #fff;
     }
-    
     .nav-overlay {
         top: 0;
         display: none;
@@ -410,7 +388,6 @@ ul.account-links li>a:hover {
         opacity: 0;
         transition: all 0.5s ease-in-out;
     }
-    
     .nav-overlay.active {
         display: block;
         opacity: 1;
@@ -418,12 +395,12 @@ ul.account-links li>a:hover {
 }
 
 /* Desktop Nav Styles */
+
 @media (min-width: 768px) {
     .brand-nav {
         width: 100%;
         padding: 4px;
     }
-
     #desktopNav {
         display: flex;
         justify-content: center;
@@ -439,15 +416,12 @@ ul.account-links li>a:hover {
         margin-left: 0;
         padding-bottom: 0;
     }
-
     .brand-nav ul.nav {
         justify-content: center;
     }
-    
     .brand-nav .nav .nav-item {
         position: static;
     }
-
     .brand-nav .nav .nav-link::after {
         position: absolute;
         opacity: 0;
@@ -461,26 +435,21 @@ ul.account-links li>a:hover {
         -o-transition: all 0.3s;
         transition: all 0.3s;
     }
-
     .brand-nav ul>li:last-child .nav-link::after {
         background: #ec3f8d!important;
     }
-
     .brand-nav .nav .nav-link:hover::after {
         opacity: 1;
         width: 100%;
     }
-
     .brand-nav .nav-link-wrapper:hover .nav-link::after {
         opacity: 1;
         width: 100%;
     }
-
     .brand-nav .nav-link-wrapper:hover .brand-dropdown {
         visibility: visible;
         opacity: 1;
     }
-
     .brand-dropdown {
         line-height: 18px;
         background-color: #fff;
@@ -497,7 +466,6 @@ ul.account-links li>a:hover {
         -o-transition: all 0.3s;
         transition: all 0.3s;
     }
-
     .brand-dropdown .row {
         width: 100%;
     }
@@ -510,11 +478,9 @@ ul.account-links li>a:hover {
         margin-bottom: 0;
         pointer-events: none;
     }
-
     .brand-dropdown ul.list-unstyled li {
         padding: 4px 0;
     }
-
     .brand-dropdown a.menu-link {
         font-size: 13px;
         color: #363636;
@@ -523,16 +489,13 @@ ul.account-links li>a:hover {
         -o-transition: color 0.1s;
         transition: color 0.1s;
     }
-    
     .brand-dropdown a.menu-link:hover {
         color: #2694cf;
     }
-
-    #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
+    #desktopNav>ul.nav>li.nav-item:last-child>div.nav-link-wrapper>a.nav-link {
         color: #ec3f8d;
     }
 }
-
 
 /* ---------------------------------------------------
     CART DRAWER STYLE
@@ -751,7 +714,6 @@ ul.account-links li>a:hover {
     margin: 15px 0;
 }
 
-
 /* ---------------------------------------------------
     HOMEPAGE STYLES
 ----------------------------------------------------- */
@@ -818,12 +780,10 @@ ul.account-links li>a:hover {
         font-size: 1.1rem;
         letter-spacing: .5px;
     }
-
     #homepage .shop-by-group h6 {
         font-size: 0.9rem;
         letter-spacing: .5px;
     }
-
     #homepage .shop-by-group .col-6 {
         padding-left: 5px;
         padding-right: 5px;
@@ -857,7 +817,6 @@ ul.account-links li>a:hover {
         margin-right: -5px;
         margin-left: -5px;
     }
-    
     #collection .shop-category .col-3 {
         padding-right: 5px;
         padding-left: 5px;
@@ -1045,7 +1004,6 @@ ul.account-links li>a:hover {
     font-size: 23px;
     background: #ec3f8d;
     color: #fff;
-
 }
 
 /* ---------------------------------------------------
@@ -1060,7 +1018,7 @@ ul.account-links li>a:hover {
 #productImages .fa-chevron-left, #productImages .fa-chevron-right {
     font-size: 2em;
     color: #fff;
-    text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 #productImages .carousel-control-next, #productImages .carousel-control-prev {
@@ -1282,7 +1240,6 @@ ul.account-links li>a:hover {
     border-color: #2694cf;
 }
 
-
 /* ---------------------------------------------------
     CCPA PAGE STYLES
 ----------------------------------------------------- */
@@ -1337,7 +1294,6 @@ section.ccpa-page {
     font-size: 18px;
     text-transform: uppercase;
 }
-
 
 /* ---------------------------------------------------
     FOOTER STYLES
@@ -1710,7 +1666,6 @@ button.place-order {
     padding: 15px;
 }
 
-
 /* ---------------------------------------------------
     Game Landing Page STYLES
 ----------------------------------------------------- */
@@ -1720,9 +1675,22 @@ button.place-order {
     color: #fff;
 }
 
-#landing-page h1, #landing-page h2, #landing-page h3 {
+#landing-page h1, #landing-page h2, #landing-page h3, #landing-page h4, #landing-page h5 {
     font-family: 'Patua One', sans-serif;
     color: rgba(255, 255, 255, .9);
+}
+
+#landing-page .no-caps {
+    text-transform: unset;
+}
+
+#landing-page .text-dark {
+    color: #1c1d25;
+}
+
+#landing-page h3.h-card {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
 }
 
 #landing-page .btn {
@@ -1734,11 +1702,25 @@ button.place-order {
     color: rgba(255, 255, 255, .9);
 }
 
+#landing-page .expansion-btn {
+    background: #4CA0E5;
+    border-color: #4CA0E5;
+}
+
 .layered-png {
     position: relative;
     width: 100%;
-    height: calc(100vw * .4);
     overflow: hidden;
+    height: 100%;
+}
+
+#product-image.layered-png {
+    overflow: visible;
+}
+
+.layered-png.main-banner {
+    height: calc(100vw * .4);
+    visibility: hidden;
 }
 
 .layered-png img {
@@ -1753,24 +1735,83 @@ canvas {
     position: relative;
 }
 
-.carousel-content {
+#howToPlayCarousel .carousel-control-wrapper {
+    width: 200px;
+    font-size: 2rem;
+    z-index: 20;
+}
+
+#howToPlayCarousel .carousel-control-wrapper .carousel-control {
+    z-index: 20;
+}
+
+#howToPlayCarousel .carousel-indicators {
+    bottom: 0;
+}
+
+#howToPlayCarousel .carousel-indicators li {
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#howToPlayCarousel .htp-caption {
+    background: #4C4C56;
+    border-radius: .5rem;
+}
+
+.full-width-white {
     width: 100%;
-    height: 600px;
+    background: #fff;
+    position: relative;
 }
 
-.cta-bar {
-    background: #2760AD;
+#landing-page .cta-link {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-.card-types {
-    background: #DD6B52
+.aspect-ratio::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
 }
 
-.img-placeholder {
-    width: 100%;
-    height: 300px;
-    background: rgba(255, 255, 255, .3);
-    margin-bottom: 2rem;
+.aspect-ratio::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.aspect-ratio.product-img::before {
+    padding-top: 83.33%;
+}
+
+.aspect-ratio.cta::before {
+    padding-top: 74.72%;
+}
+
+.aspect-ratio.customizer-promo::before {
+    padding-top: 65.83%;
+}
+
+.aspect-ratio.tall-card::before {
+    padding-top: 47.33%;
+}
+
+.aspect-ratio.reg-card::before {
+    padding-top: 35.09%;
+}
+
+@media (max-width: 575.98px) {
+    #landing-page .btn h2 {
+        font-size: 1.5rem;
+    }
 }
 
 /* ---------------------------------------------------
@@ -1811,11 +1852,7 @@ canvas {
     cursor: text;
 }
 
-.form-label-group input::-webkit-input-placeholder,
-.form-label-group input:-ms-input-placeholder,
-.form-label-group input::-ms-input-placeholder,
-.form-label-group input::-moz-placeholder,
-.form-label-group input::placeholder {
+.form-label-group input::-webkit-input-placeholder, .form-label-group input:-ms-input-placeholder, .form-label-group input::-ms-input-placeholder, .form-label-group input::-moz-placeholder, .form-label-group input::placeholder {
     color: transparent;
 }
 
@@ -2001,7 +2038,6 @@ canvas {
     content: "\f054";
 }
 
-
 /* ---------------------------------------------------
     TeeTurtle SPECIFIC STYLES
 ----------------------------------------------------- */
@@ -2018,7 +2054,6 @@ canvas {
         margin-bottom: 1.25rem;
     }
 }
-
 
 /* ---------------------------------------------------
     Fandoms SPECIFIC STYLES
@@ -2037,17 +2072,11 @@ canvas {
     }
 }
 
-
 /* ---------------------------------------------------
     Chibipuffs SPECIFIC STYLES
 ----------------------------------------------------- */
 
-#toys h1, 
-#toys h2, 
-#toys h3, 
-#toys h4, 
-#toys h5, 
-#toys h6 {
+#toys h1, #toys h2, #toys h3, #toys h4, #toys h5, #toys h6 {
     font-family: atten-round-new, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -2056,6 +2085,7 @@ canvas {
 }
 
 /* Universal Nav */
+
 #toys #universal-nav {
     background: #4cceee;
     color: #fff;
@@ -2108,6 +2138,7 @@ canvas {
 }
 
 /* Promo Bar */
+
 #toys .promo-bar {
     background: #493499;
 }
@@ -2117,6 +2148,7 @@ canvas {
 }
 
 /* Brand Bar */
+
 #toys .brand-logo {
     height: 50px;
     margin: .25rem;
@@ -2130,27 +2162,29 @@ canvas {
     }
 }
 
-#toys #desktopNav > ul.nav > li.nav-item:last-child > div.nav-link-wrapper > a.nav-link {
+#toys #desktopNav>ul.nav>li.nav-item:last-child>div.nav-link-wrapper>a.nav-link {
     color: #4cceee;
 }
 
 /* Desktop Nav Styles */
+
 @media (min-width: 768px) {
     #toys .brand-nav .nav .nav-link::after {
         background: #493499;
     }
-
     #toys .brand-nav ul>li:last-child .nav-link::after {
         background: #4cceee!important;
     }
 }
 
 /* Homepage */
+
 #toys #homepage .shop-characters .col-6 {
     padding: 0;
 }
 
 /* Footer */
+
 #toys .footer {
     background: #C8F5FF url(../img/footer-unicorn.svg) right bottom no-repeat;
     background-size: auto 280px;
@@ -2191,6 +2225,7 @@ canvas {
 }
 
 /* Promo Bar */
+
 #unstable .promo-bar {
     background: #2694cf;
 }
@@ -2222,6 +2257,7 @@ canvas {
     padding: 0 .5rem;
     color: #2694cf;
 }
+
 #unstable .nav-link.cart-link {
     padding: 0;
 }
@@ -2239,7 +2275,6 @@ canvas {
         margin-top: 1.25rem;
         margin-bottom: 0;
     }
-
     #unstable .mobile-nav {
         top: 44px;
     }
