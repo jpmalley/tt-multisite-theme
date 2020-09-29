@@ -10,34 +10,7 @@ canvasElements.forEach((canvas) => {
     let currentFrame = frameIndex => (`img/animation/${sceneName}/frame-${frameIndex.toString().padStart(3, "0")}.jpg`);
     let images = [];
     let canvasFrames = { frame: 0 };
-    let preloadImages = () => {
-        for (let i = 1; i < frameCount; i++) {
-            const img = new Image();
-            img.src = currentFrame(i);
-        }
-    };
-
-    preloadImages();
-
-    for (let i = 0; i < frameCount; i++) {
-        const img = new Image();
-        img.src = currentFrame(i);
-        images.push(img);
-    }
-
-    gsap.to(canvasFrames, {
-        frame: frameCount - 1,
-        snap: "frame",
-        scrollTrigger: {
-            start: "top center",
-            trigger: canvas,
-            scrub: 0.5,
-            // markers: true,
-        },
-        onUpdate: render
-    });
-
-    images[0].onload = render;
+    let smBreakpoint = window.matchMedia("(max-width: 575.98px)")
 
     function render() {
         fix_dpi()
@@ -58,14 +31,46 @@ canvasElements.forEach((canvas) => {
         canvas.setAttribute('height', style.height() * dpi);
     }
 
+    function myFunction(smBreakpoint) {
+        if (smBreakpoint.matches) { // If media query matches
+            let staticImg = new Image();
+            staticImg.src = currentFrame(33);
+            
+            fix_dpi()
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            staticImg.onload = () => context.drawImage(staticImg, 0, 0, canvas.width, canvas.height);
+        } else {
+            for (let i = 0; i < frameCount; i++) {
+                const img = new Image();
+                img.src = currentFrame(i);
+                images.push(img);
+            }
+
+            gsap.to(canvasFrames, {
+                frame: frameCount - 1,
+                snap: "frame",
+                scrollTrigger: {
+                    start: "top center",
+                    trigger: canvas,
+                    scrub: 0.5,
+                    // markers: true,
+                },
+                onUpdate: render
+            });
+
+            images[0].onload = render;
+        }
+    }
+
+    myFunction(smBreakpoint);
+    // smBreakpoint.addEventListener("change", myFunction);
+
 })
 
 const mainBanner = document.querySelector("#mb-thief");
 
 // Main Banner Animation
-function init() {
-    console.log("triggered")
-    gsap.timeline({
+gsap.timeline({
     scrollTrigger: {
         trigger: ".main-banner",
         toggleActions: "play reset play complete",
@@ -74,7 +79,7 @@ function init() {
         // markers: true,
     }
 })
-    .from(".main-banner", {autoAlpha:0})
+    .from(".main-banner", { autoAlpha: 0 })
     .from("#mb-thief", {
         opacity: 0,
         top: "200px",
@@ -89,11 +94,6 @@ function init() {
         top: "-160px",
         duration: 2,
     }, .2)
-}
-
-mainBanner.addEventListener("load", function() {
-    init();
-})
 
 // HTS Product Image Animation
 gsap.timeline({
