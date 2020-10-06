@@ -34,7 +34,7 @@ canvasElements.forEach((canvas) => {
     function myFunction(smBreakpoint) {
         if (smBreakpoint.matches) { // If media query matches
             let staticImg = new Image();
-            staticImg.src = currentFrame(33);
+            staticImg.src = currentFrame(13);
             
             fix_dpi()
             context.clearRect(0, 0, canvas.width, canvas.height);
@@ -69,11 +69,13 @@ canvasElements.forEach((canvas) => {
 
 const mainBanner = document.querySelector("#mb-thief");
 
+let playActions = "restart complete complete complete"
+
 // Main Banner Animation
 gsap.timeline({
     scrollTrigger: {
         trigger: ".main-banner",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -99,7 +101,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#product-image",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 80%",
         end: "bottom top",
         // markers: true,
@@ -121,7 +123,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#cta-1",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -143,7 +145,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#customizer-promo",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 80%",
         end: "bottom top",
         // markers: true,
@@ -170,10 +172,10 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#party-leader-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
-        // markers: true,
+        markers: true,
     }
 })
     .from("#party-leader-cards img", {
@@ -187,7 +189,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#hero-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -204,7 +206,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#monster-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -221,7 +223,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#item-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -238,7 +240,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#magic-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -255,7 +257,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#modifier-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
@@ -272,28 +274,28 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#challenge-cards",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
     }
 })
+    .from("#challenge-2", {
+        opacity: 0,
+        top: "500px",
+        duration: .25,
+    },)
     .from("#challenge-0", {
         opacity: 0,
         left: "-500px",
         duration: .25,
         ease: "back"
-    })
+    }, .1)
     .from("#challenge-1", {
         opacity: 0,
         left: "500px",
         duration: .25,
         ease: "back"
-    }, 0)
-    .from("#challenge-2", {
-        opacity: 0,
-        top: "500px",
-        duration: .25,
     }, .1)
 
 
@@ -301,7 +303,7 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#cta-2",
-        toggleActions: "play reset play complete",
+        toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
         // markers: true,
