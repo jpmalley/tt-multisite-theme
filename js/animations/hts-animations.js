@@ -175,7 +175,7 @@ gsap.timeline({
         toggleActions: playActions,
         start: "top 50%",
         end: "bottom top",
-        markers: true,
+        // markers: true,
     }
 })
     .from("#party-leader-cards img", {
