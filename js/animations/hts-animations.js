@@ -2,6 +2,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const canvasElements = document.querySelectorAll(".animation");
 const dpi = window.devicePixelRatio;
+let smBreakpoint = window.matchMedia("(max-width: 575.98px)");
+let startString = "top 90%";
 
 canvasElements.forEach((canvas) => {
     let context = canvas.getContext("2d");
@@ -10,10 +12,9 @@ canvasElements.forEach((canvas) => {
     let currentFrame = frameIndex => (`img/animation/${sceneName}/frame-${frameIndex.toString().padStart(3, "0")}.jpg`);
     let images = [];
     let canvasFrames = { frame: 0 };
-    let smBreakpoint = window.matchMedia("(max-width: 575.98px)")
 
     function render() {
-        fix_dpi()
+        fix_dpi();
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.drawImage(images[canvasFrames.frame], 0, 0, canvas.width, canvas.height);
     }
@@ -31,12 +32,12 @@ canvasElements.forEach((canvas) => {
         canvas.setAttribute('height', style.height() * dpi);
     }
 
-    function myFunction(smBreakpoint) {
-        if (smBreakpoint.matches) { // If media query matches
+    function scrubMediaQuery(breakpoint) {
+        if (breakpoint.matches) {
             let staticImg = new Image();
             staticImg.src = currentFrame(13);
-            
-            fix_dpi()
+
+            fix_dpi();
             context.clearRect(0, 0, canvas.width, canvas.height);
             staticImg.onload = () => context.drawImage(staticImg, 0, 0, canvas.width, canvas.height);
         } else {
@@ -50,7 +51,7 @@ canvasElements.forEach((canvas) => {
                 frame: frameCount - 1,
                 snap: "frame",
                 scrollTrigger: {
-                    start: "top center",
+                    start: "top 20%",
                     trigger: canvas,
                     scrub: 0.5,
                     // markers: true,
@@ -62,47 +63,26 @@ canvasElements.forEach((canvas) => {
         }
     }
 
-    myFunction(smBreakpoint);
-    // smBreakpoint.addEventListener("change", myFunction);
+    scrubMediaQuery(smBreakpoint);
 
 })
 
-const mainBanner = document.querySelector("#mb-thief");
-
-let playActions = "restart complete complete complete"
-
-// Main Banner Animation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: ".main-banner",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
+function timelineMediaQuery(breakpoint) {
+    if (breakpoint.matches) {
+        startString = "top 95%";
     }
-})
-    .from(".main-banner", { autoAlpha: 0 })
-    .from("#mb-thief", {
-        opacity: 0,
-        top: "200px",
-        duration: 2,
-    })
-    .from("#mb-rain", {
-        top: "-50px",
-        duration: 2,
-    }, 0)
-    .from("#mb-logo", {
-        opacity: 0,
-        top: "-160px",
-        duration: 2,
-    }, .2)
+}
+
+timelineMediaQuery(smBreakpoint);
+
+let playOptions = "restart complete complete reset";
 
 // HTS Product Image Animation
 gsap.timeline({
     scrollTrigger: {
         trigger: "#product-image",
-        toggleActions: playActions,
-        start: "top 80%",
+        toggleActions: playOptions,
+        start: startString,
         end: "bottom top",
         // markers: true,
     }
@@ -123,8 +103,8 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger: {
         trigger: "#cta-1",
-        toggleActions: playActions,
-        start: "top 50%",
+        toggleActions: playOptions,
+        start: startString,
         end: "bottom top",
         // markers: true,
     }
@@ -141,11 +121,164 @@ gsap.timeline({
     }, .5)
 
 
+// Party Leader Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#party-leader-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#party-leader-cards img", {
+        opacity: 0,
+        top: "500px",
+        stagger: 0.1
+    })
+
+
+// Hero Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#hero-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#hero-cards img", {
+        opacity: 0,
+        top: "500px",
+        stagger: 0.1
+    })
+
+
+// Monster Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#monster-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#monster-cards img", {
+        opacity: 0,
+        top: "500px",
+        stagger: 0.1
+    })
+
+
+// Item Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#item-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#item-cards img", {
+        opacity: 0,
+        top: "500px",
+        stagger: 0.1
+    })
+
+
+// Magic Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#magic-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#magic-cards img", {
+        opacity: 0,
+        top: "500px",
+        stagger: 0.1
+    })
+
+
+// Modifier Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#modifier-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#modifier-cards img", {
+        opacity: 0,
+        top: "500px",
+        stagger: 0.1
+    })
+
+
+// Challenge Cards Animimation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#challenge-cards",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#challenge-2", {
+        opacity: 0,
+        top: "500px",
+        duration: .25,
+    },)
+    .from("#challenge-0", {
+        opacity: 0,
+        left: "-500px",
+        duration: .25,
+        ease: "back"
+    }, .1)
+    .from("#challenge-1", {
+        opacity: 0,
+        left: "500px",
+        duration: .25,
+        ease: "back"
+    }, .1)
+
+
+// CTA-2 Animation
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#cta-2",
+        toggleActions: playOptions,
+        start: startString,
+        end: "bottom top",
+        // markers: true,
+    }
+})
+    .from("#cta-2-product", {
+        opacity: 0,
+        left: "-100px",
+        duration: 1,
+    })
+    .from("#cta-2-character", {
+        opacity: 0,
+        left: "-100px",
+        duration: .25,
+    }, .5)
+
+
 // Customizer Animation
 gsap.timeline({
     scrollTrigger: {
         trigger: "#customizer-promo",
-        toggleActions: playActions,
+        toggleActions: playOptions,
         start: "top 80%",
         end: "bottom top",
         // markers: true,
@@ -168,154 +301,14 @@ gsap.timeline({
     }, 0)
 
 
-// Party Leader Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#party-leader-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
+let waitForIt1 = document.getElementById('htp-1');
+let waitForIt2 = document.getElementById('wd-banner');
+
+waitForIt1.addEventListener('load', function() {
+    ScrollTrigger.refresh();
 })
-    .from("#party-leader-cards img", {
-        opacity: 0,
-        top: "500px",
-        stagger: 0.1
-    })
 
-
-// Hero Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#hero-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
+waitForIt2.addEventListener('load', function() {
+    ScrollTrigger.refresh();
+    console.log("refresh after wdb")
 })
-    .from("#hero-cards img", {
-        opacity: 0,
-        top: "500px",
-        stagger: 0.1
-    })
-
-
-// Monster Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#monster-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
-})
-    .from("#monster-cards img", {
-        opacity: 0,
-        top: "500px",
-        stagger: 0.1
-    })
-
-
-// Item Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#item-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
-})
-    .from("#item-cards img", {
-        opacity: 0,
-        top: "500px",
-        stagger: 0.1
-    })
-
-
-// Magic Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#magic-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
-})
-    .from("#magic-cards img", {
-        opacity: 0,
-        top: "500px",
-        stagger: 0.1
-    })
-
-
-// Modifier Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#modifier-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
-})
-    .from("#modifier-cards img", {
-        opacity: 0,
-        top: "500px",
-        stagger: 0.1
-    })
-
-
-// Challenge Cards Animimation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#challenge-cards",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        markers: true,
-    }
-})
-    .from("#challenge-2", {
-        opacity: 0,
-        top: "500px",
-        duration: .25,
-    },)
-    .from("#challenge-0", {
-        opacity: 0,
-        left: "-500px",
-        duration: .25,
-        ease: "back"
-    }, .1)
-    .from("#challenge-1", {
-        opacity: 0,
-        left: "500px",
-        duration: .25,
-        ease: "back"
-    }, .1)
-
-
-// CTA-1 Animation
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#cta-2",
-        toggleActions: playActions,
-        start: "top 50%",
-        end: "bottom top",
-        // markers: true,
-    }
-})
-    .from("#cta-2-product", {
-        opacity: 0,
-        left: "-100px",
-        duration: 1,
-    })
-    .from("#cta-2-character", {
-        opacity: 0,
-        left: "-100px",
-        duration: .25,
-    }, .5)
