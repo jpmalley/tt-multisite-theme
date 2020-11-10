@@ -1292,7 +1292,7 @@ section.ccpa-page {
     color: #6b7073;
 }
 
-.privacy-policy ul > li {
+.privacy-policy ul>li {
     margin-bottom: 0.5rem;
 }
 
@@ -1303,7 +1303,6 @@ section.ccpa-page {
 .privacy-policy .table td>p {
     margin-bottom: 0;
 }
-
 
 /* ---------------------------------------------------
     404 PAGE STYLES
@@ -1852,6 +1851,32 @@ canvas {
         font-size: 1.5rem;
     }
 }
+
+/* ---------------------------------------------------
+    GIFT GUIDE STYLES
+----------------------------------------------------- */
+
+.grid-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.grid-item {
+    text-align: center;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-row: 1 / span 2;
+}
+
+.item10 {
+    grid-column: 3;
+    grid-row: 3 / span 2;
+}
+
 
 /* ---------------------------------------------------
     FLOATING FORM LABEL STYLES

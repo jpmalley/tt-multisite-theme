@@ -563,3 +563,4 @@ $('#gdpr-dismiss, #gdpr-confirm').on('click', function(e) {
     console.log('clicked')
     $('.gdpr-message').hide();
 });
+
