@@ -1267,6 +1267,45 @@ section.ccpa-page {
 }
 
 /* ---------------------------------------------------
+    PRIVACY POLICY STYLES
+----------------------------------------------------- */
+
+.privacy-policy {
+    overflow-y: auto;
+}
+
+.privacy-policy h1 {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 1.6rem;
+}
+
+.privacy-policy a {
+    color: var(--blue);
+}
+
+.privacy-policy a:hover {
+    color: var(--orange);
+}
+
+.privacy-policy ul {
+    color: #6b7073;
+}
+
+.privacy-policy ul > li {
+    margin-bottom: 0.5rem;
+}
+
+.privacy-policy .bold-heading {
+    font-weight: bold;
+}
+
+.privacy-policy .table td>p {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------
     404 PAGE STYLES
 ----------------------------------------------------- */
 
