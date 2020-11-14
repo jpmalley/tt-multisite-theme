@@ -1723,7 +1723,7 @@ button.place-order {
 }
 
 #landing-page .text-dark {
-    color: #1c1d25;
+    color: #1c1d25!important;
 }
 
 #landing-page h3.h-card {
@@ -1846,11 +1846,140 @@ canvas {
     padding-top: 35.09%;
 }
 
+#landing-page.dino {
+    background: #291721;
+}
+
+#landing-page.dino h1, #landing-page.dino h2, #landing-page.dino h3, #landing-page.dino h4, #landing-page.dino h5 {
+    font-family: 'Gaegu', sans-serif;
+}
+
+#landing-page.dino p, #landing-page.dino ul {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+}
+
+#landing-page.dino .text-dino {
+    color: #20abc2!important;
+}
+
+#landing-page.dino .btn {
+    font-family: 'Gaegu', sans-serif;
+    color: rgba(255, 255, 255, .9);
+}
+
+#landing-page.dino .sec-head {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+#landing-page.dino .sub-head {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#landing-page.dino .game-head {
+    font-family: 'Gaegu', sans-serif;
+    color: #fff;
+    background: #2A1621;
+}
+
+#landing-page.dino .table th, #landing-page.dino .table td {
+    border: 5px solid #fff;
+}
+
+#landing-page.dino .table tbody th {
+    background: #eeeeee;
+}
+
+#landing-page.dino .table tbody td {
+    background: #EDECDF;
+}
+
+#landing-page.dino .game-head span {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+#landing-page.dino .add-on {
+    margin-bottom: 40px;
+}
+
+#landing-page.dino .add-on-footer {
+    width: 100%;
+    background: #2A1621;
+}
+
+#landing-page.dino .add-on-title {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+#landing-page.dino .feat-head {
+    font-size: 2.5rem;
+}
+
+#landing-page.dino .stego-head {
+    font-weight: bold;
+}
+
+#landing-page.dino span.donation {
+    font-weight: bold;
+}
+
+#landing-page.dino .wp-nowrap {
+    white-space: nowrap;
+}
+
+#landing-page.dino .bullet-divider {
+    margin: 0 .5rem;
+}
+
+#landing-page.dino .acs-logo {
+    width: 120px;
+    height: auto;
+}
+
+#landing-page.dino #howToPlayCarousel .carousel-inner {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+#landing-page.dino #howToPlayCarousel .htp-caption {
+    background: #fff;
+    border-radius: 0;
+    padding: 0 3rem 3rem 3rem;
+}
+
+#landing-page.dino #howToPlayCarousel .carousel-control-wrapper {
+    width: 100%;
+    font-size: 2rem;
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#landing-page.dino h2.timeline {
+    font-size: 4.5rem;
+    margin: 2rem 0 0 2rem;
+}
+
+#landing-page.dino .other-games .sub-head {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 575.98px) {
     #landing-page .btn h2 {
         font-size: 1.5rem;
     }
 }
+
 
 /* ---------------------------------------------------
     GIFT GUIDE STYLES
