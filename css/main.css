@@ -1856,16 +1856,25 @@ canvas {
 
 #landing-page.dino p, #landing-page.dino ul {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 }
 
 #landing-page.dino .text-dino {
     color: #20abc2!important;
 }
 
+#landing-page.dino .text-exc {
+    color: #1C1D25!important;
+}
+
 #landing-page.dino .btn {
     font-family: 'Gaegu', sans-serif;
     color: rgba(255, 255, 255, .9);
+}
+
+#landing-page.dino .product-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.25rem;
 }
 
 #landing-page.dino .sec-head {
@@ -1888,6 +1897,11 @@ canvas {
 
 #landing-page.dino .table th, #landing-page.dino .table td {
     border: 5px solid #fff;
+    font-weight: bold;
+}
+
+#landing-page.dino .table td {
+    vertical-align: middle;
 }
 
 #landing-page.dino .table tbody th {
@@ -1910,6 +1924,7 @@ canvas {
 #landing-page.dino .add-on-footer {
     width: 100%;
     background: #2A1621;
+    padding: 0 10px;
 }
 
 #landing-page.dino .add-on-title {
@@ -1966,7 +1981,7 @@ canvas {
 }
 
 #landing-page.dino h2.timeline {
-    font-size: 4.5rem;
+    text-align: left;
     margin: 2rem 0 0 2rem;
 }
 
@@ -1977,6 +1992,66 @@ canvas {
 @media (max-width: 575.98px) {
     #landing-page .btn h2 {
         font-size: 1.5rem;
+    }
+
+    #landing-page.dino .sec-head {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #landing-page.dino .sub-head {
+        font-size: 1.5rem;
+    }
+
+    #landing-page.dino h2.timeline {
+        font-size: 1.5rem;
+        margin: 1rem 0 0 0;
+    }
+    
+    #landing-page.dino .table th, #landing-page.dino .table td {
+        border: 3px solid #fff;
+        font-size: 0.8rem;
+    }
+
+    #landing-page.dino .table .game-head {
+        height: 165px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #landing-page.dino .table .game-head h2 {
+        text-align: left;
+        transform: translate(0px, -36px) rotate(270deg);
+        font-size: 1.2rem;
+    }
+    
+    #landing-page.dino .table thead th:first-child, #landing-page.dino .table tbody th {
+        width: 30px;
+    }
+    
+    #landing-page.dino .table tbody td {
+        background: #EDECDF;
+    }
+    
+    #landing-page.dino .game-head span {
+        font-size: 1.5rem;
+    }
+
+    #landing-page.dino .wp-nowrap {
+        white-space: normal;
+    }
+
+    #landing-page.dino #howToPlayCarousel .carousel-inner {
+        width: 85%;
+        margin: 1rem auto 0 auto;
+    }
+
+    #landing-page.dino #howToPlayCarousel .htp-caption {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    #landing-page.dino .add-on-title {
+        font-size: .9rem;
     }
 }
 
