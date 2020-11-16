@@ -1847,7 +1847,7 @@ canvas {
 }
 
 #landing-page.dino {
-    background: #291721;
+    background: #2e2832;
 }
 
 #landing-page.dino h1, #landing-page.dino h2, #landing-page.dino h3, #landing-page.dino h4, #landing-page.dino h5 {
@@ -1892,7 +1892,7 @@ canvas {
 #landing-page.dino .game-head {
     font-family: 'Gaegu', sans-serif;
     color: #fff;
-    background: #2A1621;
+    background: #2e2832;
 }
 
 #landing-page.dino .table th, #landing-page.dino .table td {
@@ -1923,8 +1923,12 @@ canvas {
 
 #landing-page.dino .add-on-footer {
     width: 100%;
-    background: #2A1621;
+    background: #2e2832;
     padding: 0 10px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #landing-page.dino .add-on-title {
@@ -2048,6 +2052,10 @@ canvas {
 
     #landing-page.dino #howToPlayCarousel .htp-caption {
         padding: 0 2rem 2rem 2rem;
+    }
+
+    #landing-page.dino .add-on-footer {
+        min-height: 75px;
     }
 
     #landing-page.dino .add-on-title {
