@@ -95,8 +95,8 @@ gsap.timeline({
 
 
 
-let waitForIt1 = document.getElementById('hld-1');
+// let waitForIt1 = document.getElementById('hld-1');
 
-waitForIt1.addEventListener('load', function() {
-    ScrollTrigger.refresh();
-})
+// waitForIt1.addEventListener('load', function() {
+//     ScrollTrigger.refresh();
+// })
