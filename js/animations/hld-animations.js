@@ -84,7 +84,7 @@ gsap.timeline({
         toggleActions: playOptions,
         start: startString,
         end: "bottom top",
-        markers: true,
+        // markers: true,
     }
 })
     .from("#hld-product", {
