@@ -564,3 +564,9 @@ $('#gdpr-dismiss, #gdpr-confirm').on('click', function(e) {
     $('.gdpr-message').hide();
 });
 
+// Gift guide
+$('.gift-guide .nav-link').on('click', function(e) {
+    e.preventDefault();
+    t = $(this).attr('href');
+    gsap.to(window, {duration: 1, scrollTo: t});
+});

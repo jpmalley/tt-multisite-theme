@@ -1981,7 +1981,7 @@ canvas {
     z-index: 20;
     position: absolute;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
 }
 
 #landing-page.dino h2.timeline {
@@ -1997,98 +1997,145 @@ canvas {
     #landing-page .btn h2 {
         font-size: 1.5rem;
     }
-
     #landing-page.dino .sec-head {
         text-align: center;
         font-size: 2.5rem;
     }
-
     #landing-page.dino .sub-head {
         font-size: 1.5rem;
     }
-
     #landing-page.dino h2.timeline {
         font-size: 1.5rem;
         margin: 1rem 0 0 0;
     }
-    
     #landing-page.dino .table th, #landing-page.dino .table td {
         border: 3px solid #fff;
         font-size: 0.8rem;
     }
-
     #landing-page.dino .table .game-head {
         height: 165px;
         padding-left: 0;
         padding-right: 0;
     }
-
     #landing-page.dino .table .game-head h2 {
         text-align: left;
         transform: translate(0px, -36px) rotate(270deg);
         font-size: 1.2rem;
     }
-    
     #landing-page.dino .table thead th:first-child, #landing-page.dino .table tbody th {
         width: 30px;
     }
-    
     #landing-page.dino .table tbody td {
         background: #EDECDF;
     }
-    
     #landing-page.dino .game-head span {
         font-size: 1.5rem;
     }
-
     #landing-page.dino .wp-nowrap {
         white-space: normal;
     }
-
     #landing-page.dino #howToPlayCarousel .carousel-inner {
         width: 85%;
         margin: 1rem auto 0 auto;
     }
-
     #landing-page.dino #howToPlayCarousel .htp-caption {
         padding: 0 2rem 2rem 2rem;
     }
-
     #landing-page.dino .add-on-footer {
         min-height: 75px;
     }
-
     #landing-page.dino .add-on-title {
         font-size: .9rem;
     }
 }
 
-
 /* ---------------------------------------------------
     GIFT GUIDE STYLES
 ----------------------------------------------------- */
 
-.grid-container {
+.gift-guide .nav {
+    background: #b63d3d;
+    color: #fff;
+    font-weight: bold;
+}
+
+.gift-guide .section-header {
+    margin-top: 3rem;
+    margin-bottom: 8px;
+}
+
+.gift-guide .grid-container {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .grid-item {
     text-align: center;
-    font-size: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #eee;
+    position: relative;
 }
 
-.item1 {
+.gift-guide .number {
+    position: absolute;
+    top: 02px;
+    left: 5px;
+}
+
+.gift-guide .item1 {
     grid-row: 1 / span 2;
 }
 
-.item10 {
-    grid-column: 3;
-    grid-row: 3 / span 2;
+.gift-guide .item10 {
+    grid-column: 2;
+    grid-row: 5 / span 2;
 }
 
+@media (min-width: 576px) {
+    .gift-guide .grid-container {
+        gap: 8px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    
+    .gift-guide .item10 {
+        grid-column: 3;
+        grid-row: 3 / span 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .gift-guide .section-header {
+        margin-bottom: 12px;
+    }
+
+    .gift-guide .grid-container {
+        gap: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .gift-guide .section-header {
+        margin-bottom: 16.5px;
+    }
+
+    .gift-guide .grid-container {
+        gap: 16.5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gift-guide .section-header {
+        margin-bottom: 20px;
+    }
+
+    .gift-guide .grid-container {
+        gap: 20px;
+    }
+}
 
 /* ---------------------------------------------------
     FLOATING FORM LABEL STYLES
