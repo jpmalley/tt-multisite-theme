@@ -2054,9 +2054,17 @@ canvas {
 ----------------------------------------------------- */
 
 .gift-guide .nav {
-    background: #b63d3d;
+    background: #b70739;
     color: #fff;
     font-weight: bold;
+}
+
+.gift-guide .nav a.nav-link {
+    transition: all .2s ease-in-out;
+}
+
+.gift-guide .nav a.nav-link:hover {
+    background: #8b082d;
 }
 
 .gift-guide .section-header {
@@ -2079,12 +2087,6 @@ canvas {
     position: relative;
 }
 
-.gift-guide .number {
-    position: absolute;
-    top: 02px;
-    left: 5px;
-}
-
 .gift-guide .item1 {
     grid-row: 1 / span 2;
 }
@@ -2092,6 +2094,11 @@ canvas {
 .gift-guide .item10 {
     grid-column: 2;
     grid-row: 5 / span 2;
+}
+
+.gift-guide .gift-cta {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 @media (min-width: 576px) {

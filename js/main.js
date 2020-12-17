@@ -568,5 +568,11 @@ $('#gdpr-dismiss, #gdpr-confirm').on('click', function(e) {
 $('.gift-guide .nav-link').on('click', function(e) {
     e.preventDefault();
     t = $(this).attr('href');
-    gsap.to(window, {duration: 1, scrollTo: t});
+    gsap.to(window, {
+        duration: 1, 
+        scrollTo: {
+            y: t,
+            offsetY: 60
+        },
+    });
 });
