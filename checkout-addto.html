@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TeeTurtle - Cute, nerdy, pop-culture t-shirts!</title>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:400,400i,600,700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f4a78f8c4f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="checkout">
+
+    <!-- Universal nav -->
+    <nav id="universal-nav" class="navbar navbar-expand navbar-dark d-flex justify-content-center sticky-top">
+        <div class="universal-bar-left d-flex">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link universal-link">
+                        <img src="img/tt-logo-white.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="/fandoms-index.html" class="nav-link universal-link">
+                        <img src="img/ttf-logo-white.svg" alt="TeeTurtle Fandoms">
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="/chibipuffs-index.html" class="nav-link universal-link">
+                        <img src="img/cb-logo-white.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <section id="checkout-content">
+        <div class="modal fade" id="accountCheck" tabindex="-1" role="dialog" aria-labelledby="accountCheckTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container account-check">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-title" id="accountCheckTitle">Do you have an account?</div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <a href="#" id="accountCheckout" class="btn btn-primary btn-lg btn-block"><strong>Yes, sign
+                                            in</strong></a>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <a href="#" id="guestCheckout" data-dismiss="modal"
+                                        class="btn btn-secondary btn-lg btn-block"><strong>Nope, continue as
+                                            guest</strong></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-center mb-0 mx-3">You will have the opportunity to create an account after completing your order as a guest.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container account-sign-in d-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-title" id="accountCheckTitle">Welcome back!</div>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="form-label-group">
+                                            <input type="email" id="accountEmail" class="form-control"
+                                                placeholder="Email address" required>
+                                            <label for="accountEmail">Email address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="form-label-group">
+                                            <input type="password" id="accountPassword" class="form-control"
+                                                placeholder="Password" required>
+                                            <label for="accountPassword">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <a href="/checkout-signedin.html" id="signIn" class="btn btn-primary btn-lg btn-block"><strong>Sign In</strong></a>
+                                    </div>
+                                </div>
+                                <div class="form-row d-flex justify-content-center mt-2 forgot-password">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <form>
+                        <div class="accordion" id="checkout-steps">
+                            <!-- 1. Shipping Info -->
+                            <div class="card">
+                                <div class="card-header" id="step-1">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            1. Shipping Info
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="step-1"
+                                    data-parent="#checkout-steps">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h6>Enter your contact information</h6>
+                                                <p>We'll use this information to send you a receipt and keep you updated
+                                                    on the status of your order.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-label-group">
+                                                    <input type="email" id="customerEmail" class="form-control"
+                                                        placeholder="Email address" required autofocus>
+                                                    <label for="customerEmail">Email address</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-label-group">
+                                                    <input type="tel" id="customerMobile" class="form-control"
+                                                        placeholder="Mobile number">
+                                                    <label for="customerMobile">Mobile number</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="marketingConsent">
+                                                        <label class="form-check-label" for="marketingConsent">
+                                                            Yes, I’d like to receive news and special offers from
+                                                            TeeTurtle
+                                                            via email
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                                <p class="marketing-disclaimer">Sign up disclaimer goes here. Legal
+                                                    jargon, blah, blah, blah. Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Repudiandae accusantium, possimus, perferendis
+                                                    nemo vero quasi praesentium veritatis at debitis alias consectetur
+                                                    iste natus cum minima, sunt magnam sapiente recusandae explicabo.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h6>Enter a new shipping address</h6>
+                                            </div>
+                                        </div>
+                                        <div class="shippingWrapper">
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipFirst" class="form-control"
+                                                            placeholder="First name" required>
+                                                        <label for="shipFirst">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipLast" class="form-control"
+                                                            placeholder="Last name" required>
+                                                        <label for="shipLast">Last name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipAddress1" class="form-control"
+                                                            placeholder="Street address" required>
+                                                        <label for="shipAddress1">Street address</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipAddress2" class="form-control"
+                                                            placeholder="Address line 2" required>
+                                                        <label for="shipAddress2">Address line 2</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><select id="shipCountry" class="form-control">
+                                                            <option selected>Country</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select id="shipState" class="form-control">
+                                                            <option selected>State</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-8 col-7">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipCity" class="form-control"
+                                                            placeholder="City" required>
+                                                        <label for="shipCity">City</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-5">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="shipPostalCode" class="form-control"
+                                                            placeholder="Postal code" required>
+                                                        <label for="shipPostalCode">Postal code</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 d-flex align-items-center">
+                                                <button id="submitAddress" class="btn btn-primary continue next-btn"
+                                                    type="button" data-toggle="collapse" data-target="#shippingOptions"
+                                                    aria-expanded="false" aria-controls="shippingOptions">
+                                                    Submit address
+                                                </button>
+                                                <div>
+                                                    <button id="changeAddress" class="btn btn-link ml-3 d-none"
+                                                        type="button" data-toggle="collapse"
+                                                        data-target="#shippingOptions" aria-expanded="false"
+                                                        aria-controls="shippingOptions">Change Address</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="shippingOptions" class="collapse">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h6 class="mt-5">Select your preferred shipping method</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix shipping-options">
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-1"
+                                                    checked="checked">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="2" for="shipping-1">
+                                                    <div class="shipping-title">Economy</div>
+                                                    <div class="shipping-est">(7-10 Business Days)</div>
+                                                    <div class="shipping-price">$3.95</div>
+                                                </label>
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-2">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="3" for="shipping-2">
+                                                    <div class="shipping-title">Priority</div>
+                                                    <div class="shipping-est">(3-6 Business Days)</div>
+                                                    <div class="shipping-price">$5.36</div>
+                                                </label>
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-3">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="4" for="shipping-3">
+                                                    <div class="shipping-title">FedEx</div>
+                                                    <div class="shipping-est">(2-3 Business Days)</div>
+                                                    <div class="shipping-price">$18.15</div>
+                                                </label>
+                                                <input class="shipping-radio" type="radio" name="style" id="shipping-4">
+                                                <label class="shipping-label btn btn-outline-secondary"
+                                                    data-slide-to="4" for="shipping-3">
+                                                    <div class="shipping-title">FREE No Rush Shipping</div>
+                                                    <div class="shipping-est">Group this order with your existing order that is expected to ship between Jan. 01 and Jan. 22</div>
+                                                    <div class="shipping-price"></div>
+                                                </label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <button id="toShipping" class="btn btn-primary continue"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        Continue to payment info
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Payment Info -->
+                            <div class="card">
+                                <div class="card-header" id="step-2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            2. Payment Info
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="step-2"
+                                    data-parent="#checkout-steps">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h6>Choose or enter a billing address</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a id="billingAddressSelector" href="#billingAddressModal"
+                                                    class="selectorForModal" data-toggle="modal">
+                                                    <div
+                                                        class="selected-wrapper d-flex justify-content-between align-items-center  mb-3">
+                                                        <div class="selected-content d-flex align-items-center">
+                                                            <div class="option-icon">
+                                                                <i class="fas fa-truck"></i>
+                                                            </div>
+                                                            <div class="option-text">
+                                                                <strong>Same as shipping address</strong>
+                                                            </div>
+                                                        </div>
+                                                        <div class="selector-arrow">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div id="billingAddressModal" class="modal fade" tabindex="-1"
+                                                    role="dialog" aria-labelledby="billingAddressSelector"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h6 class="mb-0">Choose a billing address</h6>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div
+                                                                    class="form-group clearfix billing-address-options mb-0">
+                                                                    <input class="billing-address-radio" type="radio"
+                                                                        name="billing" id="billing-address-1"
+                                                                        checked="checked" value="same">
+                                                                    <label
+                                                                        class="billing-address-label btn btn-outline-secondary"
+                                                                        for="billing-address-1">
+                                                                        <div
+                                                                            class="option-content d-flex align-items-center">
+                                                                            <div class="option-icon">
+                                                                                <i class="fas fa-truck"></i>
+                                                                            </div>
+                                                                            <div class="option-text">
+                                                                                <strong>Same as shipping
+                                                                                    address</strong>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                    <input class="billing-address-radio" type="radio"
+                                                                        name="billing" id="billing-address-2"
+                                                                        value="new">
+                                                                    <label
+                                                                        class="billing-address-label btn btn-outline-secondary"
+                                                                        for="billing-address-2">
+                                                                        <div
+                                                                            class="option-content d-flex align-items-center">
+                                                                            <div class="option-icon">
+                                                                                <i class="fas fa-plus-circle"></i>
+                                                                            </div>
+                                                                            <div class="option-text">
+                                                                                <strong>Enter a new address</strong>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="newBillingAddress" class="collapse">
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="billFirst" class="form-control"
+                                                            placeholder="First name" required>
+                                                        <label for="billFirst">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="billLast" class="form-control"
+                                                            placeholder="Last name" required>
+                                                        <label for="billLast">Last name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="billAddress1" class="form-control"
+                                                            placeholder="Street address" required>
+                                                        <label for="billAddress1">Street address</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="billAddress2" class="form-control"
+                                                            placeholder="Address line 2" required>
+                                                        <label for="billAddress2">Address line 2</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><select id="billCountry"
+                                                            class="form-control">
+                                                            <option selected>Country</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select id="billState" class="form-control">
+                                                            <option selected>State</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-8 col-7">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="billCity" class="form-control"
+                                                            placeholder="City" required>
+                                                        <label for="billCity">City</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-5">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="billPostalCode" class="form-control"
+                                                            placeholder="Postal code" required>
+                                                        <label for="billPostalCode">Postal code</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 my-2">
+                                                <a href="#couponCodeWrapper" data-toggle="collapse"><strong>Do you have
+                                                        a coupon code or gift card?</strong></a>
+                                                <div id="couponCodeWrapper" class="collapse mt-2">
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="text"
+                                                            placeholder="Apply a promo code or gift card"
+                                                            aria-label="Apply a promo code">
+                                                        <div class="input-group-append">
+                                                            <button type="submit" class="input-group-text btn"
+                                                                id="promo-apply">
+                                                                Apply
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="payTabs-wrapper">
+                                                    <ul class="nav my-3" id="payTabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="creditCard-tab"
+                                                                data-toggle="tab" href="#creditCard" role="tab"
+                                                                aria-controls="creditCard" aria-selected="true">Credit
+                                                                Card</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="payPal-tab" data-toggle="tab"
+                                                                href="#payPal" role="tab" aria-controls="payPal"
+                                                                aria-selected="false">PayPal</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="applePay-tab" data-toggle="tab"
+                                                                href="#applePay" role="tab" aria-controls="applePay"
+                                                                aria-selected="false">Apply Pay</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="googlePay-tab" data-toggle="tab"
+                                                                href="#googlePay" role="tab" aria-controls="googlePay"
+                                                                aria-selected="false">Google Pay</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="payTabsContent">
+                                                        <div class="tab-pane fade show active" id="creditCard"
+                                                            role="tabpanel" aria-labelledby="creditCard-tab">
+                                                            <div class="row">
+                                                                <div class="col-12 d-flex accepted-cc mt-1 mb-3">
+                                                                    <i class="fab fa-cc-visa"></i>
+                                                                    <i class="fab fa-cc-mastercard"></i>
+                                                                    <i class="fab fa-cc-amex"></i>
+                                                                    <i class="fab fa-cc-discover"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <h6>Enter card information</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="col-12">
+                                                                    <div class="form-label-group">
+                                                                        <input type="text" id="nameOnCard"
+                                                                            class="form-control"
+                                                                            placeholder="Name on card" required>
+                                                                        <label for="nameOnCard">Name on card</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="col-12">
+                                                                    <div class="form-label-group">
+                                                                        <input type="text" id="cardNumber"
+                                                                            class="form-control"
+                                                                            placeholder="Card number" required>
+                                                                        <label for="cardNumber">Card number</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-label-group">
+                                                                        <input type="text" id="expDate"
+                                                                            class="form-control" placeholder="MM / YY"
+                                                                            required maxlength="7">
+                                                                        <label for="expDate">MM / YY</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-label-group">
+                                                                        <input type="text" id="cvv" class="form-control"
+                                                                            placeholder="CVV" required>
+                                                                        <label for="cvv">CVV</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <button class="btn btn-primary continue"
+                                                                        type="button" data-toggle="collapse"
+                                                                        data-target="#collapseThree"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseThree">
+                                                                        Continue to review your order
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="payPal" role="tabpanel"
+                                                            aria-labelledby="payPal-tab">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <p class="third-party-disclaimer">You’ll be directed
+                                                                        to PayPal to complete your order.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
+                                                                        Pay with PayPal
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="applePay" role="tabpanel"
+                                                            aria-labelledby="applePay-tab">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <p class="third-party-disclaimer">You’ll be directed
+                                                                        to Apple Pay to complete your order.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
+                                                                        Pay with Apple Pay
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="googlePay" role="tabpanel"
+                                                            aria-labelledby="googlePay-tab">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <p class="third-party-disclaimer">You’ll be directed
+                                                                        to Google Pay to complete your order.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <button
+                                                                        class="btn btn-primary btn-block place-order"
+                                                                        type="submit">
+                                                                        Pay with Google Pay
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. Review -->
+                            <div class="card">
+                                <div class="card-header" id="step-3">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            3. Review
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="step-3"
+                                    data-parent="#checkout-steps">
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <h6>Shipping address</h6>
+                                                3858 Walnut Ave. <br>
+                                                Suite 111 <br>
+                                                Denver, CO 80214
+                                            </div>
+                                            <div class="col-md-6 mt-md-0 mt-3">
+                                                <h6>Shipping Method</h6>
+                                                Economy (7-10 Business Days)<br>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5">
+                                            <div class="col-md-6 mt-md-0 mt-3">
+                                                <h6>Billing address</h6>
+                                                Same as shipping <br>
+                                            </div>
+                                            <div class="col-md-6 mt-md-0 mt-3">
+                                                <h6>Payment</h6>
+                                                Visa ending in 1234 <br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h6>Would you like your items faster or save on shipping?</h6>
+                                                <p>Because your order contains preorder items, you can choose to have your items shipped once they all become available or split your order into two shipments to receive the currently available items sooner.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix split-ship-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="splitShip" id="splitShip2" value="option2" checked>
+                                                <label class="form-check-label" for="splitShip2">
+                                                    I can wait for all items to become available! <em>No additional cost</em>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mt-2">
+                                                <input class="form-check-input" type="radio" name="splitShip" id="splitShip1" value="option1">
+                                                <label class="form-check-label" for="splitShip1">
+                                                    <strong class="text-primary">Ship currently available items now!</strong> <em>Add $3.95</em>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div id="reviewOrder" class="w-100">
+                                                <ul class="order-line-items list-unstyled mb-2">
+                                                    <li class="order-item">
+                                                        <div class="order-item-contents">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <a href="#">
+                                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                                            alt="Ohhh Burn" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="order-summary-info col-8">
+                                                                    <a class="order-summary-title" href="#">Ohhh
+                                                                        Burn</a>
+                                                                    <div class="order-summary-variant">T-Shirt / Men's /
+                                                                        M</div>
+                                                                        <div class="badge badge-primary">AVAILABLE NOW</div>
+                                                                    <div class="order-summary-qtyamt">
+                                                                        <div class="qty">Qty 1</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <div class="ammount text-right">$25</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- end order item -->
+                                                    <li class="order-item">
+                                                        <div class="order-item-contents">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <a href="#">
+                                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                                            alt="Ohhh Burn" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="order-summary-info col-8">
+                                                                    <a class="order-summary-title" href="#">Ohhh
+                                                                        Burn</a>
+                                                                    <div class="order-summary-variant">T-Shirt / Men's /
+                                                                        M</div>
+                                                                    <div class="badge badge-primary">AVAILABLE NOW</div>
+                                                                    <div class="order-summary-qtyamt">
+                                                                        <div class="qty">Qty 1</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <div class="ammount text-right">$25</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- end order item -->
+                                                    <li class="order-item">
+                                                        <div class="order-item-contents">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <a href="#">
+                                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                                            alt="Ohhh Burn" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="order-summary-info col-8">
+                                                                    <a class="order-summary-title" href="#">Ohhh
+                                                                        Burn</a>
+                                                                    <div class="order-summary-variant">T-Shirt / Men's /
+                                                                        M</div>
+                                                                    <div class="badge badge-info">SHIPS BETWEEN 1/10 AND 1/22</div>
+                                                                    <div class="order-summary-qtyamt">
+                                                                        <div class="qty">Qty 1</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <div class="ammount text-right">$25</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- end order item -->
+
+                                                </ul>
+                                                <div class="order-subtotal mb-2">
+                                                    <div class="subtotal d-flex justify-content-between">
+                                                        <div class="label">Subtotal</div>
+                                                        <div class="ammount">$37.50</div>
+                                                    </div>
+                                                    <div class="subtotal d-flex justify-content-between">
+                                                        <div class="label">Shipping (Economy)</div>
+                                                        <div class="ammount">$3.95</div>
+                                                    </div>
+                                                    <div class="subtotal d-flex justify-content-between">
+                                                        <div class="label">Tax (8.31%)</div>
+                                                        <div class="ammount">$2.78</div>
+                                                    </div>
+                                                    <div class="total d-flex justify-content-between">
+                                                        <div class="label">Total</div>
+                                                        <div class="ammount">$37.50</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button class="btn btn-primary btn-block place-order" type="submit">
+                                                    Place Order
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- END accordion -->
+                    </form>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="order-summary-header">
+                        <h4>Order Summary</h4>
+                    </div>
+                    <div class="order-summary-wrapper">
+                        <form action="#" method="post" id="order-summary">
+                            <div id="orderSummary">
+                                <div class="order-subtotal">
+                                    <div class="subtotal d-flex justify-content-between">
+                                        <div class="label">Subtotal</div>
+                                        <div class="ammount">$37.50</div>
+                                    </div>
+                                    <div class="subtotal d-flex justify-content-between">
+                                        <div class="label">Shipping</div>
+                                        <div class="ammount">--</div>
+                                    </div>
+                                    <div class="subtotal d-flex justify-content-between">
+                                        <div class="label">Tax</div>
+                                        <div class="ammount">--</div>
+                                    </div>
+                                    <div class="total d-flex justify-content-between">
+                                        <div class="label">Total</div>
+                                        <div class="ammount">$37.50</div>
+                                    </div>
+                                </div>
+                                <ul class="order-line-items list-unstyled mb-0">
+                                    <li class="order-item">
+                                        <div class="order-item-contents">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <a href="#">
+                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                            alt="Ohhh Burn" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="order-summary-info col-8">
+                                                    <a class="order-summary-title" href="#">Ohhh Burn</a>
+                                                    <div class="order-summary-variant">T-Shirt / Men's / M</div>
+                                                    <div class="order-summary-qtyamt d-flex justify-content-between">
+                                                        <div class="qty">Qty 1</div>
+                                                        <div class="ammount">$25</div>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="remove-item-checkout">
+                                                    <i class="fas fa-times-circle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- end order item -->
+                                    <li class="order-item">
+                                        <div class="order-item-contents">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <a href="#">
+                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                            alt="Ohhh Burn" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="order-summary-info col-8">
+                                                    <a class="order-summary-title" href="#">Ohhh Burn</a>
+                                                    <div class="order-summary-variant">T-Shirt / Men's / M</div>
+                                                    <div class="order-summary-qtyamt d-flex justify-content-between">
+                                                        <div class="qty">Qty 1</div>
+                                                        <div class="ammount">$25</div>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="remove-item-checkout">
+                                                    <i class="fas fa-times-circle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- end order item -->
+                                    <li class="order-item">
+                                        <div class="order-item-contents">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <a href="#">
+                                                        <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                            alt="Ohhh Burn" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="order-summary-info col-8">
+                                                    <a class="order-summary-title" href="#">Ohhh Burn</a>
+                                                    <div class="order-summary-variant">T-Shirt / Men's / M</div>
+                                                    <div class="order-summary-qtyamt d-flex justify-content-between">
+                                                        <div class="qty">Qty 1</div>
+                                                        <div class="ammount">$25</div>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="remove-item-checkout">
+                                                    <i class="fas fa-times-circle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- end order item -->
+                                </ul>
+                                <div class="order-total">
+                                    <div class="total d-flex justify-content-between align-items-center">
+                                        <div class="label">Total</div>
+                                        <div class="ammount">$37.50</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Stuck?
+                        <a href="#">Contact us</a>, our turtles are here to help.</p>
+                    <nav class="nav justify-content-center checkout-footer-nav">
+                        <a class="nav-link" href="#">Refund policy</a>
+                        <a class="nav-link" href="#">Privacy policy</a>
+                        <a class="nav-link" href="#">Terms of service</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Shows modal on page load
+        // $('#accountCheck').modal('show');
+    </script>
+</body>
+
+</html>
