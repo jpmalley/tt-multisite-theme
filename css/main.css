@@ -2613,3 +2613,45 @@ canvas {
         top: 44px;
     }
 }
+
+/* ---------------------------------------------------
+    Here to Slay SPECIFIC STYLES
+----------------------------------------------------- */
+#otherGames{
+    padding-top: 24px;
+}
+
+.related-product-footer{
+    background-color: #f47719;
+    height: 36px;
+    margin-bottom: 10px;
+}
+
+.related-product-title{
+    color: white;
+    text-align:center;
+    padding: 10px;
+    font-size: .5rem;
+}
+
+@media (min-width: 768px) {
+    .related-product-title{
+        font-size: 1rem;
+    }
+    .related-product-footer{
+        height: 60px;
+    }
+}
+
+/* ---------------------------------------------------
+    Happy Little Dinosaurs SPECIFIC STYLES
+----------------------------------------------------- */
+
+#arrowBtn{
+    color: black;
+}
+
+.howToPlayBtnFont{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}

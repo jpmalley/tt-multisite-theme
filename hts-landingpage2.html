@@ -1,0 +1,2035 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Here To Slay</title>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Patua+One&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f4a78f8c4f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="unstable">
+    <div class="promo-bar">
+        <div class="promo-bar-contents">
+            <h5>50% OFF ALL SHIRTS!</h5>
+        </div>
+    </div>
+
+    <div class="brand-bar">
+        <div class="position-reletive">
+            <div class="d-flex justify-content-center">
+                <div>
+                    <img class="brand-logo" src="img/uu-logo-main.svg" alt="">
+                </div>
+            </div>
+            <div class="mobile-nav d-flex justify-content-between position-absolute">
+                <button id="navToggler" class="d-md-none" type="button" aria-controls="responsiveNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <form action="" class="search-form d-none d-md-block">
+                    <div class="input-group search-box">
+                        <input class="form-control form-control-sm search-input" type="text" placeholder="Search..."
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text btn search-btn" id="sidebar-search">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav account-links d-flex flex-row align-items-center justify-content-end">
+                    <li class="nav-item d-none d-md-flex">
+                        <a class="nav-link" href="#"><i class="fas fa-user-alt"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-md-flex">
+                        <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="#" id="cartLink" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-counter">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Cart Drawer  -->
+        <div id="cartDrawer">
+            <!-- Slide 1 -->
+            <div id="cart" class="cart-drawer">
+                <div id="dismissCart">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="cart-header">
+                    <h5>Your Cart</h5>
+                </div>
+                <div class="cart-item-wrapper">
+                    <form action="#" method="post" id="cart-drawer">
+                        <div class="cart-item-list">
+                            <ul class="list-unstyled">
+                                <li class="cart-item">
+                                    <div class="cart-item-contents">
+                                        <div class="row">
+                                            <div class="cart-drawer-image col-4">
+                                                <a href="#">
+                                                    <img src="img/ohhh-Burn-teeturtle_335x.progressive.jpg"
+                                                        alt="Ohhh Burn" class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="cart-drawer-info col-8">
+                                                <a class="cart-drawer-title" href="#">Ohhh Burn</a>
+                                                <div class="cart-drawer-variant">T-Shirt / Men's / XL</div>
+                                                <div class="cart-drawer-qtyamt d-flex justify-content-between">
+                                                    <div class="input-group input-group-sm cart-drawer-qty">
+                                                        <div class="input-group-prepend">
+                                                            <button type="button"
+                                                                class="input-group-text btn btn-number"
+                                                                data-type="minus" data-field="qty[1]">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" name="qty[1]"
+                                                            class="form-control input-number" value="1" min="0">
+                                                        <div class="input-group-append">
+                                                            <button type="button"
+                                                                class="input-group-text btn btn-number" data-type="plus"
+                                                                data-field="qty[1]">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-drawer-price">
+                                                        $25
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="remove-item">
+                                                <i class="fas fa-times-circle"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- end cart item -->
+                                <li class="cart-item">
+                                    <div class="cart-item-contents">
+                                        <div class="row">
+                                            <div class="cart-drawer-image col-4">
+                                                <a href="#">
+                                                    <img src="img/Kiss-the-Girl-Little-Mermaid-Colors_2_800x800_SEPS_335x.progressive.jpg"
+                                                        alt="Ohhh Burn" class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="cart-drawer-info col-8">
+                                                <a class="cart-drawer-title" href="#">Kiss the Girl</a>
+                                                <div class="cart-drawer-variant">T-Shirt / Women's / S</div>
+                                                <div class="cart-drawer-qtyamt d-flex justify-content-between">
+                                                    <div class="input-group input-group-sm cart-drawer-qty">
+                                                        <div class="input-group-prepend">
+                                                            <button type="button"
+                                                                class="input-group-text btn btn-number"
+                                                                data-type="minus" data-field="qty[2]">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" name="qty[2]"
+                                                            class="form-control input-number" value="1" min="0">
+                                                        <div class="input-group-append">
+                                                            <button type="button"
+                                                                class="input-group-text btn btn-number" data-type="plus"
+                                                                data-field="qty[2]">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-drawer-price">
+                                                        $12.50
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="remove-item">
+                                                <i class="fas fa-times-circle"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- end cart item -->
+
+
+                            </ul>
+                        </div>
+
+                        <div class="checkout-buttons">
+                            <div class="subtotal d-flex justify-content-between">
+                                <div class="label">Subtotal</div>
+                                <div class="ammount">$37.50</div>
+                            </div>
+                            <div class="input-group promo-box">
+                                <input class="form-control promo-input" type="text" placeholder="Apply a promo code"
+                                    aria-label="Apply a promo code">
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text btn" id="promo-apply">
+                                        Apply
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="total d-flex justify-content-between align-items-center">
+                                <div class="label">Total</div>
+                                <div class="shipping-disclaimer">(shipping calculated at checkout)</div>
+                                <div class="ammount">$37.50</div>
+                            </div>
+                            <div class="checkout-btn">
+                                <button id="checkOut" type="button" name="checkout"
+                                    class="btn btn-lg btn-primary btn-block">Check
+                                    Out</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div id="cart-email-prompt" class="cart-drawer">
+                <div class="cart-drawer-nav">
+                    <div id="backFromEmail" class="cart-back-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div id="dismissCart">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <div class="cart-header">
+                    <h5>Hello!</h5>
+                </div>
+
+                <div class="cart-item-wrapper">
+                    <form action="#" method="post" id="email-prompt">
+                        <div class="cart-email-form">
+                            <div class="form-group">
+                                <label for="cart-email-init">Email address*</label>
+                                <input id="cart-email-init" class="form-control" type="email"
+                                    placeholder="Please enter your email address"
+                                    aria-label="Please enter your email address">
+                            </div>
+                            <div class="checkout-btn">
+                                <button id="emailContinue" type="button" name="emailContinue"
+                                    class="btn btn-lg btn-primary btn-block">Continue</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div id="cart-sign-up" class="cart-drawer">
+                <div class="cart-drawer-nav">
+                    <div id="backFromSignUp" class="cart-back-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div id="dismissCart">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <div class="cart-header">
+                    <h5>Hello!</h5>
+                </div>
+
+                <div class="cart-item-wrapper">
+                    <form action="#" method="post" id="sign-up">
+                        <div class="cart-sign-up-form">
+                            <p class="sign-up-greeting">It looks like you're new, can we be friends?</p>
+                            <div class="form-group">
+                                <label for="cart-email">Email address*</label>
+                                <input type="email" class="form-control" id="cart-email" aria-describedby="emailHelp"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col">
+                                    <label for="cart-firstname">First Name*</label>
+                                    <input id="cart-firstname" type="text" class="form-control"
+                                        placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <label for="cart-lastname">Last Name*</label>
+                                    <input id="cart-lastname" type="text" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cart-password">Enter a Password*</label>
+                                <input type="password" class="form-control" id="cart-password" placeholder="Password">
+                                <small class="form-text text-muted password-help">Minimum of 7 characters. Must include
+                                    at
+                                    least 1 letter and 1 number</small>
+                                <small class="form-text text-muted required-field">*Required Field</small>
+                            </div>
+                            <div class="checkout-btn">
+                                <button id="checkoutNew" type="button" name="checkoutNew"
+                                    class="btn btn-lg btn-primary btn-block">Continue</button>
+                                <small id="guestCheckout" class="form-text text-muted">
+                                    <a href="#">Check out as guest?</a>
+                                </small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div id="cart-sign-in" class="cart-drawer">
+                <div class="cart-drawer-nav">
+                    <div id="backFromSignIn" class="cart-back-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div id="dismissCart">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <div class="cart-header">
+                    <h5>Hello!</h5>
+                </div>
+
+                <div class="cart-item-wrapper">
+                    <form action="#" method="post" id="sign-in">
+                        <div class="cart-email-form">
+                            <p class="sign-up-greeting">Welcome back!</p>
+                            <div class="form-group">
+                                <label for="cart-email-signin">Email address</label>
+                                <input id="cart-email-signin" class="form-control" type="email"
+                                    placeholder="Email address" aria-label="Please enter your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="cart-password-signin">Password</label>
+                                <input id="cart-password-signin" class="form-control" type="password"
+                                    placeholder="Password" aria-label="Please enter your password">
+                            </div>
+                            <div class="checkout-btn">
+                                <button id="checkoutReturning" type="button" name="checkoutReturning"
+                                    class="btn btn-lg btn-primary btn-block">Continue</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-nav navbar navbar-light justify-content-center d-none d-md-flex">
+            <div id="desktopNav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true"><span>New!</span>
+                                <i class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true"><span>Men</span> <i
+                                    class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true"><span>Women</span>
+                                <i class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true"><span>Juniors</span>
+                                <i class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true"><span>Kids</span> <i
+                                    class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true"><span>Accessories</span> <i
+                                    class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link-wrapper">
+                            <a class="nav-link" href="#" role="button" aria-haspopup="true">Final
+                                Clearance <i class="fas fa-chevron-right d-md-none"></i></a>
+                            <div class="brand-dropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 offset-lg-1">
+                                            <a href="#" class="menu-header">Shop by Category</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">T-Shirts</a></li>
+                                                <li><a href="#" class="menu-link">Mystery Grab Bags</a></li>
+                                                <li><a href="#" class="menu-link">Plushies</a></li>
+                                                <li><a href="#" class="menu-link">Enamel Pins</a></li>
+                                                <li><a href="#" class="menu-link">Underwear</a></li>
+                                                <li><a href="#" class="menu-link">Socks</a></li>
+                                                <li><a href="#" class="menu-link">Stickers</a></li>
+                                                <li><a href="#" class="menu-link">Card Games & Accessories</a></li>
+                                                <li><a href="#" class="menu-link">Hats</a></li>
+                                                <li><a href="#" class="menu-link">Leggings</a></li>
+                                                <li><a href="#" class="menu-link">Gift Cards</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Animal</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Turtles</a></li>
+                                                <li><a href="#" class="menu-link">Cats</a></li>
+                                                <li><a href="#" class="menu-link">Dogs</a></li>
+                                                <li><a href="#" class="menu-link">Foxes</a></li>
+                                                <li><a href="#" class="menu-link">Bunnies</a></li>
+                                                <li><a href="#" class="menu-link">Unicorns</a></li>
+                                                <li><a href="#" class="menu-link">Pandas</a></li>
+                                                <li><a href="#" class="menu-link">Sloths</a></li>
+                                                <li><a href="#" class="menu-link">Dinosaurs</a></li>
+                                                <li><a href="#" class="menu-link">Dragons</a></li>
+                                                <li><a href="#" class="menu-link">All Animals</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Interest</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Fitness</a></li>
+                                                <li><a href="#" class="menu-link">Tabletop Gaming</a></li>
+                                                <li><a href="#" class="menu-link">Video Games</a></li>
+                                                <li><a href="#" class="menu-link">Crafting</a></li>
+                                                <li><a href="#" class="menu-link">Space</a></li>
+                                                <li><a href="#" class="menu-link">Science</a></li>
+                                                <li><a href="#" class="menu-link">Food</a></li>
+                                                <li><a href="#" class="menu-link">Reading</a></li>
+                                                <li><a href="#" class="menu-link">Coffee</a></li>
+                                                <li><a href="#" class="menu-link">Fantasy</a></li>
+                                                <li><a href="#" class="menu-link">Puns</a></li>
+                                                <li><a href="#" class="menu-link">Pride</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3">
+                                            <a href="#" class="menu-header">Shop by Mood</a>
+                                            <ul class="list-unstyled menu-level-3">
+                                                <li><a href="#" class="menu-link">Magical</a></li>
+                                                <li><a href="#" class="menu-link">Quirky</a></li>
+                                                <li><a href="#" class="menu-link">Kind</a></li>
+                                                <li><a href="#" class="menu-link">Sarcastic</a></li>
+                                                <li><a href="#" class="menu-link">Tired</a></li>
+                                                <li><a href="#" class="menu-link">Cheerful</a></li>
+                                                <li><a href="#" class="menu-link">Angry</a></li>
+                                                <li><a href="#" class="menu-link">Nerdy</a></li>
+                                                <li><a href="#" class="menu-link">Creative</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 d-lg-flex d-none">
+                                            <div class="placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="brand-nav navbar navbar-light justify-content-center d-md-none">
+            <div id="mobileNav">
+                <ul class="nav menu-level-1">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-link-header link-level-0">Menu <i class="fas fa-times"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="" class="search-form">
+                            <div class="input-group search-box">
+                                <input class="form-control search-input" type="text" placeholder="Search..."
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text btn search-btn" id="sidebar-search">
+                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link-level-1">New! <i class="fas fa-chevron-right"></i></a>
+                        <ul class="list-unstyled menu-level-2">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Category <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">T-Shirts</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Mystery Grab Bags</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Plushies</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Enamel Pins</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Underwear</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Socks</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Stickers</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Card Games & Accessories</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Hats</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Leggings</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Gift Cards</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Animal <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Turtles</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Cats</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dogs</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Foxes</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Bunnies</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Unicorns</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Pandas</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Sloths</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dinosaurs</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dragons</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">All Animals</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Interest <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Fitness</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Tabletop Gaming</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Video Games</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Crafting</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Space</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Science</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Food</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Reading</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Coffee</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Fantasy</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Puns</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Pride</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Mood <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Magical</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Quirky</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Kind</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Sarcastic</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Tired</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Cheerful</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Angry</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Nerdy</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Creative</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link-level-1">Men <i class="fas fa-chevron-right"></i></a>
+                        <ul class="list-unstyled menu-level-2">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Category <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">T-Shirts</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Mystery Grab Bags</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Plushies</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Enamel Pins</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Underwear</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Socks</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Stickers</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Card Games & Accessories</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Hats</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Leggings</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Gift Cards</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Animal <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Turtles</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Cats</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dogs</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Foxes</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Bunnies</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Unicorns</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Pandas</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Sloths</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dinosaurs</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dragons</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">All Animals</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Interest <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Fitness</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Tabletop Gaming</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Video Games</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Crafting</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Space</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Science</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Food</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Reading</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Coffee</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Fantasy</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Puns</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Pride</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Mood <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Magical</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Quirky</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Kind</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Sarcastic</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Tired</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Cheerful</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Angry</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Nerdy</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Creative</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link-level-1">Women <i class="fas fa-chevron-right"></i></a>
+                        <ul class="list-unstyled menu-level-2">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Category <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">T-Shirts</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Mystery Grab Bags</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Plushies</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Enamel Pins</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Underwear</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Socks</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Stickers</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Card Games & Accessories</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Hats</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Leggings</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Gift Cards</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Animal <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Turtles</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Cats</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dogs</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Foxes</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Bunnies</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Unicorns</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Pandas</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Sloths</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dinosaurs</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Dragons</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">All Animals</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Interest <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Fitness</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Tabletop Gaming</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Video Games</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Crafting</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Space</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Science</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Food</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Reading</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Coffee</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Fantasy</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Puns</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Pride</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-level-2">Shop by Mood <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="list-unstyled menu-level-3">
+                                    <li class="nav-item"><a href="#" class="link-level-3">Magical</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Quirky</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Kind</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Sarcastic</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Tired</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Cheerful</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Angry</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Nerdy</a></li>
+                                    <li class="nav-item"><a href="#" class="link-level-3">Creative</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav mobile-account-links">
+                    <li class="nav-item">
+                        <a class="nav-link acct-link" href="#">My Account <i class="fas fa-user-alt"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link acct-link" href="#">Sign Out <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="nav-overlay"></div>
+        <div class="cart-overlay"></div>
+    </div>
+
+    <section id="landing-page">
+        <img class="img-fluid" src="img/animation/hts-main-banner.jpg" alt="Here to Slay. A Strategic Card Game. A Role-Playing Adventure. A Dangerous New World.">
+        <div class="container">
+            <div class="row mt-3 mt-md-5 mb-5">
+                <div class="col-md-5 d-flex">
+                    <div class="aspect-ratio product-img w-100">
+                        <div id="product-image" class="layered-png">
+                            <img id="product-img-1" class="img-fluid" src="img/animation/hts-product-img-1.png" alt="Here To Slay Base Game">
+                            <img id="product-img-0" class="img-fluid" src="img/animation/hts-product-img-0.png" alt="Warriors &amp; Druids Expansion">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h2>Here to Slay</h2>
+                    <p>From the creators of Unstable Unicorns, Here to Slay is an adorable and brutal new card game that
+                        is perfect for players of all skill levels, whether you’re just entering the world of
+                        role-playing games or honing your masterful skills.</p>
+                    <ul class="desc-ul">
+                        <li>One of Kickstarter’s top 50 most backed projects of all time!</li>
+                        <li>2-6 player card game</li>
+                        <li>30-60 minute playtime</li>
+                        <li>Ages 10+</li>
+                        <li>Includes 1 standard deck of 115 cards, 6 oversized Party Leader cards, 15 oversized Monster
+                        <li>Warriors & Druids Expansion includes 30 standard-sized cards, 2 oversized Party Leader
+                            cards, and 2 oversized Monster cards</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="/products/here-to-slay-game?variant=19577791466294" class="btn btn-lg btn-block btn-primary add-to-cart-btn">Buy Now</a>
+                            <a href="/products/here-to-slay-game?variant=19577791466295" class="btn btn-lg btn-block btn-primary add-to-cart-btn expansion-btn">Buy
+                                Expansion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid full-width-color">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-5 d-none d-md-flex align-items-center">
+                        <p><strong>Open up Here to Slay and enter a world of cute, cuddly, and utterly destructive
+                                creatures. You’ll learn to outwit your rivals and slay savage monsters, crushing your opponents on
+                                the way to victory! But don’t let your guard down, because enemies are watching at every
+                                turn. Your friends will seize every opportunity to sabotage you and take the glory for
+                                themselves. Trust no one. (This advice can also be applied to life in general.)</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/AODIocFMlls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img id="wd-banner" class="img-fluid" src="img/animation/hts-wd-banner.jpg" alt="Here to Slay Warriors And Druids Expansion Pack">
+        <div class="container-fluid wd-section">
+            <div class="container">
+                <div class="row pb-5 pt-md-5">
+                    <div class="col-md-5">
+                        <img src="img/animation/exp-product-img.png" alt="Warriors And Druids Expansion box" class="img-fluid">
+                    </div>
+                    <div class="col-md-7">
+                        <h2>Warriors And Druids Expansion</h2>
+                        <p>Warrior and Druid classes join the fray in this Here to Slay expansion. This game features new
+                            party leaders, heroes, and dangerous monsters!</p>
+                        <ul class="desc-ul">
+                            <li>2-6 player card game</li>
+                            <li>30-60 minute playtime</li>
+                            <li>Ages 10+</li>
+                            <li>Includes 31 standard-sized cards, 2 oversized Party Leader cards, 2 oversized Monster cards
+                            </li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="/products/here-to-slay?variant=19577791462480" class="btn btn-lg btn-block btn-primary add-to-cart-btn expansion-btn">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Related Products Collection -->
+        <div class="container-fluid full-width-white">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-dark sec-head mb-5">Related Products Collection</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/happy-little-dinosaurs?variant=19577791463979">
+                                <img src="img/animation/addons/Add-ons-Base-Game.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Happy Little Dinosaurs <br> Base Game</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/happy-little-dinosaurs?variant=19577791464357">
+                                <img src="img/animation/addons/Add-ons-Expansion.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Happy Little Dinosaurs <br> 5-6 Player Expansion</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/smile-its-almost-over">
+                                <img src="img/animation/addons/Add-ons-Stego-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Smile, It's Almost Over T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/nervous-rex">
+                                <img src="img/animation/addons/Add-ons-Nervous-Rex-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Nervous Rex T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/crushed-dino">
+                                <img src="img/animation/addons/Add-ons-Crushed-Dino-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Crushed Dino T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/bad-day-bronto">
+                                <img src="img/animation/addons/Add-ons-Bad-Day-Bronot-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Bad Day Bronto T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/rexcellent">
+                                <img src="img/animation/addons/Add-ons-Rexellent-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Rexcellent T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/t-wrecks">
+                                <img src="img/animation/addons/Add-ons-T-Wreck-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">T-Wrecks T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/ill-deal-with-it-later">
+                                <img src="img/animation/addons/Add-ons-Deal-with-it-Later-Shirt.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">I'll Deal With It Later T-Shirt</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/reversible-stego-plushie">
+                                <img src="img/animation/addons/Add-ons-Stego-Plushie.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Reversible Stego Plushie</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/happy-little-dinosaur-socks">
+                                <img src="img/animation/addons/Add-ons_HLD-Socks.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Happy Little Dinosaur Socks</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/bad-day-bronto-socks">
+                                <img src="img/animation/addons/Add-ons_Bronto-Socks.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Bad Day Bronto Socks</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/stego-pin">
+                                <img src="img/animation/addons/Add-ons-Stego-Pin.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Stego Pin</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/cry-ceratops-pin">
+                                <img src="img/animation/addons/Add-ons-Cry-Ceratops-Pin.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Cry Ceratops Pin</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/nervous-rex-pin">
+                                <img src="img/animation/addons/Add-ons-Nervous-Rex-Pin.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Nervous Rex Pin</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/bad-day-bronto-pin">
+                                <img src="img/animation/addons/Add-ons-Bad-Day-Bronto-Pin.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Bad Day Bronto Pin</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/raging-raptor-pin">
+                                <img src="img/animation/addons/Add-ons-Raging-Raptor-Pin.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Raging Raptor Pin</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="related-product">
+                            <a href="/products/pterry-dactyl-pin">
+                                <img src="img/animation/addons/Add-ons-Pterry-Dactyl-Pin.jpg" alt="" class="img-fluid">
+                                <div class="related-product-footer">
+                                    <h6 class="related-product-title">Pterry Dactyl Pin</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <canvas class="animation" id="hts-animation-0" data-frame-count="95" data-scene="dragon"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mt-5 mb-0">How To Play</h2>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-7">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/gsPZoEJyYMM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <p class="d-none d-md-flex"><strong>
+                            In Here to Slay, the first person to successfully slay three monsters, or build a full
+                            party with six classes, wins the game! That means you can choose your own play style. Will
+                            you work to build the most robust party of highly-skilled heroes this world has ever seen,
+                            create a lean team of monster-killing machines, or set out to screw over your friends at
+                            every turn? No matter what you choose, there are enough strategies, characters, cards,
+                            and effects to make the game different every time you play it.
+                        </strong></p>
+                    <div class="rules-links d-flex justify-content-between mt-3">
+                        <a href="https://12ax7web.s3.amazonaws.com/accounts/2/homepage/Here-to-Slay-Rules.pdf" class="btn btn-primary mx-1 d-flex justify-content-center align-items-center"><div>Base Game Rules</div></a>
+                        <a href="https://12ax7web.s3.amazonaws.com/accounts/2/homepage/Warrior-Druid-Expansion-Rules.pdf" class="btn btn-primary mx-1 d-flex justify-content-center align-items-center"><div>Warrior & Druid Rules</div></a>
+                        <a href="http://unstablegameswiki.com/index.php?title=Here_To_Slay" class="btn btn-primary mx-1 d-flex justify-content-center align-items-center"><div>Here to Slay Wiki</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="howToPlayCarousel" class="carousel slide" data-interval="false">
+                        <ol class="carousel-indicators">
+                            <li data-target="#howToPlayCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#howToPlayCarousel" data-slide-to="1"></li>
+                            <li data-target="#howToPlayCarousel" data-slide-to="2"></li>
+                            <li data-target="#howToPlayCarousel" data-slide-to="3"></li>
+                            <li data-target="#howToPlayCarousel" data-slide-to="4"></li>
+                            <li data-target="#howToPlayCarousel" data-slide-to="5"></li>
+                            <li data-target="#howToPlayCarousel" data-slide-to="6"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img id="htp-1" src="img/animation/howto/hts-htp-1.png" alt="Heros standing in a line with monsters behind them" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center m-0">You’ll work to assemble a team to slay
+                                            savage monsters. The first person to slay 3 monsters, or build a full party
+                                            with 6 classes, wins the game!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img src="img/animation/howto/hts-htp-2.png" alt="Party leader cards" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center m-0">Choose a party leader to represent you
+                                            throughout the game. All 6 party leader have a different class and unique
+                                            effect that will give you an edge.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img src="img/animation/howto/hts-htp-3.png" alt="Diagram of monster set up" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center m-0">Deal 5 standard cards to each player and
+                                            place 3 Monster cards face up in the center of the table. Use the remaining
+                                            standard and Monster cards to create 2 draw piles.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img src="img/animation/howto/hts-htp-4.png" alt="Diagram of an example hand" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center m-0">On each turn, you get 3 action points to
+                                            spend. For 1 point, you can draw a card; play a hero, magic, or item card;
+                                            or roll to use a hero card’s effect.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img src="img/animation/howto/hts-htp-5.png" alt="Attack monster for 2 points, draw a new hand for 3 points" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center m-0">For 2 points, you can attack a monster. For
+                                            3 points, you can discard your hand and draw 5 new cards.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img src="img/animation/howto/hts-htp-6.png" alt="Monster card" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center m-0">To attack a Monster, you must meet the party
+                                            requirements listed on the card. Then, roll to determine your fate. If you
+                                            meet the roll requirement, you defeat the beast. If not, you must pay the
+                                            price.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content d-flex align-items-center justify-content-center flex-column">
+                                    <img src="img/animation/howto/hts-htp-7.png" alt="Example ways to win" class="img-fluid">
+                                    <div class="htp-caption mt-3 p-3">
+                                        <h5 class="no-caps text-center">There are two ways to win the game:</h5>
+                                        <h5 class="no-caps text-center m-0">End your turn with a party of six different
+                                            classes -OR- Successfully slay 3 Monsters</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-control-wrapper d-flex justify-content-between mx-auto mt-2 mb-4">
+                            <a class="carousel-control" href="#howToPlayCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></i></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control" href="#howToPlayCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></i></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-dark mt-5 mb-0">Take a Closer Look</h2>
+                    </div>
+                    <div class="aspect-ratio tall-card w-100">
+                        <div id="party-leader-cards" class="layered-png">
+                            <img id="pl-0" class="img-fluid" src="img/animation/party-leader/pl-0.png" alt="Party leader cards">
+                            <img id="pl-1" class="img-fluid" src="img/animation/party-leader/pl-1.png" alt="">
+                            <img id="pl-2" class="img-fluid" src="img/animation/party-leader/pl-2.png" alt="">
+                            <img id="pl-3" class="img-fluid" src="img/animation/party-leader/pl-3.png" alt="">
+                            <img id="pl-4" class="img-fluid" src="img/animation/party-leader/pl-4.png" alt="">
+                            <img id="pl-5" class="img-fluid" src="img/animation/party-leader/pl-5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="text-dark h-card">Party Leader Cards</h3>
+                        <p class="text-dark">Every player gets to choose a party leader character to represent them
+                            throughout the game. Each party leader has a class and a skill that gives you an edge over
+                            your opponents. One day you may feel like a bloodthirsty fighter and the next you could be a
+                            cunning thief--but choose wisely, because you only get one party leader throughout the game!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Removed CTA about animation -->
+        <!-- <div class="container-fluid cta-bar full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio cta w-100 pb-sm-0 pb-3">
+                        <div id="cta-1" class="layered-png">
+                            <img id="cta-1-product" class="img-fluid" src="img/animation/cta1-product.png" alt="Here to Slay box">
+                            <img id="cta-1-heading" class="img-fluid d-none d-sm-block" src="img/animation/cta1-heading.png" alt="Are you ready to start your adventure?">
+                            <img id="cta-1-character" class="img-fluid" src="img/animation/cta1-character.png" alt="Archer cat shooting a grapling hook">
+                        </div>
+                    </div>
+                    <a class="btn btn-primary btn-md-lg cta-link" href="/products/here-to-slay-game?variant=19577791466294">
+                        <h2 class="my-0 mx-2 mx-md-5">Buy Now</h2>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio reg-card w-100 mt-md-0 mt-3">
+                        <div id="hero-cards" class="layered-png">
+                            <img id="hero-0" class="img-fluid" src="img/animation/hero/hero-0.png" alt="Hero cards">
+                            <img id="hero-1" class="img-fluid" src="img/animation/hero/hero-1.png" alt="">
+                            <img id="hero-2" class="img-fluid" src="img/animation/hero/hero-2.png" alt="">
+                            <img id="hero-3" class="img-fluid" src="img/animation/hero/hero-3.png" alt="">
+                            <img id="hero-4" class="img-fluid" src="img/animation/hero/hero-4.png" alt="">
+                            <img id="hero-5" class="img-fluid" src="img/animation/hero/hero-5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="h-card">Hero Cards</h3>
+                        <p>Hero cards are brave adventurers who bring new skills to your party, and there are 40 unique
+                            heroes included in the game. Each hero card has a class and an effect, and each hero’s
+                            effect has a roll requirement. In order to use a hero’s effect, you must roll two dice and
+                            score equal to or higher than that effect’s roll requirement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio tall-card w-100">
+                        <div id="monster-cards" class="layered-png">
+                            <img id="monster-0" class="img-fluid" src="img/animation/monster/monster-0.png" alt="Monster cards">
+                            <img id="monster-1" class="img-fluid" src="img/animation/monster/monster-1.png" alt="">
+                            <img id="monster-2" class="img-fluid" src="img/animation/monster/monster-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="text-dark h-card">Monster Cards</h3>
+                        <p class="text-dark">Everyone wants to be a hero, but are you brave enough to face off against
+                            these monsters? You can win the game by successfully slaying 3 monsters, but attacking may
+                            come at a price. In order to slay a monster, you must roll equal to or higher than the
+                            monster’s roll requirement. Be warned: Each monster has a roll range in which they’ll fight
+                            back. If you score within that range, your party might be in grave danger...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio reg-card w-100 mt-md-0 mt-3">
+                        <div id="item-cards" class="layered-png">
+                            <img id="item-0" class="img-fluid" src="img/animation/item/item-0.png" alt="Item cards">
+                            <img id="item-1" class="img-fluid" src="img/animation/item/item-1.png" alt="">
+                            <img id="item-2" class="img-fluid" src="img/animation/item/item-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="h-card">Item Cards</h3>
+                        <p>Item cards are enchanted weapons and objects that heroes can use for special effects and
+                            skills. Most items give beneficial effects and are meant to be equipped to heroes in your
+                            own party, but a handful of items are cursed and can be used to sabotage enemy heroes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio reg-card w-100 mt-md-0 mt-3">
+                        <div id="magic-cards" class="layered-png">
+                            <img id="magic-0" class="img-fluid" src="img/animation/magic/magic-0.png" alt="Magic cards">
+                            <img id="magic-1" class="img-fluid" src="img/animation/magic/magic-1.png" alt="">
+                            <img id="magic-2" class="img-fluid" src="img/animation/magic/magic-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="text-dark h-card">Magic Cards</h3>
+                        <p class="text-dark">What would this world be without a little magic and mayhem? Magic cards are
+                            powerful spells with a one-time effect. Some magic cards can give you great advantages,
+                            while others are designed to set your opponents back.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio reg-card w-100 mt-md-0 mt-3">
+                        <div id="modifier-cards" class="layered-png">
+                            <img id="modifier-0" class="img-fluid" src="img/animation/modifier/modifier-0.png" alt="Modifier cards">
+                            <img id="modifier-1" class="img-fluid" src="img/animation/modifier/modifier-1.png" alt="">
+                            <img id="modifier-2" class="img-fluid" src="img/animation/modifier/modifier-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <h3 class="h-card">Modifier Cards</h3>
+                        <p>Only fools rely solely on luck. In this game, you can keep a modifier card up your sleeve
+                            (Not literally, please. No cheating!) to make sure the odds always tip in your favor.
+                            Modifier cards add or subtract from the final total of any dice roll. Whether you need to
+                            recover from a low roll or sabotage the high roll of an opponent, modifier cards can be a
+                            handy tool when luck doesn't seem to be on your side.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio tall-card w-100 mt-md-0 mt-3">
+                        <div id="challenge-cards" class="layered-png">
+                            <img id="challenge-0" class="img-fluid" src="img/animation/challenge/challenge-0.png"
+                                alt="Bear with claws, yelling">
+                            <img id="challenge-1" class="img-fluid" src="img/animation/challenge/challenge-1.png"
+                                alt="Unicorn with armor and a flag">
+                            <img id="challenge-2" class="img-fluid" src="img/animation/challenge/challenge-2.png"
+                                alt="Challenge card">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-sm-5 mb-2">
+                        <h3 class="text-dark h-card">Challenge Cards</h3>
+                        <p class="text-dark">To stop a fellow player from using a hero, item, or magic card, you can lay
+                            down a challenge card and go toe-to-toe with your opponent. You and another player will roll
+                            the dice to determine a winner. Winning the challenge will stop them in their tracks and
+                            send their card to the discard pile, but you risk making an enemy for life...or at least
+                            until the game is over.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <canvas class="animation" id="hts-animation-1" data-frame-count="62" data-scene="forest"></canvas>
+            </div>
+        </div>
+        <div class="container-fluid cta-bar full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="aspect-ratio cta w-100  pb-sm-0 pb-3">
+                        <div id="cta-2" class="layered-png">
+                            <img id="cta-2-product" class="img-fluid" src="img/animation/cta1-product.png" alt="Here to Slay box">
+                            <img id="cta-2-heading" class="img-fluid d-none d-sm-block" src="img/animation/cta2-heading.png" alt="Do you want it yet?">
+                            <img id="cta-2-character" class="img-fluid" src="img/animation/cta2-character.png" alt="Bard cat with tambourine">
+                        </div>
+                    </div>
+                    <a class="btn btn-primary btn-md-lg cta-link" href="/products/here-to-slay-game?variant=19577791466294">
+                        <h2 class="my-0 mx-2 mx-md-5">Buy Now</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row position-relative">
+                <div class="col-12 text-center">
+                    <h2 class="mt-5">Create Your Own Party Leader</h2>
+                </div>
+                <div class="aspect-ratio customizer-promo w-100">
+                    <div id="customizer-promo" class="layered-png">
+                        <img id="customizer-left" class="img-fluid" src="img/animation/customizer-left.png" alt="Example custom party leader">
+                        <img id="customizer-right" class="img-fluid" src="img/animation/customizer-right.png" alt="">
+                        <img id="customizer-main" class="img-fluid" src="img/animation/customizer-main.png" alt="Your name here">
+                    </div>
+                </div>
+                <a class="btn btn-outline-light btn-lg customizer-cta-link mx-auto mb-5" href="/community-cards/here-to-slay">
+                    START NOW
+                </a>
+            </div>
+        </div>
+        <div class="container-fluid full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-sm-5 my-3">
+                        <h2 class="text-dark text-center">Wallpapers</h2>
+                        <div class="row">
+                            <div class="col-12">
+                                <style>
+                                    section.faq-page > div > div:nth-child(1) > div > h2 { text-align: center;}
+                                </style>
+                                <div class="d-flex justify-content-center flex-wrap">
+            
+                                    <div class="card m-3">
+                                        <img class="card-img-top img-fluid"
+                                            src="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/alone_thumb_1.jpg"
+                                            alt="alttext">
+                                        <div class="card-body">
+                                            <p class="text-center mt-0 mb-2 text-dark">Download:</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Alone_Together.jpg"
+                                                    target="_blank" class="btn btn-primary"
+                                                    rel="noreferrer noopener">Print</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Alone_Together_v1.jpg"
+                                                    target="_blank" class="btn btn-primary mx-2" rel="noreferrer noopener">Digital</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Alone_Together_v2.jpg"
+                                                    target="_blank" class="btn btn-primary" rel="noreferrer noopener">Vertical</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="card m-3">
+                                        <img class="card-img-top img-fluid"
+                                            src="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/lava_thumb_5.jpg"
+                                            alt="alttext">
+                                        <div class="card-body">
+                                            <p class="text-center mt-0 mb-2 text-dark">Download:</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Lava_You.jpg"
+                                                    target="_blank" class="btn btn-primary"
+                                                    rel="noreferrer noopener">Print</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/I-Lava-You-E-Card.jpg"
+                                                    target="_blank" class="btn btn-primary mx-2" rel="noreferrer noopener">Digital</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Lava_You_v2.jpg"
+                                                    target="_blank" class="btn btn-primary" rel="noreferrer noopener">Vertical</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="card m-3">
+                                        <img class="card-img-top img-fluid"
+                                            src="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/player_thumb_2.jpg"
+                                            alt="alttext">
+                                        <div class="card-body">
+                                            <p class="text-center mt-0 mb-2 text-dark">Download:</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Player2.jpg"
+                                                    target="_blank" class="btn btn-primary"
+                                                    rel="noreferrer noopener">Print</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Player2_v1.jpg"
+                                                    target="_blank" class="btn btn-primary mx-2" rel="noreferrer noopener">Digital</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Player2_v2.jpg"
+                                                    target="_blank" class="btn btn-primary" rel="noreferrer noopener">Vertical</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="card m-3">
+                                        <img class="card-img-top img-fluid"
+                                            src="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/purr_thumb_4.jpg"
+                                            alt="alttext">
+                                        <div class="card-body">
+                                            <p class="text-center mt-0 mb-2 text-dark">Download:</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Purrfect_Together.jpg"
+                                                    target="_blank" class="btn btn-primary"
+                                                    rel="noreferrer noopener">Print</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Purrfect_Match.jpg"
+                                                    target="_blank" class="btn btn-primary mx-2" rel="noreferrer noopener">Digital</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Purrfect_Together_v1.jpg"
+                                                    target="_blank" class="btn btn-primary" rel="noreferrer noopener">Vertical</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="card m-3">
+                                        <img class="card-img-top img-fluid"
+                                            src="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/slay_thumb_3.jpg"
+                                            alt="alttext">
+                                        <div class="card-body">
+                                            <p class="text-center mt-0 mb-2 text-dark">Download:</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Slay_Together.jpg"
+                                                    target="_blank" class="btn btn-primary"
+                                                    rel="noreferrer noopener">Print</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Slay_Together_v1.jpg"
+                                                    target="_blank" class="btn btn-primary mx-2" rel="noreferrer noopener">Digital</a>
+                                                <a href="https://12ax7web.s3.amazonaws.com/accounts/1/uploads/Slay_Together_v2.jpg"
+                                                    target="_blank" class="btn btn-primary" rel="noreferrer noopener">Vertical</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-sm-5 my-3">
+                        <h2 class="text-center">Our Story</h2>
+                        <p class="mb-3">We launched our first game, Unstable Unicorns, in 2017 and have been
+                            obsessed with making games ever since. All of our games are created by a team of in-house
+                            game developers and artists who pride themselves on making games that walk the line between
+                            adorable and diabolical. Keep an eye out for jokes and easter eggs as you play, and you may
+                            find some delightful details.</p>
+                        <p class="">While TeeTurtle’s games can be brutal and vicious, we actually create
+                            them to bring people together. After all, the strongest friendships begin with good,
+                            old-fashioned power struggles during game night. Our games are created to be accessible and
+                            easy-to learn for new players, but complex enough to keep seasoned veterans intrigued for
+                            years to come.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid full-width-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-0 text-dark" id="otherGames">Other Games</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="img/animation/uu-product-img.png" alt="Unstable Unicorns box" class="img-fluid">
+                        <h3 class="mt-3 text-dark">Unstable Unicorns</h3>
+                        <p class="mb-3 text-dark">Build a Unicorn army. Betray your friends. Unicorns are your friends now.</p>
+                        <a href="/products/unstable-unicorns-card-game" class="btn btn-primary btn-lg btn-block d-md-none">
+                            <h3 class="m-0">BUY NOW</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="img/animation/lu-product-img.png" alt="Llamas Unleashed box" class="img-fluid">
+                        <h3 class="mt-3 text-dark">Llamas Unleashed</h3>
+                        <p class="mb-3 text-dark">More llama puns, you said! We herd you.</p>
+                        <a href="/products/llamas-unleashed-base-game" class="btn btn-primary btn-lg btn-block d-md-none">
+                            <h3 class="m-0">BUY NOW</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="img/animation/rr-product-img.png" alt="Runes &amp; Regulations box" class="img-fluid">
+                        <h3 class="mt-3 text-dark">Runes &amp; Regulations</h3>
+                        <p class="mb-3 text-dark">A game that’s as aggressive as a dragon and as passive-aggressive as the suburbs.
+                        </p>
+                        <a href="/products/runes-and-regulations-bundle" class="btn btn-primary btn-lg btn-block d-md-none">
+                            <h3 class="m-0">BUY NOW</h3>
+                        </a>
+                    </div>
+                </div>
+                <!-- REMEMBER TO UPDATE LINKS IN BOTH PLACES Below and Above -->
+                <div class="row pb-5">
+                    <div class="col-md-4 text-center">
+                        <a href="/products/unstable-unicorns-card-game" class="btn btn-primary btn-lg btn-block d-none d-md-block">
+                            <h3 class="m-0">BUY NOW</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/products/llamas-unleashed-base-game" class="btn btn-primary btn-lg btn-block d-none d-md-block">
+                            <h3 class="m-0">BUY NOW</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/products/runes-and-regulations-bundle" class="btn btn-primary btn-lg btn-block d-none d-md-block">
+                            <h3 class="m-0">BUY NOW</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const ImagesUrl = "img"
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="js/animations/hts-animations.js"></script>
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h4>Stay in the Know</h4>
+                    <p class="footer-text">Don't miss out on your next favorite tee! Add your e-mail address to get the
+                        latest on new designs and exclusive sales.</p>
+                    <form action="post">
+                        <div class="input-group email-box">
+                            <input class="form-control email-input" type="email" placeholder="email@example.com"
+                                aria-label="Newsletter Signup">
+                            <div class="input-group-append">
+                                <button type="submit" class="input-group-text btn" id="email-submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/teeturtle">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/teeturtlenews">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/teeturtle/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/teeturtle/">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-1 footer-nav">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <nav class="nav flex-column">
+                                <a href="https://www.teeturtle.com/pages/FAQs?bn">FAQs</a>
+                                <a href="https://www.teeturtle.com/pages/order-lookup?bn">Order Lookup</a>
+                                <a href="https://www.teeturtle.com/pages/FAQs?bn#how-do-i-exchange-an-item">Returns
+                                    &amp; Exchanges</a>
+                                <a href="https://www.teeturtle.com/pages/Contact-Us?bn">Contact Us</a>
+                            </nav>
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="nav flex-column">
+                                <a href="https://www.teeturtle.com/pages/About-Us?bn">About Us</a>
+                                <a href="https://www.teeturtle.com/blogs/news?bn">Blog</a>
+                                <a href="https://www.teeturtle.com/pages/privacy?bn">Privacy Policy</a>
+                                <a href="https://teeturtle.recruitee.com?bn" target="_blank">Careers</a>
+                            </nav>
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="nav flex-column">
+                                <a href="https://www.teeturtle.com/pages/FAQs?bn">FAQs</a>
+                                <a href="https://www.teeturtle.com/pages/order-lookup?bn">Order Lookup</a>
+                                <a href="https://www.teeturtle.com/pages/FAQs?bn#how-do-i-exchange-an-item">Returns
+                                    &amp; Exchanges</a>
+                                <a href="https://www.teeturtle.com/pages/Contact-Us?bn">Contact Us</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="copyright">&copy; 2021 TeeTurtle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
