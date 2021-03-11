@@ -2655,3 +2655,11 @@ canvas {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
 }
+
+/* ---------------------------------------------------
+    Wrong Party SPECIFIC STYLES
+----------------------------------------------------- */
+
+.wrongPartyBuyNowCTA{
+    margin: 0 auto 44px auto;
+}
