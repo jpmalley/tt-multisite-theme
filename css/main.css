@@ -1968,25 +1968,25 @@ canvas {
     height: auto;
 }
 
-#landing-page.dino #howToPlayCarousel .carousel-inner {
+/* #landing-page.dino #howToPlayCarousel .carousel-inner {
     width: 90%;
     margin: 2rem auto;
-}
+} */
 
-#landing-page.dino #howToPlayCarousel .htp-caption {
+/* #landing-page.dino #howToPlayCarousel .htp-caption {
     background: #fff;
     border-radius: 0;
     padding: 0 3rem 3rem 3rem;
-}
+} */
 
-#landing-page.dino #howToPlayCarousel .carousel-control-wrapper {
+/* #landing-page.dino #howToPlayCarousel .carousel-control-wrapper {
     width: 100%;
     font-size: 2rem;
     z-index: 20;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-}
+} */
 
 #landing-page.dino h2.timeline {
     text-align: left;
@@ -2617,6 +2617,33 @@ canvas {
 /* ---------------------------------------------------
     Here to Slay SPECIFIC STYLES
 ----------------------------------------------------- */
+#landing-page.heretoslay .game-head {
+    font-family: 'Gaegu', sans-serif;
+    color: #fff;
+    background: #2e2832;
+}
+
+#landing-page.heretoslay .table th, #landing-page.heretoslay .table td {
+    border: 5px solid #fff;
+    font-weight: bold;
+}
+
+#landing-page.heretoslay .table td {
+    vertical-align: middle;
+}
+
+#landing-page.heretoslay .table tbody th {
+    background: #eeeeee;
+}
+
+#landing-page.heretoslay .table tbody td {
+    background: #EDECDF;
+}
+
+#landing-page.heretoslay .game-head span {
+    font-size: 3rem;
+    line-height: 1;
+}
 #otherGames{
     padding-top: 24px;
 }
@@ -2639,7 +2666,7 @@ canvas {
         font-size: 1rem;
     }
     .related-product-footer{
-        height: 60px;
+        height: 44px;
     }
 }
 
@@ -2656,10 +2683,34 @@ canvas {
     font-weight: 600;
 }
 
+#hldLinksBtn{
+    margin-bottom: 50px;
+}
+
+#HLDReadyTOBuy{
+    margin-top: 50px;
+}
+
 /* ---------------------------------------------------
     Wrong Party SPECIFIC STYLES
 ----------------------------------------------------- */
 
 .wrongPartyBuyNowCTA{
     margin: 0 auto 44px auto;
+}
+
+/* ---------------------------------------------------
+    UG Homepage SPECIFIC STYLES
+----------------------------------------------------- */
+
+.UGSeeAllBtn{
+    background: none;
+    border: none;
+    font-family: 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    outline:0;
 }
