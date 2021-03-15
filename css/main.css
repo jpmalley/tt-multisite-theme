@@ -2714,3 +2714,35 @@ canvas {
     text-decoration: underline;
     outline:0;
 }
+
+
+/* Footer */
+#unstable .footer {
+    background: #C8F5FF url(../img/footer-unicorn.svg) right bottom no-repeat;
+    background-size: auto 280px;
+    position: relative;
+    min-height: 300px;
+    font-weight: 700;
+    color: #44667B;
+}
+
+#unstable .footer p {
+    color: #44667B;
+    font-weight: 700;
+}
+
+#unstable #email-submit {
+    background: #44667B;
+    border: 1px solid #44667B;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+
+#unstable .social-icons a:hover {
+    color: #2694cf;
+}
+
+#unstable .footer-nav a:hover {
+    color: #2694cf;
+}
