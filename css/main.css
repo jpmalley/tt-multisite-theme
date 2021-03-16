@@ -1997,6 +1997,11 @@ canvas {
     font-size: 1.2rem;
 }
 
+
+.testimonialText{
+    font-size: 2rem;
+}
+
 @media (max-width: 575.98px) {
     #landing-page .btn h2 {
         font-size: 1.5rem;
