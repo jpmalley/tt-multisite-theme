@@ -2000,6 +2000,11 @@ canvas {
 
 .testimonialText{
     font-size: 2rem;
+    color: #ffffff !important;
+}
+
+.testimonialName{
+    color: #6b7073 !important;
 }
 
 @media (max-width: 575.98px) {
